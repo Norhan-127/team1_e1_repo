@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team1_e1/core/routing/routes.dart';
+import '../../features/capsules/logic/capsule_cubit.dart';
+import '../../features/capsules/ui/screens/capsules_screen.dart';
 import '../../features/on_boarging/ui/screens/on_baording_screen.dart';
+import '../di/dependency_injection.dart';
 
 class AppRouter {
   static Route generateRoute(RouteSettings settings) {
