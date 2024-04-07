@@ -9,6 +9,13 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const OnBoardingScreen(),
         );
+      case Routes.capsuleScreen:
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+              create: (context) => getIt<CapsuleCubit>(),
+              child: const CapsulesScreen(),
+            )
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

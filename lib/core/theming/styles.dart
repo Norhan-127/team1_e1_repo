@@ -10,6 +10,21 @@ abstract class TextStyles {
     fontWeight: FontWeightHelper.bold,
     color: Colors.black,
   );
+  static TextStyle poppins22regular = GoogleFonts.poppins(
+    fontSize: 22.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: Colors.white,
+  );
+  static TextStyle poppins22bold = GoogleFonts.poppins(
+    fontSize: 22.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.white,
+  );
+  static TextStyle poppins30bold = GoogleFonts.poppins(
+    fontSize: 30.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.white,
+  );
   static TextStyle orbitron24Bold = GoogleFonts.orbitron(
     fontSize: 24.sp,
     fontWeight: FontWeightHelper.bold,
