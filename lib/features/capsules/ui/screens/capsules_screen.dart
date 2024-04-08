@@ -2,12 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:team1_e1/core/theming/colors.dart';
 import 'package:team1_e1/core/theming/styles.dart';
-import 'package:team1_e1/features/capsules/data/models/capsule.dart';
 import 'package:team1_e1/features/capsules/logic/capsule_cubit.dart';
-import 'package:team1_e1/features/capsules/ui/widgets/cap_con.dart';
+import 'package:team1_e1/features/capsules/ui/widgets/capsule_container_serial.dart';
+
+import '../../logic/capsule_state.dart';
 
 class CapsulesScreen extends StatefulWidget {
   const CapsulesScreen({super.key});
@@ -19,7 +18,6 @@ class CapsulesScreen extends StatefulWidget {
 class _CapsulesScreenState extends State<CapsulesScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     BlocProvider.of<CapsuleCubit>(context).GetAllCapsules();
   }
@@ -39,23 +37,24 @@ class _CapsulesScreenState extends State<CapsulesScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: ListView(
             children: [
-              Text('Capsules',style: TextStyles.poppins30bold),
+              Text('Capsules',style: TextStyles.poppins30WhiteBold),
               SizedBox(height: 14.h,),
-              Text('designed for transporting astronauts to and from the International Space Station. It is a significant advancement from the original Dragon spacecraft, featuring improvements in design, capabilities, and safety features.',style: TextStyles.poppins22regular,),
+              Text('designed for transporting astronauts to and from the International Space Station. It is a significant advancement from the original Dragon spacecraft, featuring improvements in design, capabilities, and safety features.',style: TextStyles.poppins22WhiteRegular,),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.56 ,
                 child: BlocBuilder<CapsuleCubit, CapsuleState>(
                   builder: (context, state) {
-                    if(state is GetCapsules){
-                      return  ListView.builder(
-                          itemCount: state.allCapsules.length,
-                          itemBuilder: (context,i) {
-                            return CapCon(txt: state.allCapsules[i].serial,index: i+1,);
-                          }
-                      );
-                    }else{
-                      return const Center(child: CircularProgressIndicator(color: Colors.white,strokeWidth: 10,));
-                    }
+                    return state.when(
+                        initial: (){
+                        return const Center(child: CircularProgressIndicator(color: Colors.white,strokeWidth: 10,));
+                        },
+                        getCapsules: (allCapsules){
+                          return  ListView.builder(
+                                    itemCount: allCapsules.length,
+                                    itemBuilder: (context,i) {
+                                      return CapsuleContainerSerial(txt: allCapsules[i].serial,index: i+1,);
+                                    });
+                        });
                   },
                 ),
               )

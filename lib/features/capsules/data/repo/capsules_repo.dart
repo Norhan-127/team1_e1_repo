@@ -6,8 +6,8 @@ class CapsuleRepo{
   CapsuleRepo( this.webServices);
 
   Future<List<Capsule>> getAllCapsules() async{
-    var r = await webServices.getAllCapsules();
-    return r.map((capusle) => Capsule.fromJson(capusle.toJson())).toList();
+    var response = await webServices.getAllCapsules();
+    return response.map((capsule) => Capsule.fromJson(capsule.toJson())).toList();
   }
 
 }

@@ -5,10 +5,10 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
 
-class CapCon extends StatelessWidget {
+class CapsuleContainerSerial extends StatelessWidget {
   String? txt;
   int? index;
-  CapCon({super.key,required this.txt,required this.index});
+  CapsuleContainerSerial({super.key,required this.txt,required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +22,8 @@ class CapCon extends StatelessWidget {
           borderRadius: BorderRadius.circular(15)
       ),
       child: ListTile(
-        title: Text('$txt',style: TextStyles.poppins22bold,),
-        leading: Text('$index.' ,style: TextStyles.poppins22bold,),
+        title: Text('$txt',style: TextStyles.poppins22WhiteBold,),
+        leading: Text('$index.' ,style: TextStyles.poppins22WhiteBold,),
         trailing: SvgPicture.asset('assets/images/rocket.svg',width: 80,height: 50,color: AppColors.whiteColor,),
       ),
 

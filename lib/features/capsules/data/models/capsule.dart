@@ -23,10 +23,8 @@ class Capsule {
         this.status,
         this.type,
         this.id});
-  /// factory.
   factory Capsule.fromJson(Map<String, dynamic> json) => _$CapsuleFromJson(json);
 
-  /// Connect the generated [_$PersonToJson] function to the `toJson` method.
   Map<String, dynamic> toJson() => _$CapsuleToJson(this);
 
 

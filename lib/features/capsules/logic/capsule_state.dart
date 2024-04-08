@@ -1,11 +1,22 @@
-part of 'capsule_cubit.dart';
 
-@immutable
-sealed class CapsuleState {}
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-final class CapsuleInitial extends CapsuleState {}
+import 'package:team1_e1/features/capsules/data/models/capsule.dart';
+part 'capsule_state.freezed.dart';
 
-class GetCapsules extends CapsuleState{
-  final List<Capsule> allCapsules;
-  GetCapsules({required this.allCapsules});
+
+
+@freezed
+class CapsuleState with _$CapsuleState {
+  const factory CapsuleState.initial() = _CapsuleInitial;
+  const factory CapsuleState.getCapsules(List<Capsule> allCapsules) = _GetCapsules;
+
 }
+
+//
+// final class CapsuleInitial extends CapsuleState {}
+//
+// class GetCapsules extends CapsuleState{
+//   final List<Capsule> allCapsules;
+//   GetCapsules({required this.allCapsules});
+// }
