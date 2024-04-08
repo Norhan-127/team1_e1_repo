@@ -13,10 +13,4 @@ class CapsuleState with _$CapsuleState {
 
 }
 
-//
-// final class CapsuleInitial extends CapsuleState {}
-//
-// class GetCapsules extends CapsuleState{
-//   final List<Capsule> allCapsules;
-//   GetCapsules({required this.allCapsules});
-// }
+
