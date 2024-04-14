@@ -5,25 +5,25 @@ import 'font_weight_helper.dart';
 
 abstract class TextStyles {
 
-  static TextStyle roboto24Bold = GoogleFonts.roboto(
+  static TextStyle roboto24BoldBlack = GoogleFonts.roboto(
     fontSize: 40.sp,
     fontWeight: FontWeightHelper.bold,
     color: Colors.black,
   );
-  static TextStyle orbitron24Bold = GoogleFonts.orbitron(
+  static TextStyle orbitron24BoldBlack = GoogleFonts.orbitron(
     fontSize: 24.sp,
     fontWeight: FontWeightHelper.bold,
     color: Colors.black,
   );
-  static TextStyle exo14 = GoogleFonts.exo(
+  static TextStyle exo14Black = GoogleFonts.exo(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
     color: Colors.black,
-  );static TextStyle openSans = GoogleFonts.openSans(
+  );static TextStyle openSans30Black = GoogleFonts.openSans(
     fontSize: 30.sp,
     fontWeight: FontWeightHelper.regular,
     color: Colors.black,
-  );static TextStyle sourceCode = GoogleFonts.sourceCodePro(
+  );static TextStyle sourceCode20Black = GoogleFonts.sourceCodePro(
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.bold,
     color: Colors.black,
