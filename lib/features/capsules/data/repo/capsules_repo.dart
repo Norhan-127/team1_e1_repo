@@ -3,7 +3,7 @@ import 'package:team1_e1/features/capsules/data/models/capsule.dart';
 
 class CapsuleRepo{
   final WebServices webServices;
-  CapsuleRepo( this.webServices);
+  CapsuleRepo(this.webServices);
 
   Future<List<Capsule>> getAllCapsules() async{
     var response = await webServices.getAllCapsules();

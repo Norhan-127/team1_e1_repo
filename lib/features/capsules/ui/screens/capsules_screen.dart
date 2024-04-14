@@ -2,10 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:team1_e1/core/shared_widgets/background_container.dart';
 import 'package:team1_e1/core/theming/styles.dart';
 import 'package:team1_e1/features/capsules/logic/capsule_cubit.dart';
 import 'package:team1_e1/features/capsules/ui/widgets/capsule_container_serial.dart';
 
+import '../../../../core/routing/routes.dart';
 import '../../logic/capsule_state.dart';
 
 class CapsulesScreen extends StatefulWidget {
@@ -24,15 +26,7 @@ class _CapsulesScreenState extends State<CapsulesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage('assets/images/bk.png')
-            )
-        ),
+      body: BackgroundContainer(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: ListView(
@@ -52,7 +46,11 @@ class _CapsulesScreenState extends State<CapsulesScreen> {
                           return  ListView.builder(
                                     itemCount: allCapsules.length,
                                     itemBuilder: (context,i) {
-                                      return CapsuleContainerSerial(txt: allCapsules[i].serial,index: i+1,);
+                                      return GestureDetector(
+                                        onTap: (){
+                                          context.read<CapsuleCubit>().index = i;
+                                          Navigator.pushNamed(context, Routes.capsuleDetailsScreen);},
+                                          child: CapsuleContainerSerial(txt: allCapsules[i].serial,index: i+1,));
                                     });
                         });
                   },

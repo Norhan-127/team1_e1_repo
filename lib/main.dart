@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (_,context) {
-
           return MaterialApp(
             initialRoute: Routes.capsuleScreen,
             onGenerateRoute: AppRouter.generateRoute,
