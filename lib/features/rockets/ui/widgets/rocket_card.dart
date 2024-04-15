@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:team1_e1/core/theming/colors.dart';
 import 'package:team1_e1/core/theming/font_weight_helper.dart';
-import 'package:team1_e1/core/theming/styles.dart';
+
 
 class RocketCard extends StatelessWidget {
   const RocketCard({super.key});
