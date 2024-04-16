@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:team1_e1/core/routing/routes.dart';
 import 'package:team1_e1/features/on_boarging/ui/screens/on_baording_screen.dart';
 import 'package:team1_e1/features/rockets/ui/screens/rocket_details.dart';
-import 'package:team1_e1/features/rockets/ui/screens/rockets_screen.dart';
+
 
 
 class AppRouter {
