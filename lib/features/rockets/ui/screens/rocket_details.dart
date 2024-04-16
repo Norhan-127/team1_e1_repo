@@ -39,7 +39,7 @@ class RocketDetails extends StatelessWidget {
                   const SizedBox(
                     height: 30,
                   ),
-                  const RocketInformations()
+                  const RocketInformation()
                 ]
               ),
             ),
