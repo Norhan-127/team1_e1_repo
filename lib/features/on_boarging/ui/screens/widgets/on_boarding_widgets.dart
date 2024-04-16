@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:team1_e1/features/on_boarging/ui/screens/widgets/custom_button.dart';
+import 'package:team1_e1/features/on_boarging/ui/screens/widgets/second_on_boarding_image.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
 import '../../../../../core/theming/text.dart';
 import '../../../data/on_boarding_data.dart';
-import 'first_on_boarding_img.dart';
 
 class OnBoardingWidget extends StatelessWidget {
   const OnBoardingWidget(
@@ -22,7 +22,7 @@ class OnBoardingWidget extends StatelessWidget {
     return Stack(
       alignment: Alignment.topCenter,
       children: [
-        const FirstOnBoardingImage(),
+        const SecondOnBoardingImage(),
         Positioned(
           bottom: 0,
           right: 0,
