@@ -83,7 +83,7 @@ class OnBoardingWidget extends StatelessWidget {
                         onPressed: () {},
                         child:  Text(
                           AppText.skip,
-                          style: TextStyles.exo18LightBlack,
+                          style: TextStyles.exo14LightBlack,
                         ),
                       ),
                       GestureDetector(

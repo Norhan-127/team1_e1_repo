@@ -14,6 +14,10 @@ abstract class TextStyles {
     fontSize: 18.sp,
     fontWeight: FontWeightHelper.light,
     color: Colors.black,
+  );static TextStyle exo14LightBlack = GoogleFonts.exo(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.light,
+    color: Colors.black,
   );static TextStyle openSans30Black = GoogleFonts.openSans(
     fontSize: 30.sp,
     fontWeight: FontWeightHelper.regular,
