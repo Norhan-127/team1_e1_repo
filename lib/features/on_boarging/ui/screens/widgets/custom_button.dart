@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:team1_e1/core/theming/colors.dart';
 import 'package:team1_e1/core/theming/styles.dart';
 
-
 class CustomButton extends StatelessWidget {
-  CustomButton({super.key, required this.txt, required this.onTap});
+  const CustomButton({super.key, required this.txt, required this.onTap});
+
   final String txt;
-  void Function()? onTap;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class CustomButton extends StatelessWidget {
         ),
         child: Text(
           txt,
-          style: TextStyles.exo14Black,
+          style: TextStyles.exo18LightBlack,
           textAlign: TextAlign.center,
         ),
       ),

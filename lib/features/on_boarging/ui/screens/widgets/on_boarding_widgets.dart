@@ -53,7 +53,7 @@ class OnBoardingWidget extends StatelessWidget {
                 children: [
                   Text(
                     pages[index].title,
-                    style: TextStyles.orbitron24BoldBlack,
+                    style: TextStyles.audioWideRegularBlack,
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(
@@ -61,7 +61,7 @@ class OnBoardingWidget extends StatelessWidget {
                   ),
                   Text(
                     pages[index].description,
-                    style: TextStyles.exo14Black,
+                    style: TextStyles.roboto20MediumBlack,
                     textAlign: TextAlign.center,
                   ),
                 ],
@@ -81,9 +81,9 @@ class OnBoardingWidget extends StatelessWidget {
                     children: [
                       TextButton(
                         onPressed: () {},
-                        child: const Text(
+                        child:  Text(
                           AppText.skip,
-                          style: TextStyle(color: Colors.black),
+                          style: TextStyles.exo18LightBlack,
                         ),
                       ),
                       GestureDetector(
