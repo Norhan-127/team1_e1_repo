@@ -11,7 +11,7 @@ class OnBoardingScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text('Welcome to SpaceX',textAlign: TextAlign.center,style: TextStyles.sourceCode,),
+          Text('Welcome to SpaceX',textAlign: TextAlign.center,style: TextStyles.sourceCode20Black,),
         ],
       ),
     );
