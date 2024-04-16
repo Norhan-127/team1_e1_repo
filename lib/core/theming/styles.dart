@@ -54,6 +54,16 @@ abstract class TextStyles {
     fontWeight: FontWeightHelper.light,
     color: Colors.white,
   );
+  static TextStyle MeduimWhite = GoogleFonts.poppins(
+    fontSize: 22,
+    fontWeight: FontWeightHelper.regular,
+    color: Colors.white,
+  );
+  static TextStyle SmallWhite = GoogleFonts.poppins(
+    fontSize: 15,
+    fontWeight: FontWeightHelper.light,
+    color: Colors.white,
+  );
 
 }
 //Roboto-> for body text, menus, and information displays.
