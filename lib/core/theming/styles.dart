@@ -15,6 +15,11 @@ abstract class TextStyles {
     fontWeight: FontWeightHelper.bold,
     color: Colors.black,
   );
+  static TextStyle orbitron24BoldWhite = GoogleFonts.orbitron(
+    fontSize: 24.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.white,
+  );
   static TextStyle exo14Black = GoogleFonts.exo(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
@@ -23,11 +28,33 @@ abstract class TextStyles {
     fontSize: 30.sp,
     fontWeight: FontWeightHelper.regular,
     color: Colors.black,
-  );static TextStyle sourceCode20Black = GoogleFonts.sourceCodePro(
+  );
+  static TextStyle sourceCode20Black = GoogleFonts.sourceCodePro(
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.bold,
     color: Colors.black,
   );
+  static TextStyle sourceCode20White = GoogleFonts.sourceCodePro(
+    fontSize: 20.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.white,
+  );
+  static TextStyle exo14White = GoogleFonts.exo(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: Colors.white,
+  );
+  static TextStyle BoldlWhite = GoogleFonts.poppins(
+    fontSize: 26,
+    fontWeight: FontWeightHelper.medium,
+    color: Colors.white,
+  );
+  static TextStyle NormalWhite = GoogleFonts.poppins(
+    fontSize: 18,
+    fontWeight: FontWeightHelper.light,
+    color: Colors.white,
+  );
+
 }
 //Roboto-> for body text, menus, and information displays.
 //Orbitron->Use for section headings, titles, and possibly numbers like dates and countdowns.
