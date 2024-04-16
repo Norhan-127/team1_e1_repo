@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:team1_e1/features/on_boarging/ui/screens/widgets/custom_button.dart';
+import 'package:team1_e1/features/on_boarging/ui/screens/widgets/first_on_boarding_img.dart';
 import 'package:team1_e1/features/on_boarging/ui/screens/widgets/second_on_boarding_image.dart';
+import 'package:team1_e1/features/on_boarging/ui/screens/widgets/third_on_boarding_image.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
 import '../../../../../core/theming/text.dart';
@@ -22,15 +24,19 @@ class OnBoardingWidget extends StatelessWidget {
     return Stack(
       alignment: Alignment.topCenter,
       children: [
-        const SecondOnBoardingImage(),
+        index == 0
+            ? const FirstOnBoardingImage()
+            : index == 1
+                ? const SecondOnBoardingImage()
+                : const ThirdOnBoardingImage(),
         Positioned(
           bottom: 0,
           right: 0,
           left: 0,
           child: Container(
-            height: MediaQuery.of(context).size.height / 2.7,
+            height: MediaQuery.of(context).size.height / 3,
             decoration: BoxDecoration(
-                color: Colors.white,
+                color: AppColors.whiteColor,
                 borderRadius: BorderRadius.only(
                   topLeft: index == 0
                       ? const Radius.circular(100)
@@ -38,7 +44,7 @@ class OnBoardingWidget extends StatelessWidget {
                   topRight: index == 2
                       ? const Radius.circular(100)
                       : const Radius.circular(0),
-                )),
+                ),),
             child: Padding(
               padding: EdgeInsets.symmetric(
                   horizontal: MediaQuery.of(context).size.width * 0.14,
@@ -85,8 +91,9 @@ class OnBoardingWidget extends StatelessWidget {
                         child: Container(
                           padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
-                              color: AppColors.redColor,
-                              borderRadius: BorderRadius.circular(50)),
+                            color: AppColors.silver,
+                            borderRadius: BorderRadius.circular(50),
+                          ),
                           child: const Icon(Icons.arrow_circle_right,
                               color: Colors.white, size: 42),
                         ),
@@ -95,7 +102,10 @@ class OnBoardingWidget extends StatelessWidget {
                   )
                 : SizedBox(
                     height: 46,
-                    child:CustomButton(txt: AppText.getStarted, onTap: () {  }, color: AppColors.gold,),
+                    child: CustomButton(
+                      txt: AppText.getStarted,
+                      onTap: () {},
+                    ),
                   ),
           ),
         )

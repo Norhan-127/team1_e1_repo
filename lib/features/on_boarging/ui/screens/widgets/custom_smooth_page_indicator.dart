@@ -6,20 +6,19 @@ import '../../../../../core/theming/colors.dart';
 import '../../logic/on_boarding_cubit.dart';
 
 class CustomSmoothIndicator extends StatelessWidget {
-  const CustomSmoothIndicator({super.key, required this.color});
-  final Color color;
+  const CustomSmoothIndicator({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SmoothPageIndicator(
       controller: BlocProvider.of<OnBoardingCurrentPageCubit>(context).pageController,
       count: 3,
-      effect:  ExpandingDotsEffect(
+      effect:  const ExpandingDotsEffect(
         spacing: 8.0,
         dotWidth: 23.0,
         dotHeight: 7.0,
-        dotColor: AppColors.darkBlueGrey,
-        activeDotColor: color,
+        dotColor: AppColors.silver,
+        activeDotColor: AppColors.darkBlueGrey,
       ),
     );
   }

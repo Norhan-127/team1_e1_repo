@@ -14,11 +14,11 @@ class FirstOnBoardingImage extends StatelessWidget {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.shade800,
-                blurRadius: 500,
+                color: Colors.grey.shade800.withOpacity(0.4),
+                blurRadius: 100,
                 spreadRadius: 0,
                 blurStyle: BlurStyle.outer,
-                offset: const Offset(30, 30),
+                offset: const Offset(0, 180),
               ),
             ],
           ),

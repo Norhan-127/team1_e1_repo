@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team1_e1/features/on_boarging/ui/screens/widgets/custom_smooth_page_indicator.dart';
-import '../../../../../core/theming/colors.dart';
 import '../../../data/on_boarding_data.dart';
 import '../../logic/on_boarding_cubit.dart';
 import 'on_boarding_widgets.dart';
@@ -48,7 +47,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody>
                   skip: pages[index].skip,
                   onTab: () {
                     cubit.pageController.nextPage(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 1000),
                       curve: Curves.fastEaseInToSlowEaseOut,
                     );
                   },
@@ -58,23 +57,14 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody>
           },
         ),
         Positioned(
-          top: MediaQuery.of(context).size.height / 1.56,
+          top: MediaQuery.of(context).size.height / 1.467,
           right: 0,
           left: 0,
-          child: Row(
+          child: const Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              BlocBuilder<OnBoardingCurrentPageCubit,
-                  OnBoardingCurrentPageState>(
-                builder: (context, state) {
-                  return CustomSmoothIndicator(
-                    color: cubit.currentPage == 2
-                        ? AppColors.gold
-                        : AppColors.redColor,
-                  );
-                },
-              )
+              CustomSmoothIndicator()
             ],
           ),
         )
