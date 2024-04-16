@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'colors.dart';
 import 'font_weight_helper.dart';
 
 abstract class TextStyles {
@@ -27,6 +28,41 @@ abstract class TextStyles {
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.bold,
     color: Colors.black,
+  );
+  static TextStyle poppins21Black = GoogleFonts.poppins(
+    fontSize: 21.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: Colors.black,
+  );
+  static TextStyle poppins40White = GoogleFonts.poppins(
+    fontSize: 40.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.whiteColor,
+  );
+  static TextStyle poppins63White = GoogleFonts.poppins(
+    fontSize: 63.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: AppColors.whiteColor,
+  );
+  static TextStyle poppins19White = GoogleFonts.poppins(
+    fontSize: 19.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.whiteColor,
+  );
+  static TextStyle poppins28White = GoogleFonts.poppins(
+    fontSize: 28.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.whiteColor,
+  );
+  static TextStyle poppins17White = GoogleFonts.poppins(
+    fontSize: 17.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.whiteColor,
+  );
+  static TextStyle poppins17WhiteL = GoogleFonts.poppins(
+    fontSize: 17.sp,
+    fontWeight: FontWeightHelper.light,
+    color: AppColors.whiteColor,
   );
 }
 //Roboto-> for body text, menus, and information displays.
