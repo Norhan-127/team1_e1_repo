@@ -11,7 +11,7 @@ class CapsuleCubit extends Cubit<CapsuleState> {
 
 
 
-  void GetAllCapsules(){
+  void getAllCapsules(){
     cap_repo.getAllCapsules().then((capsules) => {
       emit(CapsuleState.getCapsules(capsules)),
     });

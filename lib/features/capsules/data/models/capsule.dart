@@ -3,9 +3,12 @@ part 'capsule.g.dart';
 
 @JsonSerializable()
 class Capsule {
-  int? reuse_count;
-  int? water_landings;
-  int? land_landings;
+  @JsonKey(name: "reuse_count")
+  int? reuseCount;
+  @JsonKey(name: "water_landings")
+  int? waterLandings;
+  @JsonKey(name: "land_landings")
+  int? landLandings;
   List<String>? launches;
   String? serial;
   String? status;
@@ -14,9 +17,9 @@ class Capsule {
 
   Capsule(
       {
-        this.reuse_count,
-        this.water_landings,
-        this.land_landings ,
+        this.reuseCount,
+        this.waterLandings,
+        this.landLandings ,
         this.launches,
         this.serial,
         this.status,
