@@ -1,0 +1,10 @@
+flutter_native_splash:
+
+  color: "#000000"
+  image: assets/images/spacexlogosplash.jpg
+
+
+  android_12:
+   color: "#000000"
+   image: assets/images/logofe.png
+
