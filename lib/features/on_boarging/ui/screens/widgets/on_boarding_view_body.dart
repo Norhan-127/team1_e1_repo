@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team1_e1/features/on_boarging/ui/screens/widgets/custom_smooth_page_indicator.dart';
-import '../../../data/on_boarding_data.dart';
 import '../../logic/on_boarding_cubit.dart';
 import 'on_boarding_widgets.dart';
 
@@ -34,7 +33,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody>
       children: [
         PageView.builder(
           controller: cubit.pageController,
-          itemCount: pages.length,
+          itemCount: 3,
           onPageChanged: (c) {
             cubit.getCurrentPageViewIndex(c);
           },
@@ -44,7 +43,6 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody>
               builder: (context, state) {
                 return OnBoardingWidget(
                   index: index,
-                  skip: pages[index].skip,
                   onTab: () {
                     cubit.pageController.nextPage(
                       duration: const Duration(milliseconds: 1000),
