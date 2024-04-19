@@ -5,6 +5,6 @@ abstract class AppText{
   static const sendingHumansAndCargo="SENDING HUMANS AND CARGO INTO SPACE";
   static const humanSpaceLight="HUMAN SPACEFLIGHT";
   static const makingLife="MAKING LIFE MULTIPLANETARY";
-  static const getReady="Get ready for an interstellar journey like never before";
-  static const ready="Ready?";
+  static const getReady="GET READY FOR AN INTERSTELLAR JOURNEY LIKE NEVER BEFORE";
+  static const ready="READY?";
 }
