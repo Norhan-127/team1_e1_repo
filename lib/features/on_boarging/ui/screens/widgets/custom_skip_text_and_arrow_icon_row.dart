@@ -25,7 +25,7 @@ class CustomSkipTextAndArrowIcon extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: AppColors.silver,
+              color: AppColors.redColor,
               borderRadius: BorderRadius.circular(50),
             ),
             child: const Icon(Icons.arrow_circle_right,
