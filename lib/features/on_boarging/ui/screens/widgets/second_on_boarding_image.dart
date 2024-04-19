@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:team1_e1/features/on_boarging/data/on_boarding_data.dart';
 
 class SecondOnBoardingImage extends StatelessWidget {
-  const SecondOnBoardingImage({super.key});
+  const SecondOnBoardingImage({super.key, required this.image});
+  final String image;
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class SecondOnBoardingImage extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.black,
           image: DecorationImage(
-              image: AssetImage(pages[1].imagePath),
+              image: AssetImage(image),
               fit: BoxFit.cover
           )
       ),

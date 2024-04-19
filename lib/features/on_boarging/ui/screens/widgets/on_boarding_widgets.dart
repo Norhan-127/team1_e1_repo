@@ -28,7 +28,7 @@ class OnBoardingWidget extends StatelessWidget {
         index == 0
             ?  FirstOnBoardingImage(image: pages[index].imagePath,)
             : index == 1
-                ?  SecondOnBoardingImage()
+                ?  SecondOnBoardingImage(image: pages[index].imagePath,)
                 :  ThirdOnBoardingImage(),
         Positioned(
           bottom: 0,
