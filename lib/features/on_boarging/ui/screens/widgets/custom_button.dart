@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:team1_e1/core/theming/colors.dart';
 import 'package:team1_e1/core/theming/styles.dart';
 
@@ -14,8 +15,8 @@ class CustomButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         padding: EdgeInsets.symmetric(
-            horizontal: MediaQuery.of(context).size.width * 0.09,
-            vertical: MediaQuery.of(context).size.height * 0.01),
+            horizontal: 15.w,
+            vertical: 12.h),
         decoration: BoxDecoration(
           shape: BoxShape.rectangle,
           color: AppColors.redColor.withOpacity(0.8),
