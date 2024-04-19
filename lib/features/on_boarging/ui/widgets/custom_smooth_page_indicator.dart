@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../../../core/theming/colors.dart';
-import '../../logic/on_boarding_cubit.dart';
+import '../logic/on_boarding_cubit.dart';
 
 class CustomSmoothIndicator extends StatelessWidget {
   const CustomSmoothIndicator({super.key});

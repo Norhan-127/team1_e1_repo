@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:team1_e1/features/on_boarging/ui/screens/widgets/custom_button.dart';
-import 'package:team1_e1/features/on_boarging/ui/screens/widgets/custom_skip_text_and_arrow_icon_row.dart';
-import 'package:team1_e1/features/on_boarging/ui/screens/widgets/first_on_boarding_img.dart';
-import 'package:team1_e1/features/on_boarging/ui/screens/widgets/on_boarding_two_text_widgets.dart';
-import 'package:team1_e1/features/on_boarging/ui/screens/widgets/second_on_boarding_image.dart';
-import 'package:team1_e1/features/on_boarging/ui/screens/widgets/third_on_boarding_image.dart';
+import 'package:team1_e1/features/on_boarging/ui/widgets/second_on_boarding_image.dart';
+import 'package:team1_e1/features/on_boarging/ui/widgets/third_on_boarding_image.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/images.dart';
 import '../../../../../core/theming/text.dart';
-import '../../../data/on_boarding_data.dart';
+import '../../data/on_boarding_data.dart';
+import 'custom_button.dart';
+import 'custom_skip_text_and_arrow_icon_row.dart';
+import 'first_on_boarding_img.dart';
+import 'on_boarding_two_text_widgets.dart';
 
 class OnBoardingWidget extends StatelessWidget {
   OnBoardingWidget({

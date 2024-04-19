@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:team1_e1/features/on_boarging/ui/screens/widgets/custom_smooth_page_indicator.dart';
-import '../../logic/on_boarding_cubit.dart';
+import '../logic/on_boarding_cubit.dart';
+import 'custom_smooth_page_indicator.dart';
 import 'on_boarding_widgets.dart';
 
-class OnBoardingViewBody extends StatefulWidget {
-  const OnBoardingViewBody({super.key});
+class OnBoardingScreenBody extends StatefulWidget {
+  const OnBoardingScreenBody({super.key});
 
   @override
-  State<OnBoardingViewBody> createState() => _OnBoardingViewBodyState();
+  State<OnBoardingScreenBody> createState() => _OnBoardingScreenBodyState();
 }
 
-class _OnBoardingViewBodyState extends State<OnBoardingViewBody>
+class _OnBoardingScreenBodyState extends State<OnBoardingScreenBody>
     with TickerProviderStateMixin {
   @override
   void initState() {

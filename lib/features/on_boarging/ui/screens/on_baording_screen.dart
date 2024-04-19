@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:team1_e1/core/theming/colors.dart';
-import 'package:team1_e1/features/on_boarging/ui/screens/widgets/on_boarding_view_body.dart';
+import '../widgets/on_boarding_screen_body.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -10,7 +10,7 @@ class OnBoardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.black.withOpacity(0.4),
-      body: const OnBoardingViewBody(),
+      body: const OnBoardingScreenBody(),
     );
   }
 }
@@ -18,4 +18,3 @@ class OnBoardingScreen extends StatelessWidget {
 
 
 
-// curve: Curves.fastEaseInToSlowEaseOut,

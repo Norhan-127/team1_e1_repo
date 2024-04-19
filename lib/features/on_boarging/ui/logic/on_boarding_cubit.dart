@@ -9,7 +9,6 @@ class OnBoardingCurrentPageCubit extends Cubit<OnBoardingCurrentPageState> {
   int currentPage = 0 ;
   getCurrentPageViewIndex(c){
     currentPage=c;
-    // print(currentPage);
     emit(ChangePageCounterState());
   }
 }
