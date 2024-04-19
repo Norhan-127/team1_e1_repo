@@ -1,3 +1,4 @@
+import 'package:team1_e1/core/theming/images.dart';
 import 'package:team1_e1/core/theming/text.dart';
 
 class OnBoardingData {
@@ -10,7 +11,22 @@ class OnBoardingData {
 }
 
 List<OnBoardingData> pages = [
-  OnBoardingData("assets/images/onboarding_dragon.png", AppText.dragon,AppText.sendingHumansAndCargo,true),
-  OnBoardingData("assets/images/onboarding_crew.jpg", AppText.humanSpaceLight,AppText.makingLife,true),
-  OnBoardingData("assets/images/onboarding_rocket.png",AppText.ready, AppText.getReady,false),
+  OnBoardingData(
+    AppImages.onBoardingDragonImage,
+    AppText.dragon,
+    AppText.sendingHumansAndCargo,
+    true,
+  ),
+  OnBoardingData(
+    AppImages.onBoardingCrewImage,
+    AppText.humanSpaceLight,
+    AppText.makingLife,
+    true,
+  ),
+  OnBoardingData(
+    AppImages.onBoardingRocketImage,
+    AppText.ready,
+    AppText.getReady,
+    false,
+  ),
 ];

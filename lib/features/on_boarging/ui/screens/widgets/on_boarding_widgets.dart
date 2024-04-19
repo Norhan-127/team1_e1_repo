@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:team1_e1/features/on_boarging/ui/screens/widgets/custom_button.dart';
 import 'package:team1_e1/features/on_boarging/ui/screens/widgets/first_on_boarding_img.dart';
+import 'package:team1_e1/features/on_boarging/ui/screens/widgets/on_boarding_two_text_widgets.dart';
 import 'package:team1_e1/features/on_boarging/ui/screens/widgets/second_on_boarding_image.dart';
 import 'package:team1_e1/features/on_boarging/ui/screens/widgets/third_on_boarding_image.dart';
 import '../../../../../core/theming/colors.dart';
@@ -45,28 +46,7 @@ class OnBoardingWidget extends StatelessWidget {
                       ? const Radius.circular(100)
                       : const Radius.circular(0),
                 ),),
-            child: Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: MediaQuery.of(context).size.width * 0.14,
-                  vertical: MediaQuery.of(context).size.height * 0.03),
-              child: Column(
-                children: [
-                  Text(
-                    pages[index].title,
-                    style: TextStyles.audioWideRegularBlack,
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(
-                    height: 16,
-                  ),
-                  Text(
-                    pages[index].description,
-                    style: TextStyles.roboto20MediumBlack,
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            ),
+            child:  OnBoardingTwoTexts(title: pages[index].title, description: pages[index].description,),
           ),
         ),
         Positioned(
