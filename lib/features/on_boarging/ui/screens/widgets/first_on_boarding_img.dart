@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-
-import '../../../data/on_boarding_data.dart';
 import 'custom_dragon_shadow.dart';
 
 class FirstOnBoardingImage extends StatelessWidget {
-  const FirstOnBoardingImage({super.key});
+  const FirstOnBoardingImage({super.key, required this.image});
+  final String image;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +31,7 @@ class FirstOnBoardingImage extends StatelessWidget {
                 child: Transform.scale(
                   scale: 0.9,
                   child: Image.asset(
-                    pages[0].imagePath,
+                    image,
                     fit: BoxFit.contain,
                     width: MediaQuery.of(context).size.width * 0.9,
                     height: MediaQuery.of(context).size.height * 0.45,

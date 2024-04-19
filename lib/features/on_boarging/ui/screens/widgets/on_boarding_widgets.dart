@@ -26,10 +26,10 @@ class OnBoardingWidget extends StatelessWidget {
       alignment: Alignment.topCenter,
       children: [
         index == 0
-            ? const FirstOnBoardingImage()
+            ?  FirstOnBoardingImage(image: pages[index].imagePath,)
             : index == 1
-                ? const SecondOnBoardingImage()
-                : const ThirdOnBoardingImage(),
+                ?  SecondOnBoardingImage()
+                :  ThirdOnBoardingImage(),
         Positioned(
           bottom: 0,
           right: 0,
