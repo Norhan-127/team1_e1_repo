@@ -35,20 +35,15 @@ class _OnBoardingScreenBodyState extends State<OnBoardingScreenBody>
           controller: cubit.pageController,
           itemCount: 3,
           onPageChanged: (c) {
-            cubit.getCurrentPageViewIndex(c);
+            cubit.getCurrentPageScreenIndex(c);
           },
           itemBuilder: (BuildContext context, int index) {
-            return BlocBuilder<OnBoardingCurrentPageCubit,
-                OnBoardingCurrentPageState>(
-              builder: (context, state) {
-                return OnBoardingWidget(
-                  index: index,
-                  onTab: () {
-                    cubit.pageController.nextPage(
-                      duration: const Duration(milliseconds: 1000),
-                      curve: Curves.fastEaseInToSlowEaseOut,
-                    );
-                  },
+            return OnBoardingWidget(
+              index: index,
+              onTab: () {
+                cubit.pageController.nextPage(
+                  duration: const Duration(milliseconds: 1000),
+                  curve: Curves.fastEaseInToSlowEaseOut,
                 );
               },
             );
