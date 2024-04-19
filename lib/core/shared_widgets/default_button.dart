@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class DefaultButton extends StatelessWidget {
-  const DefaultButton({super.key, required this.radius, required this.backgroundColor, this.function, required this.text, this.icon, required this.style, this.IconColor});
   final double radius;
   final Color backgroundColor;
   final void Function()? function;
@@ -9,6 +8,7 @@ class DefaultButton extends StatelessWidget {
   final IconData? icon;
   final TextStyle style;
   final Color? IconColor;
+  const DefaultButton({super.key, required this.radius, required this.backgroundColor, this.function, required this.text, this.icon, required this.style, this.IconColor});
   @override
   Widget build(BuildContext context) {
     return Container(
