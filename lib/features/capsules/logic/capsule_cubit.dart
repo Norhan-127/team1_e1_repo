@@ -7,14 +7,18 @@ class CapsuleCubit extends Cubit<CapsuleState> {
   CapsuleCubit(this.cap_repo) : super(const CapsuleState.initial());
 
 
-  int index = 0;
 
 
 
-  void getAllCapsules(){
-    cap_repo.getAllCapsules().then((capsules) => {
-      emit(CapsuleState.getCapsules(capsules)),
-    });
+  void getAllCapsules()async{
+    var response = await capsuleRepo.getAllCapsules();
+
+    response.when(
+      success: (List<Capsule> capsule) => emit(CapsuleState.success(capsule)),
+      fail: (NetworkExceptions networkExceptions) => emit(CapsuleState.error(networkExceptions)),
+    );
+
+
 
   }
 }
