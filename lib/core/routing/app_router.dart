@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team1_e1/core/routing/routes.dart';
 import 'package:team1_e1/features/capsules/ui/screens/one_capsule_details_screen.dart';
+import '../../features/capsules/data/models/capsule.dart';
 import '../../features/capsules/logic/capsule_cubit.dart';
 import '../../features/capsules/ui/screens/capsules_screen.dart';
 import '../../features/on_boarging/ui/screens/on_baording_screen.dart';
