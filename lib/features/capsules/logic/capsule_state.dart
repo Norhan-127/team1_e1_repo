@@ -9,8 +9,8 @@ part 'capsule_state.freezed.dart';
 @freezed
 class CapsuleState with _$CapsuleState {
   const factory CapsuleState.initial() = _CapsuleInitial;
-  const factory CapsuleState.getCapsules(List<Capsule> allCapsules) = _GetCapsules;
-
+  const factory CapsuleState.success(T data) = _Success<T>;
+  const factory CapsuleState.error(NetworkExceptions networkExceptions) = _Error<T>;
 }
 
 
