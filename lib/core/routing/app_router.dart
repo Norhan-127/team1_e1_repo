@@ -22,11 +22,9 @@ class AppRouter {
             )
         );
       case Routes.capsuleDetailsScreen:
+        final capsule = settings.arguments as Capsule;
         return MaterialPageRoute(
-            builder: (_) => BlocProvider(
-              create: (context) => getIt<CapsuleCubit>(),
-              child: const OneCapsuleDetailsScreen(),
-            )
+            builder: (_) =>  OneCapsuleDetailsScreen(capsule: capsule,)
         );
       default:
         return MaterialPageRoute(
