@@ -34,7 +34,7 @@ class RocketCard extends StatelessWidget {
                 child:Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Falcon Heavy',style: TextStyles.MeduimWhite,),
+                    Text('Falcon Heavy',style: TextStyles.font22RegularWhite,),
                     Text(
                       'The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth',
                       maxLines: 2,

@@ -60,7 +60,7 @@ abstract class TextStyles {
     fontWeight: FontWeightHelper.light,
     color: Colors.white,
   );
-  static TextStyle MeduimWhite = GoogleFonts.poppins(
+  static TextStyle font22RegularWhite = GoogleFonts.poppins(
     fontSize: 22,
     fontWeight: FontWeightHelper.regular,
     color: Colors.white,
