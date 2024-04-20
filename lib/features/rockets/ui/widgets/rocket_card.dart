@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:team1_e1/core/theming/colors.dart';
 import 'package:team1_e1/core/theming/styles.dart';
-import 'package:team1_e1/features/rockets/ui/screens/rocket_details.dart';
+import 'package:team1_e1/features/rockets/ui/screens/rocket_details_screen.dart';
 
 
 class RocketCard extends StatelessWidget {
@@ -29,7 +29,7 @@ class RocketCard extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => const RocketDetails(),),);
+                    MaterialPageRoute(builder: (_) => const RocketDetailsScreen(),),);
                 },
                 child:Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

@@ -3,8 +3,8 @@ import 'package:team1_e1/features/rockets/ui/widgets/rocket_informations.dart';
 import 'package:team1_e1/core/shared_widgets/defult_app_bar.dart';
 
 
-class RocketDetails extends StatelessWidget {
-  const RocketDetails({super.key});
+class RocketDetailsScreen extends StatelessWidget {
+  const RocketDetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
