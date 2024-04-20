@@ -5,9 +5,13 @@ class CapsuleRepo{
   final WebServices webServices;
   CapsuleRepo(this.webServices);
 
-  Future<List<Capsule>> getAllCapsules() async{
-    var response = await webServices.getAllCapsules();
-    return response.map((capsule) => Capsule.fromJson(capsule.toJson())).toList();
+  Future<ApiResult<List<Capsule>>> getAllCapsules() async{
+    try{
+      var response = await webServices.getAllCapsules();
+      return ApiResult.success(response);
+    }catch(error){
+      return ApiResult.fail(NetworkExceptions.getDioException(error));
+    }
   }
 
 }
