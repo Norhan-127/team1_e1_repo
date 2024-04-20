@@ -2,14 +2,11 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
 part 'network_exceptions.freezed.dart';
 
 @freezed
 abstract class NetworkExceptions with _$NetworkExceptions {
   const factory NetworkExceptions.requestCancelled() = RequestCancelled;
-
-  const factory NetworkExceptions.unauthorizedRequest(String reason) = UnauthorizedRequest;
 
   const factory NetworkExceptions.badRequest() = BadRequest;
 
@@ -18,10 +15,6 @@ abstract class NetworkExceptions with _$NetworkExceptions {
   const factory NetworkExceptions.methodNotAllowed() = MethodNotAllowed;
 
   const factory NetworkExceptions.notAcceptable() = NotAcceptable;
-
-  const factory NetworkExceptions.requestTimeout() = RequestTimeout;
-
-  const factory NetworkExceptions.sendTimeout() = SendTimeout;
 
   const factory NetworkExceptions.unprocessableEntity(String reason) = UnprocessableEntity;
 
@@ -46,10 +39,12 @@ abstract class NetworkExceptions with _$NetworkExceptions {
   static NetworkExceptions handleResponse(Response? response) {
     int statusCode = response?.statusCode ?? 0;
     switch (statusCode) {
+      case 404:
+        return const NetworkExceptions.notFound('page not found');
       case 409:
         return const NetworkExceptions.conflict();
       case 408:
-        return const NetworkExceptions.requestTimeout();
+        return const NetworkExceptions.noInternetConnection();
       case 500:
         return const NetworkExceptions.internalServerError();
       case 503:
@@ -64,44 +59,46 @@ abstract class NetworkExceptions with _$NetworkExceptions {
 
   static NetworkExceptions getDioException(error) {
     if (error is Exception) {
-      NetworkExceptions networkExceptions;
       try {
-        if (error is SocketException) {
-          networkExceptions = const NetworkExceptions.noInternetConnection();
-        } else if (error is DioException) {
+        NetworkExceptions networkExceptions;
+        if (error is DioException) {
           switch (error.type) {
             case DioExceptionType.cancel:
               networkExceptions = const NetworkExceptions.requestCancelled();
               break;
             case DioExceptionType.connectionTimeout:
-              networkExceptions = const NetworkExceptions.requestTimeout();
+              networkExceptions = const NetworkExceptions.noInternetConnection();
               break;
             case DioExceptionType.unknown:
               networkExceptions = const NetworkExceptions.noInternetConnection();
               break;
             case DioExceptionType.receiveTimeout:
-              networkExceptions = const NetworkExceptions.sendTimeout();
+              networkExceptions = const NetworkExceptions.noInternetConnection();
               break;
             case DioExceptionType.badResponse:
               networkExceptions = NetworkExceptions.handleResponse(error.response);
               break;
             case DioExceptionType.sendTimeout:
-              networkExceptions = const NetworkExceptions.sendTimeout();
+              networkExceptions = const NetworkExceptions.noInternetConnection();
               break;
             case DioExceptionType.badCertificate:
-              networkExceptions = NetworkExceptions.handleResponse(error.response);
+              networkExceptions = const NetworkExceptions.noInternetConnection();
               break;
+
             case DioExceptionType.connectionError:
               networkExceptions = const NetworkExceptions.noInternetConnection();
               break;
           }
+        } else if (error is SocketException) {
+          networkExceptions = const NetworkExceptions.noInternetConnection();
         } else {
           networkExceptions = const NetworkExceptions.unexpectedError();
         }
         return networkExceptions;
-      } on SocketException{
-        networkExceptions = const NetworkExceptions.noInternetConnection();
-        return networkExceptions;
+      } on FormatException catch (e) {
+        return const NetworkExceptions.formatException();
+      } catch (_) {
+        return const NetworkExceptions.unexpectedError();
       }
     } else {
       if (error.toString().contains("is not a subtype of")) {
