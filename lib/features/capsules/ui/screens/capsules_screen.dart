@@ -6,6 +6,7 @@ import 'package:team1_e1/core/theming/styles.dart';
 import 'package:team1_e1/features/capsules/logic/capsule_cubit.dart';
 import 'package:team1_e1/features/capsules/ui/widgets/capsule_container_serial.dart';
 
+import '../../../../core/networking/network_exceptions.dart';
 import '../../../../core/routing/routes.dart';
 import '../../logic/capsule_state.dart';
 
@@ -43,28 +44,46 @@ class _CapsulesScreenState extends State<CapsulesScreen> {
                 height: MediaQuery.of(context).size.height * 0.56,
                 child: BlocBuilder<CapsuleCubit, CapsuleState>(
                   builder: (context, state) {
-                    return state.when(initial: () {
-                      return const Center(
-                          child: CircularProgressIndicator(
-                        color: Colors.white,
-                        strokeWidth: 10,
-                      ));
-                    }, getCapsules: (allCapsules) {
-                      return ListView.builder(
-                          itemCount: allCapsules.length,
-                          itemBuilder: (context, i) {
-                            return GestureDetector(
+                    return state.when(
+                        initial: () {
+                          return const Center(
+                            child: CircularProgressIndicator(
+                              color: Colors.white,
+                              strokeWidth: 3,
+                            ),
+                          );
+                        },
+                        success: (allCapsules) {
+                          return ListView.builder(
+                              itemCount: allCapsules.length,
+                              itemBuilder: (context, i) => GestureDetector(
                                 onTap: () {
-                                  context.read<CapsuleCubit>().index = i;
                                   Navigator.pushNamed(
-                                      context, Routes.capsuleDetailsScreen);
+                                      context, Routes.capsuleDetailsScreen,
+                                      arguments: allCapsules[i]);
                                 },
                                 child: CapsuleContainerSerial(
                                   txt: allCapsules[i].serial,
                                   index: i + 1,
-                                ));
-                          });
-                    });
+                                ),
+                              ));
+                        },
+                        error: (networkExceptions) => AlertDialog(
+                          title: Text(
+                            NetworkExceptions.getErrorMessage(
+                                networkExceptions),
+                          ),
+                          actions: [
+                            ElevatedButton(
+                              onPressed: () {
+                                context
+                                    .read<CapsuleCubit>()
+                                    .getAllCapsules();
+                              },
+                              child: const Text('refresh'),
+                            )
+                          ],
+                        ));
                   },
                 ),
               )
