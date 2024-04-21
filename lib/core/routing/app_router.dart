@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:team1_e1/core/routing/routes.dart';
+import 'package:team1_e1/features/crew/ui/screen/crew_screen.dart';
 import 'package:team1_e1/features/auth/login/ui/screens/before_login.dart';
 import 'package:team1_e1/features/auth/login/ui/screens/login_screen.dart';
 import 'package:team1_e1/features/auth/register/ui/screens/register_screen.dart';
@@ -12,17 +13,21 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const OnBoardingScreen(),
         );
+        case Routes.crewScreen:
+        return MaterialPageRoute(
+          builder: (_) => const CrewScreen(),
+        );
       case Routes.beforeLoginScreen:
         return MaterialPageRoute(
           builder: (_) => const BeforeLoginScreen(),
         );
-        case Routes.loginScreen:
+      case Routes.loginScreen:
         return MaterialPageRoute(
           builder: (_) => const LoginScreen(),
         );
-        case Routes.signUpScreen:
+      case Routes.signUpScreen:
         return MaterialPageRoute(
-          builder: (_) => const RegisterScreen(),
+            builder: (_) => const RegisterScreen(),
         );
       default:
         return MaterialPageRoute(
