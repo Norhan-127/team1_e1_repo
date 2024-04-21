@@ -59,6 +59,11 @@ abstract class TextStyles {
     fontWeight: FontWeightHelper.medium,
     color: AppColors.whiteColor,
   );
+  static TextStyle poppins28BoldWhite = GoogleFonts.poppins(
+    fontSize: 28.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.whiteColor,
+  );
   static TextStyle poppins17MediumWhite = GoogleFonts.poppins(
     fontSize: 17.sp,
     fontWeight: FontWeightHelper.medium,

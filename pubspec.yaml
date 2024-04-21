@@ -35,6 +35,8 @@ dependencies:
   flutter_native_splash: ^2.4.0
   # for adapting screen and font size.
   flutter_screenutil: ^5.9.0
+  #firebase_lib
+  firebase_core: ^2.30.0
 
   cupertino_icons: ^1.0.6
   google_fonts: ^6.1.0
