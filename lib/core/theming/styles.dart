@@ -7,6 +7,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'colors.dart';
 import 'font_weight_helper.dart';
 
 abstract class TextStyles {
@@ -30,7 +31,8 @@ abstract class TextStyles {
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
     color: Colors.black,
-  );static TextStyle openSans30Black = GoogleFonts.openSans(
+  );
+  static TextStyle openSans30Black = GoogleFonts.openSans(
     fontSize: 30.sp,
     fontWeight: FontWeightHelper.regular,
     color: Colors.black,
@@ -70,5 +72,40 @@ abstract class TextStyles {
     fontWeight: FontWeightHelper.light,
     color: Colors.white,
   );
+  static TextStyle poppins28BoldWhite = GoogleFonts.poppins(
+    fontSize: 28.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.whiteColor,
+  );
 
+  static TextStyle poppins21MediumBlack = GoogleFonts.poppins(
+    fontSize: 21.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: Colors.black,
+  );
+  static TextStyle poppins40MediumWhite = GoogleFonts.poppins(
+    fontSize: 40.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.whiteColor,
+  );
+  static TextStyle poppins63SemiBoldWhite = GoogleFonts.poppins(
+    fontSize: 63.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: AppColors.whiteColor,
+  );
+  static TextStyle poppins19MediumWhite = GoogleFonts.poppins(
+    fontSize: 19.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.whiteColor,
+  );
+  static TextStyle poppins17MediumWhite = GoogleFonts.poppins(
+    fontSize: 17.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.whiteColor,
+  );
+  static TextStyle poppins17LightWhite = GoogleFonts.poppins(
+    fontSize: 17.sp,
+    fontWeight: FontWeightHelper.light,
+    color: AppColors.whiteColor,
+  );
 }

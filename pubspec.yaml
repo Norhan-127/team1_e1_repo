@@ -7,7 +7,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.3.3 <4.0.0'
+  sdk: '>=3.3.1 <4.0.0'
 
 dependencies:
   flutter:
@@ -32,9 +32,11 @@ dependencies:
   intl: ^0.18.1
   easy_localization: ^3.0.3
   # for splash screen
-  flutter_native_splash: ^2.3.5
+  flutter_native_splash: ^2.4.0
   # for adapting screen and font size.
   flutter_screenutil: ^5.9.0
+  #firebase_lib
+  firebase_core: ^2.30.0
 
   cupertino_icons: ^1.0.6
   google_fonts: ^6.1.0
@@ -56,6 +58,7 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
 
 #  assets:
   # To add assets to your application, add an assets section, like this:
