@@ -5,6 +5,7 @@ import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:team1_e1/core/theming/styles.dart';
 import 'package:team1_e1/core/theming/svg_images.dart';
 import 'package:team1_e1/features/crew/ui/screen/crew_screen.dart';
+import 'package:team1_e1/features/rockets/ui/screens/rockets_screen.dart';
 import '../../../core/theming/colors.dart';
 
 class NavBarScreen extends StatefulWidget {
@@ -19,16 +20,14 @@ class _NavBarScreenState extends State<NavBarScreen> {
 
   List<Widget> _buildScreens() {
     return [
-      const CrewScreen(),
       Container(
         color: Colors.brown,
       ),
-      Container(
-        color: Colors.black,
-      ),
+      const RocketsScreen(),
       Container(
         color: Colors.green,
       ),
+      const CrewScreen(),
       Container(
         color: Colors.white,
       ),

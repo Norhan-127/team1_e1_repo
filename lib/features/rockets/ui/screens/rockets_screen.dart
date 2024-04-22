@@ -22,12 +22,6 @@ class RocketsScreen extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 20,),
-              DefaultAppBar(
-                icon: Icons.arrow_back,
-                function: () => Navigator.pop(context),
-                text: 'SpaceX Rockets',
-              ),
-              const SizedBox(height: 20),
               const Divider(
                 height: 0.5,
                 color: Colors.white24,
