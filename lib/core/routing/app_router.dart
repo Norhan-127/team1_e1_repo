@@ -6,8 +6,6 @@ import 'package:team1_e1/features/crew/ui/screen/crew_screen.dart';
 import 'package:team1_e1/features/auth/login/ui/screens/before_login.dart';
 import 'package:team1_e1/features/auth/login/ui/screens/login_screen.dart';
 import 'package:team1_e1/features/auth/register/ui/screens/register_screen.dart';
-import '../../features/on_boarging/ui/screens/on_baording_screen.dart';
-
 
 class AppRouter {
   static Route generateRoute(RouteSettings settings) {
@@ -20,8 +18,9 @@ class AppRouter {
       case Routes.rocketDetailsScreen:
         return MaterialPageRoute(
           builder: (_) => const RocketDetailsScreen(),
+        );
 
-        case Routes.crewScreen:
+      case Routes.crewScreen:
         return MaterialPageRoute(
           builder: (_) => const CrewScreen(),
         );
@@ -35,8 +34,7 @@ class AppRouter {
         );
       case Routes.signUpScreen:
         return MaterialPageRoute(
-            builder: (_) => const RegisterScreen(),
-
+          builder: (_) => const RegisterScreen(),
         );
       default:
         return MaterialPageRoute(
