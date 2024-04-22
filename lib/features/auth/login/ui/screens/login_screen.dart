@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/routing/routes.dart';
 import '../../../../../core/shared_widgets/default_button.dart';
 import '../../../../../core/shared_widgets/default_text_field.dart';
@@ -56,6 +57,7 @@ class LoginScreen extends StatelessWidget {
                         Navigator.pushReplacementNamed(context, Routes.navBarScreen);
                     },
                   ),
+                  SizedBox(height: 20.h,),
                   TextButton(onPressed: (){
                     Navigator.pushNamed(context, Routes.signUpScreen);
                   }, child: Text('Register -> ' , style: TextStyles.exo14White,))
