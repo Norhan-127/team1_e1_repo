@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import '../../../../core/theming/styles.dart';
 import '../widgets/crew_list.dart';
 
 class CrewScreen extends StatelessWidget {
@@ -21,10 +19,6 @@ class CrewScreen extends StatelessWidget {
           ),
            child: Column(
              children: [
-               AppBar(
-                 backgroundColor: Colors.transparent,
-                 title: Text('SpaceX Crew',style: TextStyles.poppins28BoldWhite,),
-               ),
                SizedBox(height: 20,),
                CrewList(),
              ],
