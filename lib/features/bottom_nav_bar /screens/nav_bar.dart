@@ -49,7 +49,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
       ),
       PersistentBottomNavBarItem(
         contentPadding: 1,
-        icon: SvgPicture.asset(SvgImages.bottomNavRocket,color:  _controller.index == 1 ? Colors.white : Colors.white.withOpacity(0.5),),
+        icon: SvgPicture.asset(SvgImages.bottomNavRocket,color:  AppColors.whiteColor,),
         // title: 'Capsule',
         activeColorPrimary: AppColors.whiteColor,
         inactiveColorPrimary: AppColors.whiteColor,
@@ -58,7 +58,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
       ),
       PersistentBottomNavBarItem(
         contentPadding: 1,
-        icon: SvgPicture.asset(SvgImages.bottomNavDragon,color:  _controller.index == 2 ? Colors.white : Colors.white.withOpacity(0.5),),
+        icon: SvgPicture.asset(SvgImages.bottomNavDragon,color: AppColors.whiteColor,),
         // title: 'Capsule',
         iconSize: 15,
         activeColorPrimary: AppColors.whiteColor,
@@ -67,7 +67,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
       ),
       PersistentBottomNavBarItem(
         contentPadding: 1,
-        icon: SvgPicture.asset(SvgImages.bottomNavCrew,color:  _controller.index == 3 ? Colors.white : Colors.white.withOpacity(0.5),),
+        icon: SvgPicture.asset(SvgImages.bottomNavCrew,color:  AppColors.whiteColor,),
         // title: 'Capsule',
         iconSize: 15,
         activeColorPrimary: AppColors.whiteColor,
@@ -76,7 +76,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
       ),
       PersistentBottomNavBarItem(
         contentPadding: 1,
-        icon: SvgPicture.asset(SvgImages.bottomNavLaunch,color:  _controller.index == 4 ? Colors.white : Colors.white.withOpacity(0.5),),
+        icon: SvgPicture.asset(SvgImages.bottomNavLaunch,color:  AppColors.whiteColor,),
         // title: 'Capsule',
         iconSize: 15,
         activeColorPrimary: AppColors.whiteColor,
@@ -120,8 +120,8 @@ class _NavBarScreenState extends State<NavBarScreen> {
             duration: Duration(milliseconds: 200),
           ),
           navBarStyle: NavBarStyle.style3,
-        ),
-      ),
+        )
+      )
     );
   }
 }

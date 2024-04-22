@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team1_e1/core/routing/routes.dart';
-import 'package:team1_e1/features/bottom_nav_bar%20/logic/nav_bar_cubit.dart';
 import 'package:team1_e1/features/bottom_nav_bar%20/screens/nav_bar.dart';
 import 'package:team1_e1/features/on_boarging/ui/screens/on_baording_screen.dart';
 import 'package:team1_e1/features/rockets/ui/screens/rocket_details_screen.dart';
@@ -41,9 +39,7 @@ class AppRouter {
         );
         case Routes.navBarScreen:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider.value(
-            value: NavBarCubit(),
-              child: const NavBarScreen(),),
+          builder: (_) => const NavBarScreen(),
         );
       default:
         return MaterialPageRoute(
