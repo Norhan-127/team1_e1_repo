@@ -52,6 +52,9 @@ class LoginScreen extends StatelessWidget {
                       icon: Icons.arrow_forward,
                     style: TextStyles.poppins21MediumBlack,
                     IconColor: Colors.black,
+                    function: (){
+                        Navigator.pushReplacementNamed(context, Routes.navBarScreen);
+                    },
                   ),
                   TextButton(onPressed: (){
                     Navigator.pushNamed(context, Routes.signUpScreen);
