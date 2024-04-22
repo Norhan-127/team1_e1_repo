@@ -7,6 +7,10 @@ import 'package:team1_e1/features/auth/login/ui/screens/before_login.dart';
 import 'package:team1_e1/features/auth/login/ui/screens/login_screen.dart';
 import 'package:team1_e1/features/auth/register/ui/screens/register_screen.dart';
 
+import '../../features/capsules/ui/screens/capsules_screen.dart';
+import '../../features/dragon/ui/screens/dragon_screen.dart';
+import '../../features/launches/ui/screens/launches_screen.dart';
+
 
 class AppRouter {
   static Route generateRoute(RouteSettings settings) {
