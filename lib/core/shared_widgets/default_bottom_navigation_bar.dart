@@ -20,13 +20,13 @@ class DefaultBottomNavigationBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            HomeButtons(img: 'assets/images/rocket.svg', txt: 'Capsule',onTap: (){
+            HomeButtons(img: 'assets/images/capsule.svg', txt: 'Capsule',onTap: (){
               Navigator.pushReplacementNamed(context, Routes.capsuleScreen);
             },),
             HomeButtons(img: 'assets/images/rocket.svg', txt: 'Rockets',onTap: (){
               Navigator.pushReplacementNamed(context, Routes.rocketScreen);
             },),
-            HomeButtons(img: 'assets/images/rocket.svg', txt: 'Crew' , onTap: (){
+            HomeButtons(img: 'assets/images/crew.svg', txt: 'Crew' , onTap: (){
               Navigator.pushReplacementNamed(context, Routes.crewScreen);
             },),
             HomeButtons(img: 'assets/images/rocket.svg', txt: 'Dragons',onTap: (){
