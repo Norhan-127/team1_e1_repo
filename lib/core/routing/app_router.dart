@@ -6,7 +6,6 @@ import 'package:team1_e1/features/crew/ui/screen/crew_screen.dart';
 import 'package:team1_e1/features/auth/login/ui/screens/before_login.dart';
 import 'package:team1_e1/features/auth/login/ui/screens/login_screen.dart';
 import 'package:team1_e1/features/auth/register/ui/screens/register_screen.dart';
-import '../../features/on_boarging/ui/screens/on_baording_screen.dart';
 
 
 class AppRouter {
@@ -19,7 +18,7 @@ class AppRouter {
 
       case Routes.rocketDetailsScreen:
         return MaterialPageRoute(
-          builder: (_) => const RocketDetailsScreen(),
+          builder: (_) => const RocketDetailsScreen(),);
 
         case Routes.crewScreen:
         return MaterialPageRoute(
@@ -36,6 +35,21 @@ class AppRouter {
       case Routes.signUpScreen:
         return MaterialPageRoute(
             builder: (_) => const RegisterScreen(),
+
+        );
+      case Routes.capsuleScreen:
+        return MaterialPageRoute(
+          builder: (_) => const CapsuleScreen(),
+
+        );
+      case Routes.launchesScreen:
+        return MaterialPageRoute(
+          builder: (_) => const LaunchesScreen(),
+
+        );
+      case Routes.dragonScreen:
+        return MaterialPageRoute(
+          builder: (_) => const DragonScreen(),
 
         );
       default:

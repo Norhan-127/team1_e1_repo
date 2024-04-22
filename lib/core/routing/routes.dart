@@ -7,5 +7,9 @@ class Routes {
   static const String rocketScreen = '/rocketScreen';
   static const String rocketDetailsScreen = '/rocketDetailsScreen';
   static const String crewScreen = '/crewScreen';
+  static const String capsuleScreen = '/capsuleScreen';
+  static const String launchesScreen = '/launchesScreen';
+  static const String dragonScreen = '/dragonScreen';
+
 
 }
