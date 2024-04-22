@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../../core/routing/routes.dart';
 import '../../../../../core/shared_widgets/default_button.dart';
 import '../../../../../core/shared_widgets/default_text_field.dart';
 import '../../../../../core/theming/colors.dart';
@@ -51,7 +52,13 @@ class LoginScreen extends StatelessWidget {
                       icon: Icons.arrow_forward,
                     style: TextStyles.poppins21MediumBlack,
                     IconColor: Colors.black,
-                  )
+                    function: (){
+                        Navigator.pushReplacementNamed(context, Routes.capsuleScreen);
+                    },
+                  ),
+                  TextButton(onPressed: (){
+                    Navigator.pushNamed(context, Routes.signUpScreen);
+                  }, child: Text('Register -> ' , style: TextStyles.exo14White,))
                 ],
               ),
             ),
