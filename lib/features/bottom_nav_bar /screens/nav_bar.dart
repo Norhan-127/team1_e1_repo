@@ -16,6 +16,7 @@ class NavBarScreen extends StatefulWidget {
 class _NavBarScreenState extends State<NavBarScreen> {
   final _controller = PersistentTabController();
 
+
   List<Widget> _buildScreens() {
     return [
      const CrewScreen(),
