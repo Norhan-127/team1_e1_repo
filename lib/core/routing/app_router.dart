@@ -20,7 +20,7 @@ class AppRouter {
       case Routes.rocketDetailsScreen:
         return MaterialPageRoute(
           builder: (_) => const RocketDetailsScreen(),
-
+        );
         case Routes.crewScreen:
         return MaterialPageRoute(
           builder: (_) => const CrewScreen(),
