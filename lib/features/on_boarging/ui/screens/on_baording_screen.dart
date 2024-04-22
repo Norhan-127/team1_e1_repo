@@ -1,9 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:team1_e1/core/theming/styles.dart';
 
-class OnBoardingScreen extends StatelessWidget {
+import '../../../../core/routing/routes.dart';
+
+class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
 
+  @override
+  State<OnBoardingScreen> createState() => _OnBoardingScreenState();
+}
+
+class _OnBoardingScreenState extends State<OnBoardingScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 3) , (){
+      Navigator.pushReplacementNamed(context, Routes.loginScreen);
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
