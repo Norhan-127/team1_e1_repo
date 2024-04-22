@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:team1_e1/core/shared_widgets/default_bottom_navigation_bar.dart';
 import '../../../../core/theming/styles.dart';
 import '../widgets/crew_list.dart';
 
@@ -27,6 +28,7 @@ class CrewScreen extends StatelessWidget {
                ),
                SizedBox(height: 20,),
                CrewList(),
+               const DefaultBottomNavigationBar()
              ],
            ),
         ),
