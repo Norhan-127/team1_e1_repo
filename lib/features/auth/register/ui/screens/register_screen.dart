@@ -13,7 +13,7 @@ class RegisterScreen extends StatelessWidget {
           height: double.infinity,
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/space-galaxy-background-generative-ai 1.png"),
+                image: AssetImage("assets/images/auth_background.png"),
                 fit: BoxFit.cover),
           ),
           child: const SingleChildScrollView(
