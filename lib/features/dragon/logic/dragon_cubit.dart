@@ -4,10 +4,10 @@ import 'package:team1_e1/features/dragon/data/models/dragon_response.dart';
 import 'package:team1_e1/features/dragon/data/repo/dragon_repo.dart';
 import 'dragon_state.dart';
 
-class CapsuleCubit extends Cubit<DragonState> {
+class DragonCubit extends Cubit<DragonState> {
   final DragonRepo capsuleRepo;
 
-  CapsuleCubit(this.capsuleRepo) : super(const DragonState.initial());
+  DragonCubit(this.capsuleRepo) : super(const DragonState.initial());
 
 
   void getAllCapsules() async {
