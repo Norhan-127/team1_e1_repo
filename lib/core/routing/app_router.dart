@@ -6,6 +6,8 @@ import 'package:team1_e1/features/crew/ui/screen/crew_screen.dart';
 import 'package:team1_e1/features/auth/login/ui/screens/before_login.dart';
 import 'package:team1_e1/features/auth/login/ui/screens/login_screen.dart';
 import 'package:team1_e1/features/auth/register/ui/screens/register_screen.dart';
+import '../../features/dragon/ui/screens/dragon_details_screen.dart';
+import '../../features/dragon/ui/screens/dragon_screen.dart';
 import '../../features/on_boarging/ui/screens/on_baording_screen.dart';
 
 
