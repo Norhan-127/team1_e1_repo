@@ -38,6 +38,16 @@ class AppRouter {
             builder: (_) => const RegisterScreen(),
 
         );
+      case Routes.dragonScreen:
+        return MaterialPageRoute(
+          builder: (_) => const DragonScreen(),
+
+        );
+      case Routes.dragonDetailsScreen:
+        return MaterialPageRoute(
+          builder: (_) => const DragonDetailsScreen(),
+
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
