@@ -16,7 +16,7 @@ class CrewScreen extends StatelessWidget {
           height: double.infinity,
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/4553888_19629 1.png"),
+                image: AssetImage("assets/images/app_background.png"),
                 fit: BoxFit.cover),
           ),
            child: Column(

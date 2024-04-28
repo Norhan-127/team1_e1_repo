@@ -20,7 +20,7 @@ class CrewCard extends StatelessWidget {
           children: [
             const ClipRRect(
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(30),bottomLeft: Radius.circular(30)),
-                child: Image(image: AssetImage('assets/images/undefined - Imgur.png',),width: 185,height: 185,)),
+                child: Image(image: AssetImage('assets/images/crew.png',),width: 185,height: 185,)),
             const SizedBox(width: 2,),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
