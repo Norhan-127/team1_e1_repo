@@ -12,6 +12,10 @@ import '../../features/dragon/ui/screens/dragon_details_screen.dart';
 import '../../features/dragon/ui/screens/dragon_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+
+
+
+
 class AppRouter {
   static Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
