@@ -1,3 +1,9 @@
+//Roboto-> for body text, menus, and information displays.
+//Orbitron->Use for section headings, titles, and possibly numbers like dates and countdowns.
+//Exo-> (For Special Elements)->It works well for drawing attention to specific UI elements like buttons, tags, or status indicators.
+//Open Sans->Applicable for sections with more text, like capsule histories or detailed descriptions.
+//Source Code
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,6 +22,11 @@ abstract class TextStyles {
     fontWeight: FontWeightHelper.bold,
     color: Colors.black,
   );
+  static TextStyle orbitron24BoldWhite = GoogleFonts.orbitron(
+    fontSize: 24.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.white,
+  );
   static TextStyle exo14Black = GoogleFonts.exo(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
@@ -31,8 +42,36 @@ abstract class TextStyles {
     fontWeight: FontWeightHelper.bold,
     color: Colors.black,
   );
-
-
+  static TextStyle sourceCode20White = GoogleFonts.sourceCodePro(
+    fontSize: 20.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.white,
+  );
+  static TextStyle exo14White = GoogleFonts.exo(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: Colors.white,
+  );
+  static TextStyle BoldlWhite = GoogleFonts.poppins(
+    fontSize: 26,
+    fontWeight: FontWeightHelper.medium,
+    color: Colors.white,
+  );
+  static TextStyle NormalWhite = GoogleFonts.poppins(
+    fontSize: 18,
+    fontWeight: FontWeightHelper.light,
+    color: Colors.white,
+  );
+  static TextStyle font22RegularWhite = GoogleFonts.poppins(
+    fontSize: 22,
+    fontWeight: FontWeightHelper.regular,
+    color: Colors.white,
+  );
+  static TextStyle SmallWhite = GoogleFonts.poppins(
+    fontSize: 15,
+    fontWeight: FontWeightHelper.light,
+    color: Colors.white,
+  );
   static TextStyle poppins28BoldWhite = GoogleFonts.poppins(
     fontSize: 28.sp,
     fontWeight: FontWeightHelper.bold,
@@ -70,8 +109,3 @@ abstract class TextStyles {
     color: AppColors.whiteColor,
   );
 }
-//Roboto-> for body text, menus, and information displays.
-//Orbitron->Use for section headings, titles, and possibly numbers like dates and countdowns.
-//Exo-> (For Special Elements)->It works well for drawing attention to specific UI elements like buttons, tags, or status indicators.
-//Open Sans->Applicable for sections with more text, like capsule histories or detailed descriptions.
-//Source Code Pro-> Ideal for technical data displays, code snippets, or any section where alignment and precision are key.
