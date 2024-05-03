@@ -5,12 +5,13 @@ import '../data/repo/launches_repo.dart';
 import 'launches_state.dart';
 
 class LaunchesCubit extends Cubit<LaunchesState> {
-  final LaunchesRepo launchesRepo;
+  final LaunchesRepo _launchesRepo;
 
-  LaunchesCubit(this.launchesRepo) : super(const LaunchesState.initial());
+  LaunchesCubit(this._launchesRepo) : super(const LaunchesState.initial());
 
   void getAllLaunches() async {
-    var response = await launchesRepo.getAllLaunches();
+    emit(const LaunchesState.loading());
+    final response = await _launchesRepo.getAllLaunches();
     response.when(
       success: (List<LaunchesResponseModel> launches) => emit(
         LaunchesState.success(launches),
