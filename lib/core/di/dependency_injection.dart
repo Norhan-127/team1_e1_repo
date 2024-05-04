@@ -5,6 +5,8 @@ import 'package:team1_e1/features/dragon/data/repo/dragon_repo.dart';
 import 'package:team1_e1/features/dragon/logic/dragon_cubit.dart';
 import '../../features/capsules/data/repo/capsules_repo.dart';
 import '../../features/capsules/logic/capsule_cubit.dart';
+import '../../features/crew/data/repo/crew_repo.dart';
+import '../../features/crew/logic/crew_cubit.dart';
 import '../networking/dio_factory.dart';
 
 
@@ -21,6 +23,11 @@ Future<void> setUpGetIt()async{
   //---------------Capsules----------------------
   getIt.registerLazySingleton<CapsuleRepo>(() => CapsuleRepo(getIt()));
   getIt.registerLazySingleton<CapsuleCubit>(() => CapsuleCubit(getIt()));
+
+
+  //---------------Crew----------------------
+  getIt.registerLazySingleton<CrewRepo>(() => CrewRepo(getIt()));
+  getIt.registerLazySingleton<CrewCubit>(() => CrewCubit(getIt()));
 
 
 }
