@@ -68,7 +68,6 @@ class AppRouter {
       case Routes.dragonDetailsScreen:
         final dragon = settings.arguments as Dragon;
         return MaterialPageRoute(
-          builder: (_) => const DragonDetailsScreen(),
         builder: (_) => DragonDetailsScreen(dragon: dragon),
         );
       case Routes.capsuleScreen:
