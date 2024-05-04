@@ -5,13 +5,13 @@ import 'package:team1_e1/features/dragon/data/repo/dragon_repo.dart';
 import 'dragon_state.dart';
 
 class DragonCubit extends Cubit<DragonState> {
-  final DragonRepo capsuleRepo;
+  final DragonRepo dragonRepo;
 
-  DragonCubit(this.capsuleRepo) : super(const DragonState.initial());
+  DragonCubit(this.dragonRepo) : super(const DragonState.initial());
 
 
-  void getAllCapsules() async {
-    var response = await capsuleRepo.getAllDragons();
+  void getAllDragons() async {
+    var response = await dragonRepo.getAllDragons();
 
     response.when(
       success: (List<Dragon> dragon) => emit(DragonState.success(dragon)),
