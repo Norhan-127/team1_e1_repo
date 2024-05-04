@@ -12,6 +12,7 @@ import 'package:team1_e1/features/auth/login/ui/screens/login_screen.dart';
 import 'package:team1_e1/features/auth/register/ui/screens/register_screen.dart';
 import '../../features/capsules/data/models/capsules_response.dart';
 import '../../features/capsules/ui/screens/one_capsule_details_screen.dart';
+import '../../features/dragon/data/models/dragon_response.dart';
 import '../../features/dragon/ui/screens/dragon_details_screen.dart';
 import '../../features/dragon/ui/screens/dragon_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -58,8 +59,9 @@ class AppRouter {
 
         );
       case Routes.dragonDetailsScreen:
+        final dragon = settings.arguments as Dragon;
         return MaterialPageRoute(
-          builder: (_) => const DragonDetailsScreen(),
+        builder: (_) => DragonDetailsScreen(dragon: dragon),
 
         );
       case Routes.capsuleScreen:
