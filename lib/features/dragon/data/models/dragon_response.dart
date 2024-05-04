@@ -3,21 +3,19 @@ part 'dragon_response.g.dart';
 
 @JsonSerializable()
 class Dragon {
+  @JsonKey(name: 'heat_shield')
   HeatShield? heatShield;
+  @JsonKey(name: 'height_w_trunk')
   HeightWTrunk? heightWTrunk;
   Diameter? diameter;
+  @JsonKey(name: 'first_flight')
   String? firstFlight;
+  @JsonKey(name: 'flickr_images')
   List<String>? flickrImages;
   String? name;
   String? type;
   bool? active;
-  int? crewCapacity;
-  int? sidewallAngleDeg;
-  int? orbitDurationYr;
-  int? dryMassKg;
-  int? dryMassLb;
   List<Thrusters>? thrusters;
-  String? wikipedia;
   String? description;
   String? id;
 
@@ -30,13 +28,7 @@ class Dragon {
         this.name,
         this.type,
         this.active,
-        this.crewCapacity,
-        this.sidewallAngleDeg,
-        this.orbitDurationYr,
-        this.dryMassKg,
-        this.dryMassLb,
         this.thrusters,
-        this.wikipedia,
         this.description,
         this.id});
   factory Dragon.fromJson(Map<String, dynamic> json) => _$DragonFromJson(json);

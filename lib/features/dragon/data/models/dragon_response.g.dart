@@ -7,51 +7,40 @@ part of 'dragon_response.dart';
 // **************************************************************************
 
 Dragon _$DragonFromJson(Map<String, dynamic> json) => Dragon(
-      heatShield: json['heatShield'] == null
+      heatShield: json['heat_shield'] == null
           ? null
-          : HeatShield.fromJson(json['heatShield'] as Map<String, dynamic>),
-      heightWTrunk: json['heightWTrunk'] == null
+          : HeatShield.fromJson(json['heat_shield'] as Map<String, dynamic>),
+      heightWTrunk: json['height_w_trunk'] == null
           ? null
-          : HeightWTrunk.fromJson(json['heightWTrunk'] as Map<String, dynamic>),
+          : HeightWTrunk.fromJson(
+              json['height_w_trunk'] as Map<String, dynamic>),
       diameter: json['diameter'] == null
           ? null
           : Diameter.fromJson(json['diameter'] as Map<String, dynamic>),
-      firstFlight: json['firstFlight'] as String?,
-      flickrImages: (json['flickrImages'] as List<dynamic>?)
+      firstFlight: json['first_flight'] as String?,
+      flickrImages: (json['flickr_images'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
       name: json['name'] as String?,
       type: json['type'] as String?,
       active: json['active'] as bool?,
-      crewCapacity: json['crewCapacity'] as int?,
-      sidewallAngleDeg: json['sidewallAngleDeg'] as int?,
-      orbitDurationYr: json['orbitDurationYr'] as int?,
-      dryMassKg: json['dryMassKg'] as int?,
-      dryMassLb: json['dryMassLb'] as int?,
       thrusters: (json['thrusters'] as List<dynamic>?)
           ?.map((e) => Thrusters.fromJson(e as Map<String, dynamic>))
           .toList(),
-      wikipedia: json['wikipedia'] as String?,
       description: json['description'] as String?,
       id: json['id'] as String?,
     );
 
 Map<String, dynamic> _$DragonToJson(Dragon instance) => <String, dynamic>{
-      'heatShield': instance.heatShield,
-      'heightWTrunk': instance.heightWTrunk,
+      'heat_shield': instance.heatShield,
+      'height_w_trunk': instance.heightWTrunk,
       'diameter': instance.diameter,
-      'firstFlight': instance.firstFlight,
-      'flickrImages': instance.flickrImages,
+      'first_flight': instance.firstFlight,
+      'flickr_images': instance.flickrImages,
       'name': instance.name,
       'type': instance.type,
       'active': instance.active,
-      'crewCapacity': instance.crewCapacity,
-      'sidewallAngleDeg': instance.sidewallAngleDeg,
-      'orbitDurationYr': instance.orbitDurationYr,
-      'dryMassKg': instance.dryMassKg,
-      'dryMassLb': instance.dryMassLb,
       'thrusters': instance.thrusters,
-      'wikipedia': instance.wikipedia,
       'description': instance.description,
       'id': instance.id,
     };

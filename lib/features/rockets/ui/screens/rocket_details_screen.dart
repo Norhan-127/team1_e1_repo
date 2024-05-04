@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:team1_e1/features/rockets/data/models/rockets_response.dart';
 import 'package:team1_e1/features/rockets/ui/widgets/rocket_informations.dart';
 import 'package:team1_e1/core/shared_widgets/defult_app_bar.dart';
 
 
 class RocketDetailsScreen extends StatelessWidget {
-  const RocketDetailsScreen({super.key});
+  Rocket rocket;
+   RocketDetailsScreen({super.key , required this.rocket });
+
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +19,7 @@ class RocketDetailsScreen extends StatelessWidget {
             decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(
-                      'assets/images/space_Galaxy_background.png',
+                      'assets/images/app_background.png',
                     ),
                     fit: BoxFit.cover,),),
             child: Padding(
@@ -28,7 +31,7 @@ class RocketDetailsScreen extends StatelessWidget {
                   DefaultAppBar(
                     icon: Icons.arrow_back,
                     function: () => Navigator.pop(context),
-                    text: 'Falcon Heavy',
+                    text: '${rocket.name}',
                   ),
                   const SizedBox(height: 20),
                   const Divider(
@@ -36,7 +39,15 @@ class RocketDetailsScreen extends StatelessWidget {
                     color: Colors.white24,
                   ),
                   const SizedBox(height: 30),
-                  const RocketInformation()
+                   RocketInformation(
+                     description: rocket.description,
+                     image: rocket.flickrImages,
+                     type: rocket.type,
+                     boosters: rocket.boosters,
+                     company: rocket.company,
+                     country: rocket.country,
+                     stages: rocket.stages,
+                   )
                 ]
               ),
             ),
