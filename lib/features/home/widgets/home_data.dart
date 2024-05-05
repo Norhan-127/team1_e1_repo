@@ -1,12 +1,7 @@
-
-
-import 'package:flutter/material.dart';
-import 'package:team1_e1/features/capsules/ui/screens/capsules_screen.dart';
-
 class HomeModel{
   final String image;
   final String name;
-  // final void Function() function;
+
 
 
   HomeModel({required this.image ,required this.name  });
