@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:team1_e1/core/di/dependency_injection.dart';
 import 'core/routing/app_router.dart';
 import 'core/routing/routes.dart';
 import 'package:flutter/services.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  setUpGetIt();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -22,7 +30,7 @@ class MyApp extends StatelessWidget {
         builder: (_,context) {
 
           return MaterialApp(
-            initialRoute: Routes.onBoardingScreen,
+            initialRoute: Routes.launchesScreen,
             onGenerateRoute: AppRouter.generateRoute,
             title: 'Flutter Demo',
             theme: ThemeData(
