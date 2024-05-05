@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:team1_e1/core/di/dependency_injection.dart';
 import 'package:team1_e1/core/routing/routes.dart';
 import 'package:team1_e1/features/capsules/ui/screens/capsules_screen.dart';
-import 'package:team1_e1/features/dragon/logic/dragon_cubit.dart';
 import 'package:team1_e1/features/home/screens/category_screen.dart';
 import 'package:team1_e1/features/home/screens/layout_screen.dart';
 import 'package:team1_e1/features/on_boarging/ui/screens/on_baording_screen.dart';
@@ -18,7 +16,7 @@ import '../../features/capsules/ui/screens/one_capsule_details_screen.dart';
 import '../../features/dragon/data/models/dragon_response.dart';
 import '../../features/dragon/ui/screens/dragon_details_screen.dart';
 import '../../features/dragon/ui/screens/dragon_screen.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+
 
 class AppRouter {
   static Route generateRoute(RouteSettings settings) {
