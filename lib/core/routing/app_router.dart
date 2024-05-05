@@ -4,7 +4,7 @@ import 'package:team1_e1/core/routing/routes.dart';
 import 'package:team1_e1/features/capsules/logic/capsule_cubit.dart';
 import 'package:team1_e1/features/capsules/ui/screens/capsules_screen.dart';
 import 'package:team1_e1/features/dragon/logic/dragon_cubit.dart';
-import 'package:team1_e1/features/on_boarging/ui/screens/on_baording_screen.dart';
+import 'package:team1_e1/features/on_boarding/ui/screens/on_baording_screen.dart';
 import 'package:team1_e1/features/rockets/data/models/rockets_response.dart';
 import 'package:team1_e1/features/rockets/logic/rocket_cubit.dart';
 import 'package:team1_e1/features/rockets/ui/screens/rocket_details_screen.dart';
