@@ -118,7 +118,7 @@ class _LoginFormState extends State<LoginForm> {
                   IconColor: Colors.black,
                 ) :
                 const Center(child: CircularProgressIndicator())
-              ],
+                ],
             ),
           );
         },

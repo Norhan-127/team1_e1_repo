@@ -7,6 +7,8 @@ import 'package:team1_e1/features/rockets/data/repo/rockets_repo.dart';
 import 'package:team1_e1/features/rockets/logic/rocket_cubit.dart';
 import '../../features/capsules/data/repo/capsules_repo.dart';
 import '../../features/capsules/logic/capsule_cubit.dart';
+import '../../features/launches/data/repo/launches_repo.dart';
+import '../../features/launches/logic/launches_cubit.dart';
 import '../networking/dio_factory.dart';
 
 
@@ -28,6 +30,10 @@ Future<void> setUpGetIt()async{
   //---------------Rockets----------------------
   getIt.registerLazySingleton<RocketRepo>(() => RocketRepo(getIt()));
   getIt.registerLazySingleton<RocketCubit>(() => RocketCubit(getIt()));
+
+  //---------------Launches----------------------
+  getIt.registerLazySingleton<LaunchesRepo>(() => LaunchesRepo(getIt()));
+  getIt.registerLazySingleton<LaunchesCubit>(() => LaunchesCubit(getIt()));
 
 
 }
