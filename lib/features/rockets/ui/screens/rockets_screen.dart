@@ -1,27 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:team1_e1/core/networking/network_exceptions.dart';
+import 'package:team1_e1/core/routing/routes.dart';
+import 'package:team1_e1/core/shared_widgets/background_container.dart';
 import 'package:team1_e1/core/shared_widgets/defult_app_bar.dart';
+import 'package:team1_e1/features/rockets/logic/rocket_cubit.dart';
+import 'package:team1_e1/features/rockets/logic/rocket_state.dart';
 import 'package:team1_e1/features/rockets/ui/widgets/rocket_card.dart';
 
-
-class RocketsScreen extends StatelessWidget {
+class RocketsScreen extends StatefulWidget {
   const RocketsScreen({super.key});
+
+  @override
+  State<RocketsScreen> createState() => _RocketsScreenState();
+}
+
+class _RocketsScreenState extends State<RocketsScreen> {
+  @override
+  void initState() {
+    super.initState();
+    BlocProvider.of<RocketCubit>(context).getAllRockets();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          width: double.infinity,
-          height: double.infinity,
-          decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(
-                    'assets/images/space_Galaxy_background.png',
-                  ),
-                  fit: BoxFit.cover)),
+        child: BackgroundContainer(
           child: Column(
             children: [
-              const SizedBox(height: 20,),
+              const SizedBox(
+                height: 20,
+              ),
               DefaultAppBar(
                 icon: Icons.arrow_back,
                 function: () => Navigator.pop(context),
@@ -33,12 +43,58 @@ class RocketsScreen extends StatelessWidget {
                 color: Colors.white24,
               ),
               const SizedBox(height: 20),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: 15,
-                  itemBuilder: (context, index) {
-                    return const RocketCard();
-                  },),
+              BlocBuilder<RocketCubit, RocketState>(
+                builder: (context, state) {
+                  return state.when(
+                      initial: () {
+                        return const Center(
+                          child: CircularProgressIndicator(
+                            color: Colors.white,
+                            strokeWidth: 3,
+                          ),
+                        );
+                      },
+                      load: () {
+                        return const Center(
+                          child: CircularProgressIndicator(
+                            color: Colors.white,
+                          ),
+                        );
+                      },
+                      success: (allRockets) {
+                        return Expanded(
+                          child: ListView.builder(
+                              itemCount: allRockets.length,
+                              itemBuilder: (context, index) => GestureDetector(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, Routes.rocketDetailsScreen,
+                                          arguments: allRockets[index]);
+                                    },
+                                    child: RocketCard(
+                                      title: allRockets[index].name,
+                                      description:
+                                          allRockets[index].description,
+                                      image: allRockets[index].flickrImages,
+                                    ),
+                                  )),
+                        );
+                      },
+                      error: (networkExceptions) => AlertDialog(
+                            title: Text(
+                              NetworkExceptions.getErrorMessage(
+                                  networkExceptions),
+                            ),
+                            actions: [
+                              ElevatedButton(
+                                onPressed: () {
+                                  context.read<RocketCubit>().getAllRockets();
+                                },
+                                child: const Text('refresh'),
+                              )
+                            ],
+                          ));
+                },
               ),
             ],
           ),

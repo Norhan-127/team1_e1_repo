@@ -12,7 +12,7 @@ class BackgroundContainer extends StatelessWidget {
       decoration: const BoxDecoration(
           image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage('assets/images/bk.png')
+              image: AssetImage('assets/images/app_background.png')
           )
       ),
       child: child,
