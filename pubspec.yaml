@@ -50,6 +50,7 @@ dependencies:
   fancy_shimmer_image: ^2.0.3
   #to make slider of images
   carousel_slider: ^4.2.1
+  another_transformer_page_view: ^2.0.1
 
 dev_dependencies:
   #to add a launcher icon
