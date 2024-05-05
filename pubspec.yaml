@@ -45,6 +45,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   google_fonts: ^6.1.0
   flutter_svg: ^2.0.10+1
+  persistent_bottom_nav_bar: ^5.0.2
   fancy_shimmer_image: ^2.0.3
   carousel_slider: ^4.2.1
 
