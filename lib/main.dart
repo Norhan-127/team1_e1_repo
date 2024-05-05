@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         builder: (_,context) {
 
           return MaterialApp(
-            initialRoute: Routes.dragonScreen,
+            initialRoute: Routes.loginScreen,
             onGenerateRoute: AppRouter.generateRoute,
             title: 'Flutter Demo',
             theme: ThemeData(
@@ -49,7 +49,8 @@ class MyApp extends StatelessWidget {
 
               // This works for code too, not just values: Most code changes can be
               // tested with just a hot reload.
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+              primarySwatch: Colors.lightBlue,
               useMaterial3: true,
             ),
             debugShowCheckedModeBanner: false,
