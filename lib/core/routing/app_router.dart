@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:team1_e1/core/di/dependency_injection.dart';
 import 'package:team1_e1/core/routing/routes.dart';
-import 'package:team1_e1/features/capsules/logic/capsule_cubit.dart';
 import 'package:team1_e1/features/capsules/ui/screens/capsules_screen.dart';
-import 'package:team1_e1/features/dragon/logic/dragon_cubit.dart';
+import 'package:team1_e1/features/home/screens/category_screen.dart';
+import 'package:team1_e1/features/home/screens/layout_screen.dart';
 import 'package:team1_e1/features/on_boarging/ui/screens/on_baording_screen.dart';
 import 'package:team1_e1/features/rockets/data/models/rockets_response.dart';
-import 'package:team1_e1/features/rockets/logic/rocket_cubit.dart';
 import 'package:team1_e1/features/rockets/ui/screens/rocket_details_screen.dart';
 import 'package:team1_e1/features/crew/ui/screen/crew_screen.dart';
 import 'package:team1_e1/features/auth/login/ui/screens/before_login.dart';
@@ -19,7 +17,7 @@ import '../../features/crew/logic/crew_cubit.dart';
 import '../../features/dragon/data/models/dragon_response.dart';
 import '../../features/dragon/ui/screens/dragon_details_screen.dart';
 import '../../features/dragon/ui/screens/dragon_screen.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+
 
 class AppRouter {
   static Route generateRoute(RouteSettings settings) {
@@ -29,12 +27,20 @@ class AppRouter {
           builder: (_) => const OnBoardingScreen(),
         );
 
+      case Routes.layOutScreen:
+        return MaterialPageRoute(
+          builder: (_) => const LayoutScreen(),
+        );
+
+      case Routes.homeScreen:
+        return MaterialPageRoute(
+          builder: (_) => const CategoryScreen(),
+        );
+
+
       case Routes.rocketScreen:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => getIt<RocketCubit>(),
-            child: const RocketsScreen(),
-          ) ,
+          builder: (_) => const RocketsScreen() ,
         );
 
       case Routes.rocketDetailsScreen:
@@ -64,10 +70,7 @@ class AppRouter {
         );
       case Routes.dragonScreen:
         return MaterialPageRoute(
-            builder: (_) => BlocProvider(
-                  create: (context) => getIt<DragonCubit>(),
-                  child: const DragonScreen(),
-                ));
+            builder: (_) => const  DragonScreen());
       case Routes.dragonDetailsScreen:
         final dragon = settings.arguments as Dragon;
         return MaterialPageRoute(
@@ -75,10 +78,7 @@ class AppRouter {
         );
       case Routes.capsuleScreen:
         return MaterialPageRoute(
-            builder: (_) => BlocProvider(
-                  create: (context) => getIt<CapsuleCubit>(),
-                  child: const CapsulesScreen(),
-                ));
+            builder: (_) => const CapsulesScreen());
 
       case Routes.capsuleDetailsScreen:
         final capsule = settings.arguments as Capsule;

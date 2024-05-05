@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:team1_e1/core/shared_widgets/background_container.dart';
+import 'package:team1_e1/core/theming/colors.dart';
 import 'package:team1_e1/core/theming/styles.dart';
 import 'package:team1_e1/features/dragon/logic/dragon_cubit.dart';
 import 'package:team1_e1/features/dragon/logic/dragon_state.dart';
@@ -25,78 +26,94 @@ class _DragonScreenState extends State<DragonScreen> {
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BackgroundContainer(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15.w),
-          child: Column(
-            children: [
-              SvgPicture.asset('assets/images/dragon.svg' , width: 400.w, height: 400.h,),
-              BlocBuilder<DragonCubit , DragonState>(
-                  builder: (context,state){
-                    return state.when(
-                        initial: (){
-                          return const Center(
-                            child: CircularProgressIndicator(
-                              color: Colors.white,
-                              strokeWidth: 3,
-                            ),
-                          );
-                        },
-                        success: (allDragons){
-                          return Expanded(
-                            child: ListView.builder(
-                                itemCount: allDragons.length,
-                                itemBuilder: (context, i) => GestureDetector(
-                                    onTap: () {
-                                      Navigator.pushNamed(
-                                          context, Routes.dragonDetailsScreen,
-                                          arguments: allDragons[i]);
-                                    },
-                                    child: Container(
-                                      margin: EdgeInsets.only(top: 30.h),
-                                      alignment: Alignment.center,
-                                      width: 370.w,
-                                      height: 80.h,
-                                      decoration: BoxDecoration(
-                                          color: Colors.grey.withOpacity(0.3),
-                                          borderRadius: BorderRadius.circular(15)
-                                      ),
-                                      child: ListTile(
-                                        title: Text('${allDragons[i].name}', style: TextStyles.orbitron24BoldWhite,),
-                                        trailing: Text('${allDragons[i].firstFlight}' , style: TextStyles.exo14White,),
-                                      ),
-
-                                    )
-                                )),
-                          );
-                        },
-                        error: (networkExceptions) => AlertDialog(
-                          title: Text(
-                            NetworkExceptions.getErrorMessage(
-                                networkExceptions),
-                          ),
-                          actions: [
-                            ElevatedButton(
-                              onPressed: () {
-                                context
-                                    .read<DragonCubit>()
-                                    .getAllDragons();
-                              },
-                              child: const Text('refresh'),
-                            )
-                          ],
-                        )
-
-                    );
-                  }
-              ),
-            ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 30.0),
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          leading: IconButton(
+            onPressed: (){
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back,color: AppColors.whiteColor,size: 25,),
           ),
+          title: Text(
+            'Dragons',
+            style: TextStyles.roboto36WhiteFontWeight700,
+          ),
+        ),
+        body: BackgroundContainer(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15.w),
+            child: Column(
+              children: [
+                SvgPicture.asset('assets/images/dragon.svg' , width: 400.w, height: 400.h,),
+                BlocBuilder<DragonCubit , DragonState>(
+                    builder: (context,state){
+                      return state.when(
+                          initial: (){
+                            return const Center(
+                              child: CircularProgressIndicator(
+                                color: Colors.white,
+                                strokeWidth: 3,
+                              ),
+                            );
+                          },
+                          success: (allDragons){
+                            return Expanded(
+                              child: ListView.builder(
+                                  itemCount: allDragons.length,
+                                  itemBuilder: (context, i) => GestureDetector(
+                                      onTap: () {
+                                        Navigator.pushNamed(
+                                            context, Routes.dragonDetailsScreen,
+                                            arguments: allDragons[i]);
+                                      },
+                                      child: Container(
+                                        margin: EdgeInsets.only(top: 30.h),
+                                        alignment: Alignment.center,
+                                        width: 370.w,
+                                        height: 80.h,
+                                        decoration: BoxDecoration(
+                                            color: Colors.grey.withOpacity(0.3),
+                                            borderRadius: BorderRadius.circular(15)
+                                        ),
+                                        child: ListTile(
+                                          title: Text('${allDragons[i].name}', style: TextStyles.orbitron24BoldWhite,),
+                                          trailing: Text('${allDragons[i].firstFlight}' , style: TextStyles.exo14White,),
+                                        ),
+
+                                      )
+                                  )),
+                            );
+                          },
+                          error: (networkExceptions) => AlertDialog(
+                            title: Text(
+                              NetworkExceptions.getErrorMessage(
+                                  networkExceptions),
+                            ),
+                            actions: [
+                              ElevatedButton(
+                                onPressed: () {
+                                  context
+                                      .read<DragonCubit>()
+                                      .getAllDragons();
+                                },
+                                child: const Text('refresh'),
+                              )
+                            ],
+                          )
+
+                      );
+                    }
+                ),
+              ],
+            ),
+          ),
+
         ),
 
       ),
-
     );
   }
 }
