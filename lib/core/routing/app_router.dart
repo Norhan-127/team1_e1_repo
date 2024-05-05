@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:team1_e1/core/di/dependency_injection.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team1_e1/core/routing/routes.dart';
-import 'package:team1_e1/features/capsules/logic/capsule_cubit.dart';
 import 'package:team1_e1/features/capsules/ui/screens/capsules_screen.dart';
-import 'package:team1_e1/features/dragon/logic/dragon_cubit.dart';
-import 'package:team1_e1/features/on_boarding/ui/screens/on_baording_screen.dart';
+import 'package:team1_e1/features/home/screens/category_screen.dart';
+import 'package:team1_e1/features/home/screens/layout_screen.dart';
+import 'package:team1_e1/features/on_boarging/ui/screens/on_baording_screen.dart';
 import 'package:team1_e1/features/rockets/data/models/rockets_response.dart';
-import 'package:team1_e1/features/rockets/logic/rocket_cubit.dart';
 import 'package:team1_e1/features/rockets/ui/screens/rocket_details_screen.dart';
 import 'package:team1_e1/features/crew/ui/screen/crew_screen.dart';
 import 'package:team1_e1/features/auth/login/ui/screens/before_login.dart';
@@ -14,11 +13,16 @@ import 'package:team1_e1/features/auth/login/ui/screens/login_screen.dart';
 import 'package:team1_e1/features/auth/register/ui/screens/register_screen.dart';
 import 'package:team1_e1/features/rockets/ui/screens/rockets_screen.dart';
 import '../../features/capsules/data/models/capsules_response.dart';
+import '../../features/capsules/logic/capsule_cubit.dart';
 import '../../features/capsules/ui/screens/one_capsule_details_screen.dart';
+import '../../features/crew/logic/crew_cubit.dart';
 import '../../features/dragon/data/models/dragon_response.dart';
+import '../../features/dragon/logic/dragon_cubit.dart';
 import '../../features/dragon/ui/screens/dragon_details_screen.dart';
 import '../../features/dragon/ui/screens/dragon_screen.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../features/on_boarding/ui/screens/on_baording_screen.dart';
+import '../../features/rockets/logic/rocket_cubit.dart';
+import '../di/dependency_injection.dart';
 
 class AppRouter {
   static Route generateRoute(RouteSettings settings) {
