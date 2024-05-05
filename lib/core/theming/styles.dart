@@ -108,4 +108,10 @@ abstract class TextStyles {
     fontWeight: FontWeightHelper.light,
     color: AppColors.whiteColor,
   );
+
+  static TextStyle roboto36WhiteFontWeight700 = GoogleFonts.roboto(
+    fontSize: 36.sp,
+    fontWeight: FontWeight.w700,
+    color: AppColors.whiteColor,
+  );
 }

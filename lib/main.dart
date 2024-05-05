@@ -30,7 +30,10 @@ class MyApp extends StatelessWidget {
         builder: (_,context) {
 
           return MaterialApp(
-            initialRoute: Routes.dragonScreen,
+
+            initialRoute: Routes.loginScreen,
+
+            initialRoute: Routes.onBoardingScreen,
             onGenerateRoute: AppRouter.generateRoute,
             title: 'Flutter Demo',
             theme: ThemeData(
@@ -46,10 +49,11 @@ class MyApp extends StatelessWidget {
               // Notice that the counter didn't reset back to zero; the application
               // state is not lost during the reload. To reset the state, use hot
               // restart instead.
-              //
+
               // This works for code too, not just values: Most code changes can be
               // tested with just a hot reload.
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+              primarySwatch: Colors.lightBlue,
               useMaterial3: true,
             ),
             debugShowCheckedModeBanner: false,
