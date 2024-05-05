@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:team1_e1/core/routing/app_router.dart';
-import 'package:team1_e1/core/routing/routes.dart';
 import 'package:team1_e1/features/home/screens/layout_screen.dart';
 import '../../../../../core/shared_widgets/default_button.dart';
 import '../../../../../core/shared_widgets/default_text_field.dart';
