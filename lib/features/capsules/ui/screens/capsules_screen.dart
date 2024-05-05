@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:team1_e1/core/theming/colors.dart';
 import 'package:team1_e1/core/theming/styles.dart';
 import 'package:team1_e1/features/capsules/logic/capsule_cubit.dart';
-import 'package:team1_e1/features/home/screens/layout_screen.dart';
+
 import '../../../../core/networking/network_exceptions.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/shared_widgets/background_container.dart';
