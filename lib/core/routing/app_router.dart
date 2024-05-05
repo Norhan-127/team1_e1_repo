@@ -13,6 +13,7 @@ import 'package:team1_e1/features/auth/register/ui/screens/register_screen.dart'
 import 'package:team1_e1/features/rockets/ui/screens/rockets_screen.dart';
 import '../../features/capsules/data/models/capsules_response.dart';
 import '../../features/capsules/ui/screens/one_capsule_details_screen.dart';
+import '../../features/crew/logic/crew_cubit.dart';
 import '../../features/dragon/data/models/dragon_response.dart';
 import '../../features/dragon/ui/screens/dragon_details_screen.dart';
 import '../../features/dragon/ui/screens/dragon_screen.dart';
@@ -51,7 +52,9 @@ class AppRouter {
         );
       case Routes.crewScreen:
         return MaterialPageRoute(
-          builder: (_) => const CrewScreen(),
+          builder: (_) => BlocProvider(
+              create: (context) => getIt<CrewCubit>(),
+              child: const CrewScreen()),
         );
       case Routes.beforeLoginScreen:
         return MaterialPageRoute(

@@ -7,6 +7,8 @@ import 'package:team1_e1/features/rockets/data/repo/rockets_repo.dart';
 import 'package:team1_e1/features/rockets/logic/rocket_cubit.dart';
 import '../../features/capsules/data/repo/capsules_repo.dart';
 import '../../features/capsules/logic/capsule_cubit.dart';
+import '../../features/crew/data/repo/crew_repo.dart';
+import '../../features/crew/logic/crew_cubit.dart';
 import '../networking/dio_factory.dart';
 
 
@@ -25,9 +27,15 @@ Future<void> setUpGetIt()async{
   getIt.registerLazySingleton<CapsuleCubit>(() => CapsuleCubit(getIt()));
 
 
+
+  //---------------Crew----------------------
+  getIt.registerLazySingleton<CrewRepo>(() => CrewRepo(getIt()));
+  getIt.registerLazySingleton<CrewCubit>(() => CrewCubit(getIt()));
+
   //---------------Rockets----------------------
   getIt.registerLazySingleton<RocketRepo>(() => RocketRepo(getIt()));
   getIt.registerLazySingleton<RocketCubit>(() => RocketCubit(getIt()));
+
 
 
 }

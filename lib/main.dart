@@ -30,7 +30,10 @@ class MyApp extends StatelessWidget {
         builder: (_,context) {
 
           return MaterialApp(
+
             initialRoute: Routes.loginScreen,
+
+            initialRoute: Routes.onBoardingScreen,
             onGenerateRoute: AppRouter.generateRoute,
             title: 'Flutter Demo',
             theme: ThemeData(
