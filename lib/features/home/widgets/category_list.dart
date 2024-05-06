@@ -13,6 +13,8 @@ import 'package:team1_e1/features/launches/ui/screens/launches_screen.dart';
 import 'package:team1_e1/features/rockets/logic/rocket_cubit.dart';
 import 'package:team1_e1/features/rockets/ui/screens/rockets_screen.dart';
 
+import '../../../core/routing/routes.dart';
+
 class CategoryList extends StatelessWidget {
   const CategoryList({super.key});
 
@@ -31,26 +33,10 @@ class CategoryList extends StatelessWidget {
             data: items[index],
             ontap: () {
               if (index == 0) {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) =>
-                          BlocProvider.value(
-                            value: getIt<CapsuleCubit>(),
-                            child: CapsulesScreen(),
-                          ),
-                    ));
+                Navigator.pushNamed(context,Routes.capsuleScreen);
               }
               if (index == 1) {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) =>
-                          BlocProvider.value(
-                            value: getIt<DragonCubit>(),
-                            child: DragonScreen(),
-                          ),
-                    ));
+                Navigator.pushNamed(context,Routes.dragonScreen);
               }
               if (index == 2) {
                 Navigator.push(
@@ -64,11 +50,7 @@ class CategoryList extends StatelessWidget {
                     ));
               }
               if (index == 3) {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => CrewScreen(),
-                    ));
+                Navigator.pushNamed(context,Routes.crewScreen);
               }
               if (index == 4) {
                 Navigator.push(
