@@ -24,7 +24,6 @@ class CapsuleContainerSerial extends StatelessWidget {
       child: ListTile(
         title: Text('$txt',style: TextStyles.orbitron24BoldWhite,),
         leading: Text('$index.' ,style: TextStyles.orbitron24BoldWhite,),
-        trailing: SvgPicture.asset('assets/images/rocket.svg',width: 80,height: 50,color: AppColors.whiteColor,),
       ),
 
     );

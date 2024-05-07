@@ -28,50 +28,50 @@ class _LayoutScreenState extends State<LayoutScreen> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 60.0),
       child: Scaffold(
-        backgroundColor: Colors.black,
-        appBar: AppBar(
           backgroundColor: Colors.black,
-          title: Text(
-            'Explore',
-            style: TextStyles.roboto36WhiteFontWeight700,
+          appBar: AppBar(
+            backgroundColor: Colors.black,
+            title: Text(
+              'Explore',
+              style: TextStyles.roboto36WhiteFontWeight700,
+            ),
+            actions: const [
+              Icon(
+                Icons.list,
+                size: 30,
+                color: AppColors.whiteColor,
+              )
+            ],
           ),
-          actions: const [
-            Icon(
-              Icons.list,
-              size: 30,
-              color: AppColors.whiteColor,
-            )
-          ],
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          backgroundColor: const Color(0xff211F26),
-          unselectedItemColor: Colors.white,
-          currentIndex: currentIndex,
-          onTap: (index) {
-            setState(() {
-              currentIndex = index;
-            });
-          },
-          items: const [
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.list_alt_rounded,
-                ),
-                label: 'Categories'),
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.home_filled,
-                ),
-                label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.account_circle_outlined,
-                ),
-                label: 'Profile'),
-          ],
-        ),
-        body:screens[currentIndex]
+          bottomNavigationBar: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            backgroundColor: const Color(0xff211F26),
+            unselectedItemColor: Colors.white,
+            currentIndex: currentIndex,
+            onTap: (index) {
+              setState(() {
+                currentIndex = index;
+              });
+            },
+            items: const [
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.list_alt_rounded,
+                  ),
+                  label: 'Categories'),
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.home_filled,
+                  ),
+                  label: 'Home'),
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.account_circle_outlined,
+                  ),
+                  label: 'Profile'),
+            ],
+          ),
+          body:screens[currentIndex]
       ),
     );
   }
