@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:team1_e1/core/helpers/spacing.dart';
 import 'package:team1_e1/core/shared_widgets/background_container.dart';
 import 'package:team1_e1/core/shared_widgets/defult_app_bar.dart';
-import 'package:team1_e1/core/theming/colors.dart';
 import 'package:team1_e1/core/theming/styles.dart';
 import 'package:team1_e1/features/dragon/logic/dragon_cubit.dart';
 import 'package:team1_e1/features/dragon/logic/dragon_state.dart';

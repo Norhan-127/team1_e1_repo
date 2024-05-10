@@ -7,7 +7,6 @@ import 'package:team1_e1/core/theming/colors.dart';
 import 'package:team1_e1/features/crew/logic/crew_cubit.dart';
 import 'package:team1_e1/features/crew/logic/crew_state.dart';
 import '../../../../core/networking/network_exceptions.dart';
-import '../../../../core/theming/styles.dart';
 import '../widgets/crew_list.dart';
 
 class CrewScreen extends StatefulWidget {

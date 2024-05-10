@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:team1_e1/core/helpers/spacing.dart';
 import 'package:team1_e1/features/auth/login/ui/widgets/image_and_text.dart';
-import '../../../../../core/shared_widgets/default_button.dart';
-import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
-import '../../../register/ui/screens/register_screen.dart';
-import 'login_screen.dart';
 
 class BeforeLoginScreen extends StatelessWidget {
   const BeforeLoginScreen({super.key});

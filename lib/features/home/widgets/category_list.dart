@@ -1,15 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team1_e1/core/di/dependency_injection.dart';
-import 'package:team1_e1/features/about_company/ui/screens/about_company_screen.dart';
-import 'package:team1_e1/features/capsules/logic/capsule_cubit.dart';
-import 'package:team1_e1/features/capsules/ui/screens/capsules_screen.dart';
-import 'package:team1_e1/features/crew/ui/screen/crew_screen.dart';
-import 'package:team1_e1/features/dragon/logic/dragon_cubit.dart';
-import 'package:team1_e1/features/dragon/ui/screens/dragon_screen.dart';
 import 'package:team1_e1/features/home/widgets/category_item.dart';
 import 'package:team1_e1/features/home/widgets/home_data.dart';
-import 'package:team1_e1/features/launches/ui/screens/launches_screen.dart';
 import 'package:team1_e1/features/rockets/logic/rocket_cubit.dart';
 import 'package:team1_e1/features/rockets/ui/screens/rockets_screen.dart';
 
