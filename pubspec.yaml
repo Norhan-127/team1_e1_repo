@@ -37,7 +37,7 @@ dependencies:
   flutter_screenutil: ^5.9.0
   #to showtoast
   fluttertoast: ^8.2.5
-  #firebase_lib
+  #firebase_libb
   firebase_core: ^2.30.0
   firebase_auth: ^4.19.3
   cloud_firestore: ^4.17.1
@@ -51,15 +51,13 @@ dependencies:
   fancy_shimmer_image: ^2.0.3
   #to make slider of images
   carousel_slider: ^4.2.1
+  build_runner: ^2.4.9
   another_transformer_page_view: ^2.0.1
+
 
 dev_dependencies:
   #to add a launcher icon
   flutter_launcher_icons: ^0.13.1
-  build_runner: ^2.4.9
-  flutter_lints: ^3.0.0
-
-
 flutter_launcher_icons:
   android: true
   ios: true
@@ -68,6 +66,8 @@ flutter_launcher_icons:
   flutter_test:
     sdk: flutter
 
+
+  flutter_lints: ^3.0.0
 
 
 

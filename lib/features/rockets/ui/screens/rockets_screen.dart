@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:team1_e1/core/helpers/spacing.dart';
 import 'package:team1_e1/core/networking/network_exceptions.dart';
 import 'package:team1_e1/core/routing/routes.dart';
 import 'package:team1_e1/core/shared_widgets/background_container.dart';
@@ -27,7 +29,7 @@ class _RocketsScreenState extends State<RocketsScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 28.0),
+        padding:  EdgeInsets.symmetric(vertical: 30.h , horizontal: 30.w),
         child: SafeArea(
           child: BackgroundContainer(
             child: Column(
@@ -40,12 +42,12 @@ class _RocketsScreenState extends State<RocketsScreen> {
                   function: () => Navigator.pop(context),
                   text: 'SpaceX Rockets',
                 ),
-                const SizedBox(height: 20),
+                verticalSpacing(15),
                 const Divider(
                   height: 0.5,
                   color: Colors.white24,
                 ),
-                const SizedBox(height: 20),
+                verticalSpacing(30),
                 BlocBuilder<RocketCubit, RocketState>(
                   builder: (context, state) {
                     return state.when(
@@ -66,7 +68,8 @@ class _RocketsScreenState extends State<RocketsScreen> {
                         },
                         success: (allRockets) {
                           return Expanded(
-                            child: ListView.builder(
+                            child: ListView.separated(
+                              separatorBuilder:(context, index) => verticalSpacing(15),
                                 itemCount: allRockets.length,
                                 itemBuilder: (context, index) => GestureDetector(
                                       onTap: () {
@@ -80,6 +83,7 @@ class _RocketsScreenState extends State<RocketsScreen> {
                                             allRockets[index].description,
                                         image: allRockets[index].flickrImages,
                                       ),
+
                                     )),
                           );
                         },

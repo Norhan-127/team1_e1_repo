@@ -10,26 +10,25 @@ class CategoryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding: EdgeInsets.all(4.0),
-      child: GestureDetector(
-        onTap: ontap,
-        child: Stack(
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.all(Radius.circular(12.0)),
-              child: Image(
-                image: NetworkImage('${data.image}'
-              ),),
-            ),
-            Positioned(
-              left: 15,
-                child: Text(
-              '${data.name}',
-              style: TextStyle(color: AppColors.whiteColor, fontSize: 22),
-            ))
-          ],
-        ),
+    return  GestureDetector(
+      onTap: ontap,
+      child: Stack(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.all(Radius.circular(12.0)),
+            child: Image(
+              image: AssetImage('${data.image}'
+            ),),
+          ),
+          Positioned(
+            top: 20,
+            left: 30,
+              child: Text(
+            '${data.name}',
+            style: TextStyle(color: AppColors.whiteColor, fontSize: 24),
+          ),
+          )
+        ],
       ),
     );
   }

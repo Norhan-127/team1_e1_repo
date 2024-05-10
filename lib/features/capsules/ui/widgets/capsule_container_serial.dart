@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
-import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
 
 class CapsuleContainerSerial extends StatelessWidget {
@@ -15,7 +13,7 @@ class CapsuleContainerSerial extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(top: 30.h),
       alignment: Alignment.center,
-      width: 370.w,
+      width: 270.w,
       height: 80.h,
       decoration: BoxDecoration(
           color: Colors.grey.withOpacity(0.3),

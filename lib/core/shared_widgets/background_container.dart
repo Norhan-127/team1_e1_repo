@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class BackgroundContainer extends StatelessWidget {
   Widget child;
@@ -9,12 +10,13 @@ class BackgroundContainer extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: double.infinity,
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-              fit: BoxFit.cover,
-              image: AssetImage('assets/images/app_background.png')
-          )
-      ),
+      color: Colors.black,
+      // decoration: const BoxDecoration(
+      //     image: DecorationImage(
+      //         fit: BoxFit.cover,
+      //         image: AssetImage('assets/images/app_background.png')
+      //     )
+      // ),
       child: child,
     );
   }

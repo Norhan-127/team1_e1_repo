@@ -20,12 +20,12 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.black,
       centerTitle: isCenter,
       leading: IconButton(
         icon: Icon(icon,color: AppColors.whiteColor, size: 26,),
         onPressed: function,),
-      title: Text('$text',style: TextStyles.BoldlWhite,),
+      title: Text('$text',style:TextStyles.exo24White),
       actions: action,
     );
   }

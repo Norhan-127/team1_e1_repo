@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:team1_e1/core/helpers/spacing.dart';
 import 'package:team1_e1/core/shared_widgets/background_container.dart';
+import 'package:team1_e1/core/shared_widgets/defult_app_bar.dart';
+import 'package:team1_e1/core/theming/colors.dart';
 import 'package:team1_e1/core/theming/styles.dart';
 import 'package:team1_e1/features/capsules/logic/capsule_cubit.dart';
 import 'package:team1_e1/features/capsules/ui/widgets/capsule_container_serial.dart';
@@ -29,19 +32,26 @@ class _CapsulesScreenState extends State<CapsulesScreen> {
     return Scaffold(
       body: BackgroundContainer(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+          padding:  EdgeInsets.symmetric(horizontal: 30.w , vertical: 30.h),
           child: ListView(
             children: [
               SizedBox(
                 height: 14.h,
               ),
-              Text('Capsules', style: TextStyles.poppins28BoldWhite),
-              SizedBox(
-                height: 14.h,
+              DefaultAppBar(
+                icon: Icons.arrow_back,
+                function: () => Navigator.pop(context),
+                text: 'SpaceX Capsules',
               ),
+              verticalSpacing(15),
+              Divider(
+                height: 0.5,
+                color: AppColors.gray,
+              ),
+              verticalSpacing(15),
               Text(
                 'designed for transporting astronauts to and from the International Space Station. It is a significant advancement from the original Dragon spacecraft, featuring improvements in design, capabilities, and safety features.',
-                style: TextStyles.poppins19MediumWhite,
+                style: TextStyles.NormalWhite,
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.63,

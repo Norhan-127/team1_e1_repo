@@ -22,12 +22,12 @@ class CategoryList extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          childAspectRatio: 0.9 / 0.8,
+          crossAxisCount: 1,
+          childAspectRatio: 3 /2.3,
         ),
         shrinkWrap: true,
         physics: const ClampingScrollPhysics(),
-        itemCount: 6,
+        itemCount: 4,
         itemBuilder: (ctx, index) {
           return CategoryItem(
             data: items[index],
@@ -52,20 +52,20 @@ class CategoryList extends StatelessWidget {
               if (index == 3) {
                 Navigator.pushNamed(context,Routes.crewScreen);
               }
-              if (index == 4) {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => LaunchesScreen(),
-                    ));
-              }
-              if (index == 5) {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => CompanyScreen(),
-                    ));
-              }
+              // if (index == 4) {
+              //   Navigator.push(
+              //       context,
+              //       MaterialPageRoute(
+              //         builder: (context) => LaunchesScreen(),
+              //       ));
+              // }
+              // if (index == 5) {
+              //   Navigator.push(
+              //       context,
+              //       MaterialPageRoute(
+              //         builder: (context) => CompanyScreen(),
+              //       ));
+              // }
             },
           );
         });
