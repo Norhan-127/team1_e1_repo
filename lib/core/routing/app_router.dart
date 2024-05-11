@@ -20,6 +20,7 @@ import '../../features/dragon/logic/dragon_cubit.dart';
 import '../../features/dragon/ui/screens/dragon_details_screen.dart';
 import '../../features/dragon/ui/screens/dragon_screen.dart';
 import '../../features/on_boarding/ui/screens/on_baording_screen.dart';
+import '../../features/profile/ui/screens/profile_screen.dart';
 import '../di/dependency_injection.dart';
 
 
@@ -71,6 +72,10 @@ class AppRouter {
       case Routes.signUpScreen:
         return MaterialPageRoute(
           builder: (_) => const RegisterScreen(),
+        );
+      case Routes.profileScreen:
+        return MaterialPageRoute(
+          builder: (_) => const ProfileScreen(),
         );
       case Routes.dragonScreen:
         return MaterialPageRoute(
