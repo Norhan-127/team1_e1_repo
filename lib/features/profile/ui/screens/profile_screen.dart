@@ -5,7 +5,7 @@ import 'package:team1_e1/core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
 import '../widgets/image_circle.dart';
 import '../widgets/main_row.dart';
-import 'edit_profile.dart';
+import 'edit_profile_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -57,7 +57,7 @@ class ProfileScreen extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: MainRow(text: 'Edit Profile',icon: Icons.person_pin_circle_outlined,
-                  function: ()=> Navigator.push(context, MaterialPageRoute(builder: (context) => const EditProfile(),)),
+                  function: ()=> Navigator.push(context, MaterialPageRoute(builder: (context) => const EditProfileScreen(),)),
                 ),
               ),
             ),
@@ -69,11 +69,10 @@ class ProfileScreen extends StatelessWidget {
                     color: AppColors.lightGrey.withOpacity(.18),
                     borderRadius: const BorderRadius.all(Radius.circular(15))
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
                   child: MainRow(
                     text: 'Logout',icon: Icons.logout,
-                    function: ()=> Navigator.push(context, MaterialPageRoute(builder: (context) => const EditProfile(),),)
                   ),
                 )
             ),
