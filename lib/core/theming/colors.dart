@@ -16,4 +16,8 @@ class AppColors {
   static const Color earthGreen = Color(0xff28A745);
   //can be used for awards, achievements, or important notices, symbolizing success and achievement
   static const Color gold = Color(0xffFFD700);
+  static const Color gray = Color(0xFF757575);
+  static const Color lightGray = Color(0xFFC2C2C2);
+  static const Color lighterGray = Color(0xFFEDEDED);
+  static const Color moreLightGray = Color(0xFFFDFDFF);
 }

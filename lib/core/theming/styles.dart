@@ -27,10 +27,22 @@ abstract class TextStyles {
     fontWeight: FontWeightHelper.bold,
     color: Colors.white,
   );
+
+  static TextStyle orbitron40BoldWhite = GoogleFonts.orbitron(
+    fontSize: 40.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.white,
+  );
   static TextStyle exo14Black = GoogleFonts.exo(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
     color: Colors.black,
+  );
+
+  static TextStyle exo24White = GoogleFonts.exo(
+    fontSize: 28.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: Colors.white,
   );
   static TextStyle openSans30Black = GoogleFonts.openSans(
     fontSize: 30.sp,
@@ -58,7 +70,7 @@ abstract class TextStyles {
     color: Colors.white,
   );
   static TextStyle NormalWhite = GoogleFonts.poppins(
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: FontWeightHelper.light,
     color: Colors.white,
   );
@@ -118,5 +130,16 @@ abstract class TextStyles {
     fontSize: 16.sp,
     fontWeight: FontWeight.w300,
     color: AppColors.whiteColor,
+
+  static TextStyle font24BlueBold = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.earthBlue,
+  );
+
+  static TextStyle font14GrayRegular = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.gray,
   );
 }

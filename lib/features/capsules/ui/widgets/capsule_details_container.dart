@@ -11,54 +11,57 @@ class CapsuleDetailsContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 190.h,
-      child: Stack(
-        alignment: Alignment.bottomCenter,
-        children: [
-          Positioned(
-            left: 55.w,
-            top: 0,
-            child: CircleAvatar(
-              radius: 22.r,
-              backgroundColor: AppColors.whiteColor,
-              child: Text(
-                index,
-                style: TextStyles.orbitron24BoldWhite
-                    .copyWith(color: Colors.black),
+    return SingleChildScrollView(
+      child: SizedBox(
+        height: 170.h,
+        width: 170,
+        child: Stack(
+          alignment: Alignment.bottomCenter,
+          children: [
+            Positioned(
+              left: 55.w,
+              top: 0,
+              child: CircleAvatar(
+                radius: 22.r,
+                backgroundColor: AppColors.whiteColor,
+                child: Text(
+                  index,
+                  style: TextStyles.orbitron24BoldWhite
+                      .copyWith(color: Colors.black),
+                ),
               ),
             ),
-          ),
-          Container(
-            width: 161.w,
-            height: 172.h,
-            decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(35)),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Center(
-                    child: Text(
-                      text,
-                      style: TextStyles.poppins28BoldWhite,
-                    )),
-                Column(
-                  children: [
-                    const Divider(
-                      thickness: 2,
-                      color: AppColors.lightGrey,
-                    ),
-                    Text(
-                      body,
-                      style: TextStyles.poppins19MediumWhite,
-                    )
-                  ],
-                )
-              ],
+            Container(
+              width: 155.w,
+              height: 152.h,
+              decoration: BoxDecoration(
+                  color: Colors.grey.withOpacity(0.3),
+                  borderRadius: BorderRadius.circular(35)),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Center(
+                      child: Text(
+                        text,
+                        style: TextStyles.poppins28BoldWhite,
+                      )),
+                  Column(
+                    children: [
+                      const Divider(
+                        thickness: 2,
+                        color: AppColors.lightGrey,
+                      ),
+                      Text(
+                        body,
+                        style: TextStyles.poppins19MediumWhite,
+                      )
+                    ],
+                  )
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
 

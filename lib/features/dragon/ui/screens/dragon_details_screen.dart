@@ -2,7 +2,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:team1_e1/core/helpers/spacing.dart';
 import 'package:team1_e1/core/shared_widgets/background_container.dart';
+import 'package:team1_e1/core/shared_widgets/defult_app_bar.dart';
 import 'package:team1_e1/features/dragon/data/models/dragon_response.dart';
 import 'package:team1_e1/features/dragon/ui/widgets/dragon_details.dart';
 
@@ -14,12 +16,18 @@ class DragonDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BackgroundContainer(
-        child: Padding(
-          padding: EdgeInsets.only(top: 28.h),
+    return Padding(
+      padding:  EdgeInsets.symmetric(horizontal: 30.w , vertical: 30.h),
+      child: Scaffold(
+        appBar: DefaultAppBar(
+          icon: Icons.arrow_back,
+          function: () => Navigator.pop(context),
+          text: '${dragon.name}',
+        ),
+        body: BackgroundContainer(
           child: ListView(
             children: [
+              verticalSpacing(30),
               CarouselSlider(
                 options: CarouselOptions(height: 400.0),
                 items: dragon.flickrImages!.map((i) {
@@ -28,12 +36,24 @@ class DragonDetailsScreen extends StatelessWidget {
                       return Container(
                         width: MediaQuery.of(context).size.width,
                         margin: const EdgeInsets.symmetric(horizontal: 5.0),
-                        decoration: const BoxDecoration(color: Colors.amber),
+                        decoration: const BoxDecoration(color: Colors.white24),
                         child: FancyShimmerImage(imageUrl: i),
                       );
                     },
                   );
                 }).toList(),
+              ),
+              verticalSpacing(20),
+
+              ListTile(
+                title: Text(
+                  'Description',
+                  style: TextStyles.orbitron24BoldWhite,
+                ),
+                subtitle: Text(
+                  '${dragon.description}',
+                  style: TextStyles.exo14White,
+                ),
               ),
               DragonDetails(
                 text: 'Heat Shield',
@@ -103,16 +123,7 @@ class DragonDetailsScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              ListTile(
-                title: Text(
-                  'Description',
-                  style: TextStyles.orbitron24BoldWhite,
-                ),
-                subtitle: Text(
-                  '${dragon.description}',
-                  style: TextStyles.exo14White,
-                ),
-              )
+
             ],
           ),
         ),

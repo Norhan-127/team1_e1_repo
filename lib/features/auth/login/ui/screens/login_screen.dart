@@ -11,11 +11,7 @@ class LoginScreen extends StatelessWidget {
         child: Container(
           width: double.infinity,
           height: double.infinity,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/images/auth_background.png"),
-                fit: BoxFit.cover),
-          ),
+          color: Colors.black,
           child: const Padding(
             padding: EdgeInsets.symmetric(vertical: 50.0,horizontal: 40.0),
             child: SingleChildScrollView(
