@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:team1_e1/core/theming/colors.dart';
 import 'package:team1_e1/features/home/screens/category_screen.dart';
 import 'package:team1_e1/features/home/screens/home_screen.dart';

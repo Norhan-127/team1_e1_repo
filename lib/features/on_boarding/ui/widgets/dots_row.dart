@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:team1_e1/core/theming/colors.dart';
-import 'package:team1_e1/core/theming/styles.dart';
-
-import '../../../../core/routing/routes.dart';
 
 class DotsRow extends StatelessWidget {
   int pageIndex;
