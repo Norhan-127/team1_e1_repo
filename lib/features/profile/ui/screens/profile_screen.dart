@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:team1_e1/core/theming/colors.dart';
-import 'package:team1_e1/features/auth/login/ui/screens/before_login.dart';
+import 'package:team1_e1/features/auth/login/ui/screens/login_screen.dart';
 import 'package:team1_e1/features/profile/logic/profile_cubit.dart';
 import 'package:team1_e1/features/profile/logic/profile_state.dart';
 import '../../../../core/theming/styles.dart';
@@ -116,7 +116,7 @@ class ProfileScreen extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) =>
-                                      const BeforeLoginScreen(),
+                                      const LoginScreen(),
                                 ),
                                 (route) => false);
                           },

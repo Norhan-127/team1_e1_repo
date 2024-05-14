@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:team1_e1/core/theming/colors.dart';
+import 'package:team1_e1/core/theming/styles.dart';
 
 import '../../../../core/routing/routes.dart';
 
@@ -9,44 +12,68 @@ class DotsRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
           decoration: pageIndex == 0
               ? BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(100))
+                  gradient: RadialGradient(
+                    center: Alignment.bottomRight,
+                    radius: 4.4,
+                    colors: [
+                      AppColors.lightBlueColor,
+                      AppColors.deepPurpleColor
+                    ],
+                  ),
+                  borderRadius: BorderRadius.circular(100))
               : BoxDecoration(
                   border: Border.all(width: 2, color: Colors.white),
                   borderRadius: BorderRadius.circular(100)),
-          width: pageIndex == 0 ? 50 : 25,
-          height: 25,
+          width: pageIndex == 0 ? 60 : 18,
+          height: 18,
+        ),
+        SizedBox(
+          width: 30.w,
         ),
         Container(
           decoration: pageIndex == 1
               ? BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(100))
+                  gradient: RadialGradient(
+                    center: Alignment.bottomRight,
+                    radius: 4.4,
+                    colors: [
+                      AppColors.lightBlueColor,
+                      AppColors.deepPurpleColor
+                    ],
+                  ),
+                  borderRadius: BorderRadius.circular(100))
               : BoxDecoration(
                   border: Border.all(width: 2, color: Colors.white),
                   borderRadius: BorderRadius.circular(100)),
-          width: pageIndex == 1 ? 50 : 25,
-          height: 25,
+          width: pageIndex == 1 ? 60 : 18,
+          height: 18,
+        ),
+        SizedBox(
+          width: 30.w,
         ),
         Container(
-            decoration: pageIndex == 2
-                ? BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(100))
-                : BoxDecoration(
-                    border: Border.all(width: 2, color: Colors.white),
-                    borderRadius: BorderRadius.circular(100)),
-            width: pageIndex == 2 ? 50 : 25,
-            height: 25,
-            child: InkWell(
-                onTap: () {
-                  Navigator.pushReplacementNamed(
-                      context, Routes.beforeLoginScreen);
-                },
-                child: Center(child: Text('Next')))),
+          decoration: pageIndex == 2
+              ? BoxDecoration(
+                  gradient: RadialGradient(
+                    center: Alignment.bottomRight,
+                    radius: 4.4,
+                    colors: [
+                      AppColors.lightBlueColor,
+                      AppColors.deepPurpleColor
+                    ],
+                  ),
+                  borderRadius: BorderRadius.circular(100))
+              : BoxDecoration(
+                  border: Border.all(width: 2, color: Colors.white),
+                  borderRadius: BorderRadius.circular(100)),
+          width: pageIndex == 2 ? 60 : 18,
+          height: 18,
+        ),
       ],
     );
   }

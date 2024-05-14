@@ -14,9 +14,9 @@ class ImageAndText extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Image(
-          image: AssetImage('assets/images/login_image.png'),
-        ),
+        // Image(
+        //   image: AssetImage('assets/images/login_image.png'),
+        // ),
         verticalSpacing(30),
         Text(
           'Unlock a SpaceX of knowledge and adventure with your pass.',

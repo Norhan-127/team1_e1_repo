@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 
 class DefaultButton extends StatelessWidget {
   final double radius;
-  final Color backgroundColor;
+  final Color? backgroundColor;
   final void Function()? function;
   final String text;
   final IconData? icon;
   final TextStyle style;
   final Color? IconColor;
-  const DefaultButton({super.key, required this.radius, required this.backgroundColor, this.function, required this.text, this.icon, required this.style, this.IconColor});
+  final Gradient? gradient;
+  const DefaultButton({super.key, required this.radius,  this.backgroundColor, this.function, required this.text, this.icon, required this.style, this.IconColor, this.gradient});
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+        gradient:gradient ,
         borderRadius: BorderRadius.circular(radius),
         color: backgroundColor,
       ),

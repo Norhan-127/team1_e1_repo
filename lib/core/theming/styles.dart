@@ -12,6 +12,56 @@ import 'font_weight_helper.dart';
 
 abstract class TextStyles {
 
+  static TextStyle fontSpace28lightWhite= GoogleFonts.spaceGrotesk(
+    fontSize: 28.sp,
+    fontWeight: FontWeightHelper.light,
+    color: AppColors.whiteColor,
+  );
+  static TextStyle fontSpace18lightGrey= GoogleFonts.spaceGrotesk(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.light,
+    color: AppColors.lightGrey,
+  );
+  static TextStyle fontSpace18RegularWhite= GoogleFonts.spaceGrotesk(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.whiteColor,
+  );
+  static TextStyle fontSpace16RegularLightBlue= GoogleFonts.spaceGrotesk(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.lightBlueColor,
+  );
+
+
+
+  static TextStyle fontSpace22RegularWhite= GoogleFonts.spaceGrotesk(
+    fontSize: 22.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.whiteColor,
+  );
+
+  static TextStyle fontSpace36RegularWhite= GoogleFonts.spaceGrotesk(
+    fontSize: 36.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.whiteColor,
+  );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   static TextStyle roboto24BoldBlack = GoogleFonts.roboto(
     fontSize: 40.sp,
     fontWeight: FontWeightHelper.bold,
@@ -130,7 +180,7 @@ abstract class TextStyles {
     fontSize: 16.sp,
     fontWeight: FontWeight.w300,
     color: AppColors.whiteColor,
-
+  );
   static TextStyle font24BlueBold = TextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeightHelper.bold,

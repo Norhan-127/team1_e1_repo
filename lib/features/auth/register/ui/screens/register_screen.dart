@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:team1_e1/core/theming/colors.dart';
 import 'package:team1_e1/features/auth/register/ui/widgets/register_form.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -11,7 +12,7 @@ class RegisterScreen extends StatelessWidget {
         child: Container(
           width: double.infinity,
           height: double.infinity,
-          color: Colors.black,
+          color: AppColors.backgroundColor,
 
           child: const SingleChildScrollView(
             child: Padding(

@@ -1,6 +1,9 @@
 import 'package:another_transformer_page_view/another_transformer_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:team1_e1/core/routing/routes.dart';
+import 'package:team1_e1/core/theming/colors.dart';
+import 'package:team1_e1/core/theming/styles.dart';
 import 'package:team1_e1/features/on_boarding/ui/widgets/dots_row.dart';
 import 'package:team1_e1/features/on_boarding/ui/widgets/onboarding_images.dart';
 import 'package:team1_e1/features/on_boarding/ui/widgets/upper_page.dart';
@@ -19,16 +22,21 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.backgroundColor,
       body: Padding(
-        padding: EdgeInsets.symmetric(vertical: 40.0.h, horizontal: 30.w),
+        padding: EdgeInsets.symmetric(vertical: 40.0.h, horizontal: 20.w),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            UpperPage(),
-            SizedBox(
-              height: 30.h,
-            ),
+            TextButton(
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, Routes.loginScreen);
+                },
+                child: Text(
+                  'Skip',
+                  style: TextStyles.fontSpace22RegularWhite,
+                )),
+
             Expanded(
                 child: TransformerPageView(
               itemCount: 3,
@@ -41,12 +49,17 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               itemBuilder: (context, index) {
                 return Column(
                   children: [
-                    Image.asset(onBoardingImages[index]),
+                    SizedBox(height: 30.h,),
+                    Image.asset(onBoardingImages[index], height:350.h,width: 270.w,fit: BoxFit.fill,),
+                    SizedBox(height: 30.h,),
+                    LowerPage(),
+                    SizedBox(height: 50.h,),
+                    DotsRow(pageIndex: _pageIndex),
                   ],
                 );
               },
             )),
-            DotsRow(pageIndex: _pageIndex),
+
           ],
         ),
       ),

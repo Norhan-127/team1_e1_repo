@@ -1,6 +1,16 @@
 import 'dart:ui';
 
 class AppColors {
+  static const Color backgroundColor = Color(0xff18151A);
+  static const Color textFormFieldColor = Color(0xff2E2E2E);
+  static const Color backgroundColor2 = Color(0xff0A0908);
+  static const Color deepPurpleColor = Color(0xFFA64EDD);
+  static const Color lightBlueColor = Color(0xFF6090DE);
+
+
+
+
+
   // Use the iconic SpaceX red for accents and important elements like buttons or active status indicators.
   static const Color redColor = Color(0xffE11E1E);
   //For backgrounds

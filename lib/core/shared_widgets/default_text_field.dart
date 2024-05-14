@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:team1_e1/core/theming/colors.dart';
 
 class DefaultTextField extends StatelessWidget {
   final String ?text;
@@ -24,7 +25,7 @@ class DefaultTextField extends StatelessWidget {
       style: style,
       decoration: InputDecoration(
           border: OutlineInputBorder(
-            borderSide: borderSide!,
+            borderSide: BorderSide(width: 1 , color: AppColors.gray),
             borderRadius: BorderRadius.all(Radius.circular(radius!)) ,
           ),
           filled: filled,
