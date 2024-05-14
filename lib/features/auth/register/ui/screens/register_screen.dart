@@ -17,7 +17,7 @@ class RegisterScreen extends StatelessWidget {
 
           child: SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 50.0.h,horizontal: 20.0.w),
+              padding: EdgeInsets.symmetric(vertical: 40.0.h,horizontal: 20.0.w),
               child: RegisterForm(),
             ),
           ),

@@ -26,11 +26,11 @@ class DotsRow extends StatelessWidget {
               : BoxDecoration(
                   border: Border.all(width: 2, color: Colors.white),
                   borderRadius: BorderRadius.circular(100)),
-          width: pageIndex == 0 ? 60 : 18,
-          height: 18,
+          width: pageIndex == 0 ? 50 : 12,
+          height: 12,
         ),
         SizedBox(
-          width: 30.w,
+          width: 15.w,
         ),
         Container(
           decoration: pageIndex == 1
@@ -47,11 +47,11 @@ class DotsRow extends StatelessWidget {
               : BoxDecoration(
                   border: Border.all(width: 2, color: Colors.white),
                   borderRadius: BorderRadius.circular(100)),
-          width: pageIndex == 1 ? 60 : 18,
-          height: 18,
+          width: pageIndex == 1 ? 50 : 12,
+          height: 12,
         ),
         SizedBox(
-          width: 30.w,
+          width: 15.w,
         ),
         Container(
           decoration: pageIndex == 2
@@ -68,8 +68,8 @@ class DotsRow extends StatelessWidget {
               : BoxDecoration(
                   border: Border.all(width: 2, color: Colors.white),
                   borderRadius: BorderRadius.circular(100)),
-          width: pageIndex == 2 ? 60 : 18,
-          height: 18,
+          width: pageIndex == 2 ? 50 : 12,
+          height: 12,
         ),
       ],
     );
