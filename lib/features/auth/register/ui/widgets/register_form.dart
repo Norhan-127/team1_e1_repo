@@ -70,7 +70,7 @@ class _RegisterFormState extends State<RegisterForm> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 80.h,),
+                SizedBox(height: 10.h,),
                 Text(
                   'Let\'s Start !',
                   style: TextStyles.fontSpace36RegularWhite,

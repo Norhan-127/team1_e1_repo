@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:team1_e1/features/auth/login/ui/widgets/login_form.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -11,8 +12,8 @@ class LoginScreen extends StatelessWidget {
         child: Container(
           width: double.infinity,
           height: double.infinity,
-          child: const Padding(
-            padding: EdgeInsets.symmetric(vertical: 50.0,horizontal: 40.0),
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: 50.0.h,horizontal: 20.0.w),
             child: SingleChildScrollView(
               child: LoginForm(),
 
