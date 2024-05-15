@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../data/models/crew_response.dart';
 import 'crew_card.dart';
 
@@ -11,7 +12,7 @@ class CrewList extends StatelessWidget {
     return Expanded(
       child: ListView.separated(
         itemCount: model.length,
-        separatorBuilder: (context, index) => const SizedBox(height: 15,),
+        separatorBuilder: (context, index) => SizedBox(height: 15.h,),
         itemBuilder: (context, index) => CrewCard(model: model,index: index,),
       ),
     );

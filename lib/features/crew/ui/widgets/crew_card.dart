@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theming/colors.dart';
@@ -14,22 +15,44 @@ class CrewCard extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30),
-        color: AppColors.gray.withOpacity(0.1),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(width: 1,color: AppColors.gray.withOpacity(.3))
       ),
       child: Row(
         children: [
-          ClipRRect(
-              borderRadius: const BorderRadius.all(Radius.circular(20)),
-              child: Image(image: NetworkImage(model[index].image!,),width: 105.w,height: 105.h,fit: BoxFit.fill,)),
-          const SizedBox(width: 9,),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(10)),
+                child: Image(image: NetworkImage(model[index].image!,),width: 95.w,height: 90.h,fit: BoxFit.fill,)),
+          ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(model[index].name!,style: TextStyles.poppins17MediumWhite, maxLines: 2,
-                overflow: TextOverflow.ellipsis,),
-              Text(model[index].agency!,style: TextStyles.poppins17LightWhite,maxLines: 2, overflow: TextOverflow.ellipsis,),
+              Text(model[index].name!,style: TextStyles.fontSpace16RegularWhite,),
+              SizedBox(height: 3.h,),
+              Row(
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.location_city,color: AppColors.gray,size: 16,),
+                      SizedBox(width: 3.w,),
+                      Text(model[index].agency!,style: TextStyles.fontSpace13RegularWhite,),
+                    ],
+                  ),
+                  SizedBox(width: 30.w,),
+                  Row(
+                    children: [
+                      model[index].status! == 'active'?
+                      Icon(Icons.offline_pin,color: AppColors.lightGreenColor.withOpacity(.7),size: 16,)
+                          :Icon(Icons.cancel,color: AppColors.lightRedColor.withOpacity(.7),size: 16,),
+                      SizedBox(width: 3.w,),
+                      Text(model[index].status!.toUpperCase(),style: TextStyles.fontSpace13RegularWhite,),
+                    ],
+                  )
+                ],
+              ),
+
             ],
           )
         ],

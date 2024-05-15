@@ -39,30 +39,21 @@ class _CrewScreenState extends State<CrewScreen> {
               },
               success: (allCrew){
                 return Scaffold(
-                  backgroundColor: Colors.black,
+                  backgroundColor: AppColors.backgroundColor,
+                  appBar: DefaultAppBar(
+                    icon: Icons.arrow_back_ios_new_outlined,
+                    function: () => Navigator.pop(context),
+                    text: 'Crew',
+                  ),
                   body: Padding(
-                    padding:  EdgeInsets.symmetric(horizontal: 30.w , vertical: 30.h),
-                    child: SafeArea(
-                      child: Container(
-                        width: double.infinity,
-                        height: double.infinity,
-                        color: Colors.black,
-                        child: Column(
-                          children: [
-                            DefaultAppBar(
-                              icon: Icons.arrow_back,
-                              function: () => Navigator.pop(context),
-                              text: 'SpaceX Crew',
-                            ),
-                            verticalSpacing(15),
-                            Divider(
-                              height: 0.5,
-                              color: AppColors.gray,
-                            ),
-                            verticalSpacing(15),
-                            CrewList(model: allCrew,),
-                          ],
-                        ),
+                    padding:  EdgeInsets.symmetric(horizontal: 20.w ,vertical: 10.h),
+                    child: Container(
+                      width: double.infinity,
+                      height: double.infinity,
+                      child: Column(
+                        children: [
+                          CrewList(model: allCrew,),
+                        ],
                       ),
                     ),
                   ),
