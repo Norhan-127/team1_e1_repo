@@ -34,7 +34,7 @@ class RocketInformation extends StatelessWidget {
     return Center(
       child: Container(
         decoration: BoxDecoration(
-          border: Border.all(width: 3,color: AppColors.gray.withOpacity(.3)),
+          border: Border.all(width: 1,color: AppColors.gray.withOpacity(.3)),
           borderRadius: const BorderRadius.all(Radius.circular(20)),
         ),
         child: Padding(
