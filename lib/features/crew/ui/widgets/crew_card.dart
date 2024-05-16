@@ -37,7 +37,7 @@ class CrewCard extends StatelessWidget {
                     children: [
                       Icon(Icons.location_city,color: AppColors.gray,size: 16,),
                       SizedBox(width: 3.w,),
-                      Text(model[index].agency!,style: TextStyles.fontSpace13RegularWhite,),
+                      Text(model[index].agency!,style: TextStyles.fontSpace13RegularGrey,),
                     ],
                   ),
                   SizedBox(width: 30.w,),
@@ -47,7 +47,7 @@ class CrewCard extends StatelessWidget {
                       Icon(Icons.offline_pin,color: AppColors.lightGreenColor.withOpacity(.7),size: 16,)
                           :Icon(Icons.cancel,color: AppColors.lightRedColor.withOpacity(.7),size: 16,),
                       SizedBox(width: 3.w,),
-                      Text(model[index].status!.toUpperCase(),style: TextStyles.fontSpace13RegularWhite,),
+                      Text(model[index].status!.toUpperCase(),style: TextStyles.fontSpace13RegularGrey,),
                     ],
                   )
                 ],

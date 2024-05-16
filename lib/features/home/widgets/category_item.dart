@@ -25,8 +25,8 @@ class CategoryItem extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 100,
-            left: 30,
+            top: 95,
+            left: 20,
             child: Text(
               '${data.name}',
               style: TextStyles.fontSpace18RegularWhite,

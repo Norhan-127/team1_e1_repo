@@ -20,6 +20,7 @@ class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      // automaticallyImplyLeading:false,
       backgroundColor: Colors.transparent,
       centerTitle: isCenter,
       leading: IconButton(

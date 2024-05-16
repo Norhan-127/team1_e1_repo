@@ -4,6 +4,7 @@ import 'package:team1_e1/core/shared_widgets/default_button.dart';
 import 'package:team1_e1/core/shared_widgets/default_text_field.dart';
 import 'package:team1_e1/features/profile/logic/profile_cubit.dart';
 import 'package:team1_e1/features/profile/logic/profile_state.dart';
+import '../../../../core/shared_widgets/defult_app_bar.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
 import '../widgets/image_circle.dart';
@@ -43,19 +44,10 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           nameController.text = ProfileCubit.get(context).userModel!.name!;
           emailController.text = ProfileCubit.get(context).userModel!.email!;
           return Scaffold(
-            backgroundColor: Colors.black,
-            appBar: AppBar(
-              backgroundColor: Colors.transparent,
-              title: Text(
-                'Edit Profile', style: TextStyles.poppins19MediumWhite,),
-              leading: IconButton(
-                icon: const Icon(
-                  Icons.arrow_back_ios_new_outlined,
-                  color: AppColors.whiteColor,),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
+            appBar: DefaultAppBar(
+              icon: Icons.arrow_back_ios_new_outlined,
+              function: () => Navigator.pop(context),
+              text: 'Edit Profile',
             ),
             body: ProfileCubit.get(context).userModel != null ?
             Padding(
@@ -68,30 +60,29 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Email', style: TextStyles.poppins19MediumWhite,),
+                        Text('Email', style: TextStyles.fontSpace18RegularWhite,),
                         const SizedBox(height: 8,),
                         DefaultTextField(
                           controller: emailController,
                           readOnly: true,
-                          fillColor: AppColors.lightGrey.withOpacity(.18),
                           filled: true,
+                          fillColor: Colors.transparent,
                           radius: 20,
-                          borderSide: BorderSide.none,
-                          style: TextStyles.poppins17MediumWhite,
+                          style: TextStyles.fontSpace16RegularWhite,
                           isPassword: false,
                         ),
                         const SizedBox(height: 15,),
                         Text(
-                          'User Name', style: TextStyles.poppins19MediumWhite,),
+                          'User Name', style: TextStyles.fontSpace18RegularWhite,),
                         const SizedBox(height: 8,),
                         DefaultTextField(
                           controller: nameController,
                           readOnly: false,
-                          fillColor: AppColors.lightGrey.withOpacity(.18),
                           filled: true,
+                          fillColor: Colors.transparent,
                           radius: 20,
                           borderSide: BorderSide.none,
-                          style: TextStyles.poppins17MediumWhite,
+                          style: TextStyles.fontSpace16RegularWhite,
                           isPassword: false,
                         ),
                       ],
@@ -102,9 +93,17 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                           ProfileCubit.get(context).updateUser(name: nameController.text);
                         },
                         radius: 20,
-                        backgroundColor: AppColors.whiteColor,
                         text: 'Edit',
-                        style: TextStyles.poppins21MediumBlack)
+                        style: TextStyles.fontSpace22RegularWhite,
+                        gradient: RadialGradient(
+                        center: Alignment.bottomRight,
+                        radius: 4.4,
+                        colors: [
+                          AppColors.lightBlueColor,
+                          AppColors.deepPurpleColor
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),

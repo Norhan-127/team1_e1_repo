@@ -6,6 +6,7 @@ import 'package:team1_e1/core/theming/colors.dart';
 import 'package:team1_e1/features/auth/login/ui/screens/login_screen.dart';
 import 'package:team1_e1/features/profile/logic/profile_cubit.dart';
 import 'package:team1_e1/features/profile/logic/profile_state.dart';
+import '../../../../core/shared_widgets/defult_app_bar.dart';
 import '../../../../core/theming/styles.dart';
 import '../widgets/image_circle.dart';
 import '../widgets/main_row.dart';
@@ -21,31 +22,19 @@ class ProfileScreen extends StatelessWidget {
       child: BlocBuilder<ProfileCubit, ProfileState>(
         builder: (context, state) {
           return Scaffold(
-            backgroundColor: Colors.black,
-            appBar: AppBar(
-              backgroundColor: Colors.transparent,
-              title: Text(
-                'Profile',
-                style: TextStyles.poppins19MediumWhite,
-              ),
-              leading: IconButton(
-                icon: const Icon(
-                  Icons.arrow_back_ios_new_outlined,
-                  color: AppColors.whiteColor,
-                ),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
+            appBar: DefaultAppBar(
+              icon: Icons.arrow_back_ios_new_outlined,
+              function: () => Navigator.pop(context),
+              text: 'Profile',
             ),
             body: ProfileCubit.get(context).userModel != null ?
             Padding(
               padding:
-                  const EdgeInsets.symmetric(vertical: 25.0, horizontal: 20),
+              EdgeInsets.symmetric(vertical: 25.0.h, horizontal: 20.w),
               child: Column(
                 children: [
                   Container(
-                    width: 300.w,
+                    width: double.infinity,
                     height: 260.h,
                     decoration: BoxDecoration(
                         color: AppColors.lightGrey.withOpacity(.18),
@@ -60,14 +49,14 @@ class ProfileScreen extends StatelessWidget {
                         ),
                         Text(
                           ProfileCubit.get(context).userModel!.name!,
-                          style: TextStyles.poppins19MediumWhite,
+                          style: TextStyles.fontSpace22RegularWhite,
                         ),
                         const SizedBox(
                           height: 7,
                         ),
                         Text(
                           ProfileCubit.get(context).userModel!.email!,
-                          style: TextStyles.poppins16WhiteFontWeight300,
+                          style: TextStyles.fontSpace18RegularWhite,
                         ),
                       ],
                     ),
@@ -76,7 +65,7 @@ class ProfileScreen extends StatelessWidget {
                     height: 10,
                   ),
                   Container(
-                    width: 300.w,
+                    width: double.infinity,
                     height: 60.h,
                     decoration: BoxDecoration(
                         color: AppColors.lightGrey.withOpacity(.18),
@@ -99,7 +88,7 @@ class ProfileScreen extends StatelessWidget {
                     height: 10,
                   ),
                   Container(
-                      width: 300.w,
+                      width: double.infinity,
                       height: 60.h,
                       decoration: BoxDecoration(
                           color: AppColors.lightGrey.withOpacity(.18),

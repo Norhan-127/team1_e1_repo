@@ -37,7 +37,7 @@ abstract class TextStyles {
     fontWeight: FontWeightHelper.regular,
     color: AppColors.whiteColor,
   );
-  static TextStyle fontSpace13RegularWhite= GoogleFonts.spaceGrotesk(
+  static TextStyle fontSpace13RegularGrey= GoogleFonts.spaceGrotesk(
     fontSize: 13.sp,
     fontWeight: FontWeightHelper.regular,
     color: AppColors.gray,
