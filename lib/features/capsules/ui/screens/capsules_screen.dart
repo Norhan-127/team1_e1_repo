@@ -35,20 +35,12 @@ class _CapsulesScreenState extends State<CapsulesScreen> {
           padding:  EdgeInsets.symmetric(horizontal: 30.w , vertical: 30.h),
           child: ListView(
             children: [
-              SizedBox(
-                height: 14.h,
-              ),
               DefaultAppBar(
-                icon: Icons.arrow_back,
+                icon: Icons.arrow_back_ios,
                 function: () => Navigator.pop(context),
-                text: 'SpaceX Capsules',
+                text: 'Capsules',
               ),
-              verticalSpacing(15),
-              Divider(
-                height: 0.5,
-                color: AppColors.gray,
-              ),
-              verticalSpacing(15),
+              verticalSpacing(10),
               Text(
                 'designed for transporting astronauts to and from the International Space Station. It is a significant advancement from the original Dragon spacecraft, featuring improvements in design, capabilities, and safety features.',
                 style: TextStyles.NormalWhite,

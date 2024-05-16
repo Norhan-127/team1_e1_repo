@@ -10,8 +10,11 @@ class Rocket {
   bool? active;
   int? stages;
   int? boosters;
+  @JsonKey(name: "cost_per_launch")
   int? costPerLaunch;
+  @JsonKey(name: "success_rate_pct")
   int? successRatePct;
+  @JsonKey(name: "first_flight")
   String? firstFlight;
   String? country;
   String? company;
@@ -27,11 +30,8 @@ class Rocket {
         this.active,
         this.stages,
         this.boosters,
-        @JsonKey(name: "cost_per_launch")
         this.costPerLaunch,
-        @JsonKey(name: "success_rate_pct")
         this.successRatePct,
-        @JsonKey(name: "first_flight")
         this.firstFlight,
         this.country,
         this.company,

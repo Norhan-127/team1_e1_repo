@@ -10,13 +10,6 @@ class BackgroundContainer extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: double.infinity,
-      color: Colors.black,
-      // decoration: const BoxDecoration(
-      //     image: DecorationImage(
-      //         fit: BoxFit.cover,
-      //         image: AssetImage('assets/images/app_background.png')
-      //     )
-      // ),
       child: child,
     );
   }

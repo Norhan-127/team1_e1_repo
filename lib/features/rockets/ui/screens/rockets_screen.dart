@@ -27,27 +27,17 @@ class _RocketsScreenState extends State<RocketsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      appBar:DefaultAppBar(
+        icon: Icons.arrow_back_ios,
+        function: () => Navigator.pop(context),
+        text: 'Rockets',
+      ) ,
       body: Padding(
-        padding:  EdgeInsets.symmetric(vertical: 30.h , horizontal: 30.w),
+        padding:  EdgeInsets.symmetric(vertical: 10.h , horizontal: 20.w),
         child: SafeArea(
           child: BackgroundContainer(
             child: Column(
               children: [
-                const SizedBox(
-                  height: 20,
-                ),
-                DefaultAppBar(
-                  icon: Icons.arrow_back,
-                  function: () => Navigator.pop(context),
-                  text: 'SpaceX Rockets',
-                ),
-                verticalSpacing(15),
-                const Divider(
-                  height: 0.5,
-                  color: Colors.white24,
-                ),
-                verticalSpacing(30),
                 BlocBuilder<RocketCubit, RocketState>(
                   builder: (context, state) {
                     return state.when(
@@ -69,7 +59,7 @@ class _RocketsScreenState extends State<RocketsScreen> {
                         success: (allRockets) {
                           return Expanded(
                             child: ListView.separated(
-                              separatorBuilder:(context, index) => verticalSpacing(15),
+                              separatorBuilder:(context, index) => verticalSpacing(15.h),
                                 itemCount: allRockets.length,
                                 itemBuilder: (context, index) => GestureDetector(
                                       onTap: () {
@@ -79,8 +69,8 @@ class _RocketsScreenState extends State<RocketsScreen> {
                                       },
                                       child: RocketCard(
                                         title: allRockets[index].name,
-                                        description:
-                                            allRockets[index].description,
+                                       company: allRockets[index].company,
+                                       type:allRockets[index].type,
                                         image: allRockets[index].flickrImages,
                                       ),
 
