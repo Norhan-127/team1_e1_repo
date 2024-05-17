@@ -59,7 +59,7 @@ class _LoginFormState extends State<LoginForm> {
             Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const CrewScreen(),
+                  builder: (context) => const LayoutScreen(),
                 ));
           }
         },
@@ -139,11 +139,6 @@ class _LoginFormState extends State<LoginForm> {
                                     email: emailController.text,
                                     password: passwordController.text);
                               }
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => LayoutScreen(),
-                                  ));
                             },
                             radius: 20,
                             backgroundColor: AppColors.lightGrey,
