@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:team1_e1/core/helpers/spacing.dart';
 import 'package:team1_e1/core/shared_widgets/background_container.dart';
 import 'package:team1_e1/core/shared_widgets/defult_app_bar.dart';
