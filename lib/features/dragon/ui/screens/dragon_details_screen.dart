@@ -41,7 +41,7 @@ class DragonDetailsScreen extends StatelessWidget {
                   children: [
                     Text(
                       'material: ${dragon.heatShield!.material}',
-                      style: TextStyles.exo14White,
+                      style: TextStyles.poppins17LightWhite,
                     ),
                     Text(
                       'size in material: ${dragon.heatShield!.sizeMeters}',
@@ -49,7 +49,7 @@ class DragonDetailsScreen extends StatelessWidget {
                     ),
                     Text(
                       'dev partner: ${dragon.heatShield!.devPartner}',
-                      style: TextStyles.exo14White,
+                      style: TextStyles.poppins17LightWhite,
                     ),
                   ],
                 ),
@@ -60,11 +60,11 @@ class DragonDetailsScreen extends StatelessWidget {
                   children: [
                     Text(
                       'height trunk in feet: ${dragon.heightWTrunk!.feet}',
-                      style: TextStyles.exo14White,
+                      style: TextStyles.poppins17LightWhite,
                     ),
                     Text(
                       'height trunk in meters: ${dragon.heightWTrunk!.meters}',
-                      style: TextStyles.exo14White,
+                      style: TextStyles.poppins17LightWhite,
                     ),
                   ],
                 ),
@@ -75,11 +75,11 @@ class DragonDetailsScreen extends StatelessWidget {
                   children: [
                     Text(
                       'diameter in feet: ${dragon.diameter!.feet}',
-                      style: TextStyles.exo14White,
+                      style: TextStyles.poppins17LightWhite,
                     ),
                     Text(
                       'diameter in meters: ${dragon.diameter!.meters}',
-                      style: TextStyles.exo14White,
+                      style: TextStyles.poppins17LightWhite,
                     ),
                   ],
                 ),
@@ -90,15 +90,15 @@ class DragonDetailsScreen extends StatelessWidget {
                   children: [
                     Text(
                       'thrusters type: ${dragon.thrusters![0].type}',
-                      style: TextStyles.exo14White,
+                      style: TextStyles.poppins17LightWhite,
                     ),
                     Text(
                       'thrusters amount: ${dragon.thrusters![0].amount}',
-                      style: TextStyles.exo14White,
+                      style: TextStyles.poppins17LightWhite,
                     ),
                     Text(
                       'thrusters ISP: ${dragon.thrusters![0].isp}',
-                      style: TextStyles.exo14White,
+                      style: TextStyles.poppins17LightWhite,
                     ),
                   ],
                 ),
@@ -106,11 +106,11 @@ class DragonDetailsScreen extends StatelessWidget {
               ListTile(
                 title: Text(
                   'Description',
-                  style: TextStyles.orbitron24BoldWhite,
+                  style: TextStyles.poppins28BoldWhite,
                 ),
                 subtitle: Text(
                   '${dragon.description}',
-                  style: TextStyles.exo14White,
+                  style: TextStyles.poppins17LightWhite,
                 ),
               )
             ],

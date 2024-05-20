@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import '../../../../core/theming/styles.dart';
 import '../widgets/crew_list.dart';
 
