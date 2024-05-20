@@ -26,7 +26,7 @@ class CapsuleDetailsContainer extends StatelessWidget {
                 backgroundColor: AppColors.whiteColor,
                 child: Text(
                   index,
-                  style: TextStyles.orbitron24BoldWhite
+                  style: TextStyles.poppins28BoldWhite
                       .copyWith(color: Colors.black),
                 ),
               ),

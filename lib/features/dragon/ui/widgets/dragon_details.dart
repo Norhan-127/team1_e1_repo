@@ -29,7 +29,7 @@ class _DragonDetailsState extends State<DragonDetails> {
       child: ListTile(
         title: Text(
           widget.text,
-          style: TextStyles.orbitron24BoldWhite,
+          style: TextStyles.poppins28BoldWhite,
         ),
         subtitle: isVisable == false
             ? null

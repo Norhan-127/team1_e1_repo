@@ -72,11 +72,11 @@ class _DragonScreenState extends State<DragonScreen> {
                                     child: ListTile(
                                       title: Text(
                                         '${allDragons[i].name}',
-                                        style: TextStyles.orbitron24BoldWhite,
+                                        style: TextStyles.poppins28BoldWhite,
                                       ),
                                       trailing: Text(
                                         '${allDragons[i].firstFlight}',
-                                        style: TextStyles.exo14White,
+                                        style: TextStyles.poppins17LightWhite,
                                       ),
                                     ),
                                   ))),

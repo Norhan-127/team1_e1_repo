@@ -20,8 +20,8 @@ class CapsuleContainerSerial extends StatelessWidget {
           borderRadius: BorderRadius.circular(15)
       ),
       child: ListTile(
-        title: Text('$txt',style: TextStyles.orbitron24BoldWhite,),
-        leading: Text('$index.' ,style: TextStyles.orbitron24BoldWhite,),
+        title: Text('$txt',style: TextStyles.poppins28BoldWhite,),
+        leading: Text('$index.' ,style: TextStyles.poppins28BoldWhite,),
       ),
 
     );

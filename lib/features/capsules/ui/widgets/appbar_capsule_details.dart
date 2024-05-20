@@ -31,7 +31,7 @@ class AppBarCapsuleDetails extends StatelessWidget {
             ),
             Text(
               'Serial $serial',
-              style: TextStyles.exo24White,
+              style: TextStyles.poppins28BoldWhite,
             ),
           ],
         ),
