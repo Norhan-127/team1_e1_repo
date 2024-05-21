@@ -26,6 +26,7 @@ class ProfileCubit extends Cubit<ProfileState> {
   void updateUser({
     required String name,
   }){
+    emit(UpdateUserDataLoading());
     UserModel model = UserModel(
       name: name,
       email: userModel!.email,

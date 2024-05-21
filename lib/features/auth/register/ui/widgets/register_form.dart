@@ -5,6 +5,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:team1_e1/core/helpers/spacing.dart';
 import 'package:team1_e1/core/routing/routes.dart';
 import 'package:team1_e1/features/crew/ui/screen/crew_screen.dart';
+import 'package:team1_e1/features/home/screens/layout_screen.dart';
 import '../../../../../core/shared_widgets/default_button.dart';
 import '../../../../../core/shared_widgets/default_text_field.dart';
 import '../../../../../core/theming/colors.dart';
@@ -61,7 +62,7 @@ class _RegisterFormState extends State<RegisterForm> {
           }
           else if (state is RegisterSuccess){
             // Replace crewScreen to homeScreen
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const CrewScreen(),));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const LayoutScreen(),));
           }
         },
         builder: (context, state) {

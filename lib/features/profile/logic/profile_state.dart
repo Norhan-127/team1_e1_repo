@@ -6,6 +6,7 @@ class GetUserDataLoading extends ProfileState {}
 class GetUserDataSuccess extends ProfileState {}
 class GetUserDataError extends ProfileState {}
 
+class UpdateUserDataLoading extends ProfileState {}
 class UpdateUserDataError extends ProfileState {}
 
 

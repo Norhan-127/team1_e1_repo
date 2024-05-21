@@ -4,6 +4,7 @@ import 'package:team1_e1/core/shared_widgets/default_button.dart';
 import 'package:team1_e1/core/shared_widgets/default_text_field.dart';
 import 'package:team1_e1/features/profile/logic/profile_cubit.dart';
 import 'package:team1_e1/features/profile/logic/profile_state.dart';
+import 'package:team1_e1/features/profile/ui/screens/profile_screen.dart';
 import '../../../../core/shared_widgets/defult_app_bar.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
@@ -41,8 +42,12 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       create: (context) => ProfileCubit()..getUserData(),
       child: BlocBuilder<ProfileCubit, ProfileState>(
         builder: (context, state) {
-          nameController.text = ProfileCubit.get(context).userModel!.name!;
-          emailController.text = ProfileCubit.get(context).userModel!.email!;
+          ProfileCubit.get(context).userModel != null ?
+          nameController.text = ProfileCubit.get(context).userModel!.name!:
+          nameController.text = '';
+          ProfileCubit.get(context).userModel != null ?
+          emailController.text = ProfileCubit.get(context).userModel!.email!:
+          emailController.text = '';;
           return Scaffold(
             appBar: DefaultAppBar(
               icon: Icons.arrow_back_ios_new_outlined,
@@ -55,6 +60,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
+                    if(state is UpdateUserDataLoading)
+                      LinearProgressIndicator(),
+                      SizedBox(height: 10,),
                     const ImageCircle(),
                     const SizedBox(height: 30,),
                     Column(
@@ -91,6 +99,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     DefaultButton(
                         function: (){
                           ProfileCubit.get(context).updateUser(name: nameController.text);
+                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ProfileScreen(),));
                         },
                         radius: 20,
                         text: 'Edit',

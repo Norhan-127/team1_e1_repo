@@ -16,7 +16,7 @@ class CapsuleDetailsContainer extends StatelessWidget {
     return SingleChildScrollView(
       child: SizedBox(
         height: 150.h,
-        width: 170,
+        width: 150.w,
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: [
@@ -30,21 +30,24 @@ class CapsuleDetailsContainer extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Icon(icon,color: AppColors.lightGrey,),
-                  Center(
-                      child: Text(
+                  Column(
+                    children: [
+                      Icon(icon,color: AppColors.lightGrey,),
+                      Text(
                         text,
-                        style: TextStyles.fontSpace22RegularWhite,
-                      )),
+                        style: TextStyles.fontSpace22RegularWhite,textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
                   Column(
                     children: [
                       const Divider(
-                        thickness: 2,
+                        thickness: 1,
                         color: AppColors.gray,
                       ),
                       Text(
                         body,
-                        style: TextStyles.fontSpace22RegularWhite,
+                        style: TextStyles.fontSpace18LightWhite,
                       )
                     ],
                   )

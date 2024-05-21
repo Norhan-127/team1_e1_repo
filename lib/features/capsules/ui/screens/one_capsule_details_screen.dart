@@ -27,7 +27,7 @@ class OneCapsuleDetailsScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     CapsuleDetailsContainer(
                       icon: Icons.type_specimen_outlined,
@@ -47,7 +47,7 @@ class OneCapsuleDetailsScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 15.h),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     CapsuleDetailsContainer(
                       icon: Icons.replay_outlined,
@@ -67,15 +67,17 @@ class OneCapsuleDetailsScreen extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 15.h),
-                Padding(
-                  padding: EdgeInsets.only(left: 90.w),
-                  child: CapsuleDetailsContainer(
-                    icon: Icons.flight_takeoff_outlined,
-                    text: 'water\nlandings',
-                    body:
-                    '${capsule.waterLandings}',
-                    index: '5',
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CapsuleDetailsContainer(
+                      icon: Icons.flight_takeoff_outlined,
+                      text: 'water\nlandings',
+                      body:
+                      '${capsule.waterLandings}',
+                      index: '5',
+                    ),
+                  ],
                 ),
               ],
             )

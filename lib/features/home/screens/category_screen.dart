@@ -13,7 +13,7 @@ class CategoryScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding:  EdgeInsets.symmetric(horizontal: 20.w ,vertical: 20.h),
+          padding:  EdgeInsets.symmetric(horizontal: 20.w ,vertical: 35.h),
           child: Column(
             children: [
               Row(
@@ -31,7 +31,6 @@ class CategoryScreen extends StatelessWidget {
                    icon: Icon(Icons.account_circle_outlined), color: Colors.white, iconSize: 30,),
                ],
               ),
-              verticalSpacing(15),
               CategoryList(),
             ],
           ),
