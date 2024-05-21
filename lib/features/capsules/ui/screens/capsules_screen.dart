@@ -4,13 +4,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:team1_e1/core/helpers/spacing.dart';
 import 'package:team1_e1/core/shared_widgets/defult_app_bar.dart';
-import 'package:team1_e1/core/theming/styles.dart';
 import 'package:team1_e1/features/capsules/logic/capsule_cubit.dart';
 import 'package:team1_e1/features/capsules/ui/widgets/capsule_container_serial.dart';
 import '../../../../core/networking/network_exceptions.dart';
 import '../../../../core/routing/routes.dart';
 import '../../logic/capsule_state.dart';
-import 'package:team1_e1/core/theming/colors.dart';
+
 
 class CapsulesScreen extends StatefulWidget {
   const CapsulesScreen({super.key});

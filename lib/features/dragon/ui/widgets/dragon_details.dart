@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:team1_e1/core/theming/colors.dart';
-
 import '../../../../core/theming/styles.dart';
-import '../../data/models/dragon_response.dart';
+
 
 class DragonDetails extends StatefulWidget {
   String text;

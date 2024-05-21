@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:team1_e1/core/helpers/spacing.dart';
-import 'package:team1_e1/core/shared_widgets/background_container.dart';
 import 'package:team1_e1/core/shared_widgets/defult_app_bar.dart';
-import 'package:team1_e1/features/capsules/ui/widgets/appbar_capsule_details.dart';
 import 'package:team1_e1/features/capsules/ui/widgets/capsule_details_container.dart';
-
 import '../../data/models/capsules_response.dart';
 
 
