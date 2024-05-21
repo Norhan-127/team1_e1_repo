@@ -78,7 +78,7 @@ class _DragonScreenState extends State<DragonScreen> {
                                   ),
                                   trailing: Text(
                                     '${allDragons[i].firstFlight}',
-                                    style: TextStyles.exo14White,
+                                    style: TextStyles.fontSpace18RegularWhite,
                                   ),
                                 ),
                               ))),

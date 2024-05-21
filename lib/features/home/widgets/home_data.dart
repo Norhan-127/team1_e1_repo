@@ -10,9 +10,9 @@ class HomeModel{
 }
 
 List<HomeModel> items =[
-  HomeModel(id: 1 ,image:'assets/images/capsule_image.jpg', name: "Capsules"),
+  HomeModel(id: 1 ,image:'assets/images/spacexCapsules.jpg', name: "Capsules"),
   HomeModel(id: 2 ,image:'assets/images/dragon_image.jpg', name: "Dragons", ),
-  HomeModel(id: 3 ,image:'assets/images/rocket.jpg', name: "Rockets", ),
+  HomeModel(id: 3 ,image:'assets/images/images.jpeg', name: "Rockets", ),
   HomeModel(id: 4 ,image:'assets/images/crew_image.webp', name: "Crew", ),
 
 

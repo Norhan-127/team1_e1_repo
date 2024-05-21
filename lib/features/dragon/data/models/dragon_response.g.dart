@@ -47,17 +47,17 @@ Map<String, dynamic> _$DragonToJson(Dragon instance) => <String, dynamic>{
 
 HeatShield _$HeatShieldFromJson(Map<String, dynamic> json) => HeatShield(
       material: json['material'] as String?,
-      sizeMeters: (json['sizeMeters'] as num?)?.toDouble(),
-      tempDegrees: json['tempDegrees'] as int?,
-      devPartner: json['devPartner'] as String?,
+      sizeMeters: (json['size_meters'] as num?)?.toDouble(),
+      tempDegrees: json['temp_degrees'] as int?,
+      devPartner: json['dev_partner'] as String?,
     );
 
 Map<String, dynamic> _$HeatShieldToJson(HeatShield instance) =>
     <String, dynamic>{
       'material': instance.material,
-      'sizeMeters': instance.sizeMeters,
-      'tempDegrees': instance.tempDegrees,
-      'devPartner': instance.devPartner,
+      'size_meters': instance.sizeMeters,
+      'temp_degrees': instance.tempDegrees,
+      'dev_partner': instance.devPartner,
     };
 
 Cargo _$CargoFromJson(Map<String, dynamic> json) => Cargo(

@@ -7,6 +7,7 @@ import 'package:team1_e1/core/shared_widgets/background_container.dart';
 import 'package:team1_e1/core/shared_widgets/defult_app_bar.dart';
 import 'package:team1_e1/features/dragon/data/models/dragon_response.dart';
 import 'package:team1_e1/features/dragon/ui/widgets/dragon_details.dart';
+import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
 
 class DragonDetailsScreen extends StatelessWidget {
@@ -55,21 +56,21 @@ class DragonDetailsScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 20.0.w),
               child: DragonDetails(
                 text: 'Heat Shield',
-                columnDetails: Column(
+                columnDetails: Row(
                   children: [
+                    Icon(Icons.wb_iridescent, color: AppColors.whiteColor),
+                    horizontalSpacing(5),
                     Text(
-                      'material: ${dragon.heatShield!.material}',
+                      '${dragon.heatShield!.material}',
                       style: TextStyles.fontSpace13RegularGrey,
                     ),
+                    Spacer(),
+                    Icon( Icons.height, color: AppColors.whiteColor),
+                    horizontalSpacing(5),
                     Text(
-                      'size in material: ${dragon.heatShield!.sizeMeters}',
+                      '${dragon.heatShield!.sizeMeters}',
                       style: TextStyles.fontSpace13RegularGrey,
                     ),
-                    Text(
-                      'dev partner: ${dragon.heatShield!.devPartner}',
-                      style: TextStyles.fontSpace13RegularGrey,
-                    ),
-
                   ],
                 ),
               ),
@@ -78,14 +79,19 @@ class DragonDetailsScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 20.0.w),
               child: DragonDetails(
                 text: 'Height W Trunk',
-                columnDetails: Column(
+                columnDetails: Row(
                   children: [
+                    Icon(Icons.height, color: AppColors.whiteColor),
+                    horizontalSpacing(5),
                     Text(
-                      'height trunk in feet: ${dragon.heightWTrunk!.feet}',
+                      '${dragon.heightWTrunk!.feet}',
                       style: TextStyles.fontSpace13RegularGrey,
                     ),
+                    Spacer(),
+                    Icon( Icons.monitor_weight_outlined, color: AppColors.whiteColor),
+                    horizontalSpacing(5),
                     Text(
-                      'height trunk in meters: ${dragon.heightWTrunk!.meters}',
+                      '${dragon.heightWTrunk!.meters}',
                       style: TextStyles.fontSpace13RegularGrey,
                     ),
                   ],
@@ -96,16 +102,22 @@ class DragonDetailsScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 20.0.w),
               child: DragonDetails(
                 text: 'Diameter',
-                columnDetails: Column(
+                columnDetails: Row(
                   children: [
+                    Icon(Icons.height, color: AppColors.whiteColor),
+                    horizontalSpacing(5),
                     Text(
-                      'diameter in feet: ${dragon.diameter!.feet}',
+                      '${dragon.diameter!.feet}',
                       style: TextStyles.fontSpace13RegularGrey,
                     ),
+                    Spacer(),
+                    Icon( Icons.monitor_weight_outlined, color: AppColors.whiteColor),
+                    horizontalSpacing(5),
                     Text(
-                      'diameter in meters: ${dragon.diameter!.meters}',
+                      '${dragon.diameter!.meters}',
                       style: TextStyles.fontSpace13RegularGrey,
                     ),
+
                   ],
                 ),
               ),
@@ -114,20 +126,33 @@ class DragonDetailsScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 20.0.w),
               child: DragonDetails(
                 text: 'thrusters',
-                columnDetails: Column(
+                columnDetails: Row(
                   children: [
+                    Icon(Icons.wb_iridescent, color: AppColors.whiteColor),
+                    horizontalSpacing(5),
                     Text(
-                      'thrusters type: ${dragon.thrusters![0].type}',
+                      '${dragon.thrusters![0].type}',
                       style: TextStyles.fontSpace13RegularGrey,
                     ),
+                    Spacer(),
+                    Icon( Icons.monitor_weight_outlined, color: AppColors.whiteColor),
+                    horizontalSpacing(5),
                     Text(
-                      'thrusters amount: ${dragon.thrusters![0].amount}',
+                      '${dragon.thrusters![0].amount}',
                       style: TextStyles.fontSpace13RegularGrey,
                     ),
-                    Text(
-                      'thrusters ISP: ${dragon.thrusters![0].isp}',
-                      style: TextStyles.fontSpace13RegularGrey,
-                    ),
+                    // Text(
+                    //   'thrusters type: ${dragon.thrusters![0].type}',
+                    //   style: TextStyles.fontSpace13RegularGrey,
+                    // ),
+                    // Text(
+                    //   'thrusters amount: ${dragon.thrusters![0].amount}',
+                    //   style: TextStyles.fontSpace13RegularGrey,
+                    // ),
+                    // Text(
+                    //   'thrusters ISP: ${dragon.thrusters![0].isp}',
+                    //   style: TextStyles.fontSpace13RegularGrey,
+                    // ),
                   ],
                 ),
               ),

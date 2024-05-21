@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:team1_e1/core/theming/colors.dart';
-import 'package:team1_e1/features/home/screens/category_screen.dart';
 import 'package:team1_e1/features/home/screens/home_screen.dart';
+
 
 
 class LayoutScreen extends StatefulWidget {
@@ -16,9 +16,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
 
 
   List<Widget> screens =[
-    CategoryScreen(),
     HomeScreen(),
-
   ];
 
 

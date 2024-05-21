@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team1_e1/core/routing/routes.dart';
 import 'package:team1_e1/features/capsules/ui/screens/capsules_screen.dart';
-import 'package:team1_e1/features/home/screens/category_screen.dart';
+import 'package:team1_e1/features/home/screens/home_screen.dart';
 import 'package:team1_e1/features/home/screens/layout_screen.dart';
 import 'package:team1_e1/features/rockets/data/models/rockets_response.dart';
 import 'package:team1_e1/features/rockets/ui/screens/rocket_details_screen.dart';
@@ -38,7 +38,7 @@ class AppRouter {
 
       case Routes.homeScreen:
         return MaterialPageRoute(
-          builder: (_) => const CategoryScreen(),
+          builder: (_) => const HomeScreen(),
         );
 
 
