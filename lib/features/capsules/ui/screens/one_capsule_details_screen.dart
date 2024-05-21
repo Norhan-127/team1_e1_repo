@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:team1_e1/core/helpers/spacing.dart';
 import 'package:team1_e1/core/shared_widgets/background_container.dart';
+import 'package:team1_e1/core/shared_widgets/defult_app_bar.dart';
 import 'package:team1_e1/features/capsules/ui/widgets/appbar_capsule_details.dart';
 import 'package:team1_e1/features/capsules/ui/widgets/capsule_details_container.dart';
 
@@ -14,71 +16,74 @@ class OneCapsuleDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BackgroundContainer(
-          child: Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 30.w , vertical: 30.h),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+      appBar: DefaultAppBar(
+        icon: Icons.arrow_back_ios_new_outlined,
+        function: () => Navigator.pop(context),
+        text: 'Capsule  ${capsule.serial}',
+      ),
+      body: Padding(
+        padding:  EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
+        child: Column(
+          children: [
+            verticalSpacing(15),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                AppBarCapsuleDetails(
-                  serial:
-                  '${capsule.serial}',
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CapsuleDetailsContainer(
-                          text: 'Type',
-                          body:
-                          '${capsule.type}',
-                          index: '1',
-                        ),
-                        CapsuleDetailsContainer(
-                          text: 'status',
-                          body:
-                          '${capsule.status}',
-                          index: '2',
-                        ),
-                      ],
+                    CapsuleDetailsContainer(
+                      icon: Icons.type_specimen_outlined,
+                      text: 'Type',
+                      body:
+                      '${capsule.type}',
+                      index: '1',
                     ),
-                    SizedBox(height: 15.h),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CapsuleDetailsContainer(
-                          text: 'reuse\ncount',
-                          body: capsule
-                              .reuseCount
-                              .toString(),
-                          index: '3',
-                        ),
-                        CapsuleDetailsContainer(
-                          text: 'land\nlandings',
-                          body:
-                          '${capsule.landLandings}',
-                          index: '4',
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 15.h),
-                    Padding(
-                      padding: EdgeInsets.only(left: 15.w),
-                      child: CapsuleDetailsContainer(
-                        text: 'water\nlandings',
-                        body:
-                        '${capsule.waterLandings}',
-                        index: '5',
-                      ),
+                    CapsuleDetailsContainer(
+                      icon: Icons.verified_outlined,
+                      text: 'status',
+                      body:
+                      '${capsule.status}',
+                      index: '2',
                     ),
                   ],
-                )
+                ),
+                SizedBox(height: 15.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    CapsuleDetailsContainer(
+                      icon: Icons.replay_outlined,
+                      text: 'reuse\ncount',
+                      body: capsule
+                          .reuseCount
+                          .toString(),
+                      index: '3',
+                    ),
+                    CapsuleDetailsContainer(
+                      icon: Icons.flight_land_outlined,
+                      text: 'land\nlandings',
+                      body:
+                      '${capsule.landLandings}',
+                      index: '4',
+                    ),
+                  ],
+                ),
+                SizedBox(height: 15.h),
+                Padding(
+                  padding: EdgeInsets.only(left: 90.w),
+                  child: CapsuleDetailsContainer(
+                    icon: Icons.flight_takeoff_outlined,
+                    text: 'water\nlandings',
+                    body:
+                    '${capsule.waterLandings}',
+                    index: '5',
+                  ),
+                ),
               ],
-            ),
-          )
-
+            )
+          ],
+        ),
       ),
     );
   }

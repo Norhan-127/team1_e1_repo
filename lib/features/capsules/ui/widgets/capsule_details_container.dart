@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theming/colors.dart';
@@ -7,53 +8,43 @@ class CapsuleDetailsContainer extends StatelessWidget {
   String text;
   String body;
   String index;
-  CapsuleDetailsContainer({super.key,required this.text,required this.body,required this.index});
+  IconData icon;
+  CapsuleDetailsContainer({super.key,required this.text,required this.body,required this.index , required this.icon});
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: SizedBox(
-        height: 170.h,
+        height: 150.h,
         width: 170,
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: [
-            Positioned(
-              left: 55.w,
-              top: 0,
-              child: CircleAvatar(
-                radius: 22.r,
-                backgroundColor: AppColors.whiteColor,
-                child: Text(
-                  index,
-                  style: TextStyles.orbitron24BoldWhite
-                      .copyWith(color: Colors.black),
-                ),
-              ),
-            ),
             Container(
               width: 155.w,
               height: 152.h,
               decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.3),
-                  borderRadius: BorderRadius.circular(35)),
+                border: Border.all(width: 1,color: AppColors.gray.withOpacity(.3)),
+                borderRadius: const BorderRadius.all(Radius.circular(20)),
+              ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  Icon(icon,color: AppColors.lightGrey,),
                   Center(
                       child: Text(
                         text,
-                        style: TextStyles.poppins28BoldWhite,
+                        style: TextStyles.fontSpace22RegularWhite,
                       )),
                   Column(
                     children: [
                       const Divider(
                         thickness: 2,
-                        color: AppColors.lightGrey,
+                        color: AppColors.gray,
                       ),
                       Text(
                         body,
-                        style: TextStyles.poppins19MediumWhite,
+                        style: TextStyles.fontSpace22RegularWhite,
                       )
                     ],
                   )

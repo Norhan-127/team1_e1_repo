@@ -25,13 +25,13 @@ class DragonDetailsScreen extends StatelessWidget {
           children: [
             verticalSpacing(30),
             CarouselSlider(
-              options: CarouselOptions(height: 400.0),
+              options: CarouselOptions(height: 270.0),
               items: dragon.flickrImages!.map((i) {
                 return Builder(
                   builder: (BuildContext context) {
                     return Container(
                       width: MediaQuery.of(context).size.width,
-                      margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                      margin: const EdgeInsets.symmetric(horizontal:10.0),
                       decoration: const BoxDecoration(color: Colors.white24),
                       child: FancyShimmerImage(imageUrl: i),
                     );
@@ -43,11 +43,11 @@ class DragonDetailsScreen extends StatelessWidget {
             ListTile(
               title: Text(
                 'Description',
-                style: TextStyles.orbitron24BoldWhite,
+                style: TextStyles.fontSpace28lightWhite,
               ),
               subtitle: Text(
                 '${dragon.description}',
-                style: TextStyles.exo14White,
+                style: TextStyles.fontSpace13RegularGrey,
               ),
             ),
             DragonDetails(
@@ -56,15 +56,15 @@ class DragonDetailsScreen extends StatelessWidget {
                 children: [
                   Text(
                     'material: ${dragon.heatShield!.material}',
-                    style: TextStyles.exo14White,
+                    style: TextStyles.fontSpace13RegularGrey,
                   ),
                   Text(
                     'size in material: ${dragon.heatShield!.sizeMeters}',
-                    style: TextStyles.exo14White,
+                    style: TextStyles.fontSpace13RegularGrey,
                   ),
                   Text(
                     'dev partner: ${dragon.heatShield!.devPartner}',
-                    style: TextStyles.exo14White,
+                    style: TextStyles.fontSpace13RegularGrey,
                   ),
 
                 ],
@@ -76,11 +76,11 @@ class DragonDetailsScreen extends StatelessWidget {
                 children: [
                   Text(
                     'height trunk in feet: ${dragon.heightWTrunk!.feet}',
-                    style: TextStyles.exo14White,
+                    style: TextStyles.fontSpace13RegularGrey,
                   ),
                   Text(
                     'height trunk in meters: ${dragon.heightWTrunk!.meters}',
-                    style: TextStyles.exo14White,
+                    style: TextStyles.fontSpace13RegularGrey,
                   ),
                 ],
               ),
@@ -91,11 +91,11 @@ class DragonDetailsScreen extends StatelessWidget {
                 children: [
                   Text(
                     'diameter in feet: ${dragon.diameter!.feet}',
-                    style: TextStyles.exo14White,
+                    style: TextStyles.fontSpace13RegularGrey,
                   ),
                   Text(
                     'diameter in meters: ${dragon.diameter!.meters}',
-                    style: TextStyles.exo14White,
+                    style: TextStyles.fontSpace13RegularGrey,
                   ),
                 ],
               ),
@@ -106,15 +106,15 @@ class DragonDetailsScreen extends StatelessWidget {
                 children: [
                   Text(
                     'thrusters type: ${dragon.thrusters![0].type}',
-                    style: TextStyles.exo14White,
+                    style: TextStyles.fontSpace13RegularGrey,
                   ),
                   Text(
                     'thrusters amount: ${dragon.thrusters![0].amount}',
-                    style: TextStyles.exo14White,
+                    style: TextStyles.fontSpace13RegularGrey,
                   ),
                   Text(
                     'thrusters ISP: ${dragon.thrusters![0].isp}',
-                    style: TextStyles.exo14White,
+                    style: TextStyles.fontSpace13RegularGrey,
                   ),
                 ],
               ),

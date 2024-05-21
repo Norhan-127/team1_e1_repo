@@ -54,11 +54,16 @@ abstract class TextStyles {
   );
 
 
-
   static TextStyle fontSpace22RegularWhite= GoogleFonts.spaceGrotesk(
     fontSize: 22.sp,
     fontWeight: FontWeightHelper.regular,
     color: AppColors.whiteColor,
+  );
+
+  static TextStyle fontSpace22BoldlightGray= GoogleFonts.spaceGrotesk(
+    fontSize: 22.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.lighterGray,
   );
 
   static TextStyle fontSpace36RegularWhite= GoogleFonts.spaceGrotesk(
