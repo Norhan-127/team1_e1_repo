@@ -17,7 +17,7 @@ Embark on a cosmic journey with our captivating app designed for space enthusias
 1. Clone the Repository: Begin your journey by cloning this repository to your local machine. Feel the thrill of anticipation as you embark on your cosmic coding adventure.
 2. Explore the Code: Delve deep into the heart of the codebase, exploring each file and line with the curiosity of a true space explorer. Marvel at the intricacies of Dart and Flutter as you navigate through the galaxy of code.
 
-🎨Our Produt
+🎨Our Product
 
 https://github.com/Norhan-127/team1_e1_repo/assets/108424060/7ac8720e-5972-4dcd-9c0b-4632f7d5ff3d
 
