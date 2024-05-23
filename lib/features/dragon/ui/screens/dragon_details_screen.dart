@@ -61,15 +61,29 @@ class DragonDetailsScreen extends StatelessWidget {
                     Icon(Icons.wb_iridescent, color: AppColors.whiteColor),
                     horizontalSpacing(5),
                     Text(
+
                       '${dragon.heatShield!.material}',
                       style: TextStyles.fontSpace13RegularGrey,
+
+                      'material: ${dragon.heatShield!.material}',
+                      style: TextStyles.poppins17LightWhite,
+                    ),
+                    Text(
+                      'size in material: ${dragon.heatShield!.sizeMeters}',
+                      style: TextStyles.exo14White,
+
                     ),
                     Spacer(),
                     Icon( Icons.height, color: AppColors.whiteColor),
                     horizontalSpacing(5),
                     Text(
+
                       '${dragon.heatShield!.sizeMeters}',
                       style: TextStyles.fontSpace13RegularGrey,
+
+                      'dev partner: ${dragon.heatShield!.devPartner}',
+                      style: TextStyles.poppins17LightWhite,
+
                     ),
                   ],
                 ),
@@ -84,15 +98,25 @@ class DragonDetailsScreen extends StatelessWidget {
                     Icon(Icons.height, color: AppColors.whiteColor),
                     horizontalSpacing(5),
                     Text(
+
                       '${dragon.heightWTrunk!.feet}',
                       style: TextStyles.fontSpace13RegularGrey,
+
+                      'height trunk in feet: ${dragon.heightWTrunk!.feet}',
+                      style: TextStyles.poppins17LightWhite,
+
                     ),
                     Spacer(),
                     Icon( Icons.monitor_weight_outlined, color: AppColors.whiteColor),
                     horizontalSpacing(5),
                     Text(
+
                       '${dragon.heightWTrunk!.meters}',
                       style: TextStyles.fontSpace13RegularGrey,
+
+                      'height trunk in meters: ${dragon.heightWTrunk!.meters}',
+                      style: TextStyles.poppins17LightWhite,
+
                     ),
                   ],
                 ),
@@ -107,15 +131,25 @@ class DragonDetailsScreen extends StatelessWidget {
                     Icon(Icons.height, color: AppColors.whiteColor),
                     horizontalSpacing(5),
                     Text(
+
                       '${dragon.diameter!.feet}',
                       style: TextStyles.fontSpace13RegularGrey,
+
+                      'diameter in feet: ${dragon.diameter!.feet}',
+                      style: TextStyles.poppins17LightWhite,
+
                     ),
                     Spacer(),
                     Icon( Icons.monitor_weight_outlined, color: AppColors.whiteColor),
                     horizontalSpacing(5),
                     Text(
+
                       '${dragon.diameter!.meters}',
                       style: TextStyles.fontSpace13RegularGrey,
+
+                      'diameter in meters: ${dragon.diameter!.meters}',
+                      style: TextStyles.poppins17LightWhite,
+
                     ),
 
                   ],
@@ -131,33 +165,50 @@ class DragonDetailsScreen extends StatelessWidget {
                     Icon(Icons.wb_iridescent, color: AppColors.whiteColor),
                     horizontalSpacing(5),
                     Text(
+
                       '${dragon.thrusters![0].type}',
                       style: TextStyles.fontSpace13RegularGrey,
+
+                      'thrusters type: ${dragon.thrusters![0].type}',
+                      style: TextStyles.poppins17LightWhite,
+                    ),
+                    Text(
+                      'thrusters amount: ${dragon.thrusters![0].amount}',
+                      style: TextStyles.poppins17LightWhite,
+
                     ),
                     Spacer(),
                     Icon( Icons.monitor_weight_outlined, color: AppColors.whiteColor),
                     horizontalSpacing(5),
                     Text(
+
                       '${dragon.thrusters![0].amount}',
                       style: TextStyles.fontSpace13RegularGrey,
+
+                      'thrusters ISP: ${dragon.thrusters![0].isp}',
+                      style: TextStyles.poppins17LightWhite,
+
                     ),
-                    // Text(
-                    //   'thrusters type: ${dragon.thrusters![0].type}',
-                    //   style: TextStyles.fontSpace13RegularGrey,
-                    // ),
-                    // Text(
-                    //   'thrusters amount: ${dragon.thrusters![0].amount}',
-                    //   style: TextStyles.fontSpace13RegularGrey,
-                    // ),
-                    // Text(
-                    //   'thrusters ISP: ${dragon.thrusters![0].isp}',
-                    //   style: TextStyles.fontSpace13RegularGrey,
-                    // ),
+                   
                   ],
                 ),
               ),
+
             ),
           ],
+
+              ListTile(
+                title: Text(
+                  'Description',
+                  style: TextStyles.poppins28BoldWhite,
+                ),
+                subtitle: Text(
+                  '${dragon.description}',
+                  style: TextStyles.poppins17LightWhite,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

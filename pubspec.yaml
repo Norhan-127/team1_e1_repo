@@ -58,6 +58,8 @@ dependencies:
 dev_dependencies:
   #to add a launcher icon
   flutter_launcher_icons: ^0.13.1
+  build_runner: ^2.4.9
+
 flutter_launcher_icons:
   android: true
   ios: true

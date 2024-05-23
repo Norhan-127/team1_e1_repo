@@ -13,6 +13,7 @@ class OneCapsuleDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: DefaultAppBar(
         icon: Icons.arrow_back_ios_new_outlined,
         function: () => Navigator.pop(context),
@@ -72,6 +73,58 @@ class OneCapsuleDetailsScreen extends StatelessWidget {
                   children: [
                     CapsuleDetailsContainer(
                       icon: Icons.flight_takeoff_outlined,
+
+      body: BackgroundContainer(
+          child: Column(
+            children: [
+              AppBarCapsuleDetails(
+                serial:
+                '${capsule.serial}',
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CapsuleDetailsContainer(
+                        text: 'Type',
+                        body:
+                        '${capsule.type}',
+                        index: '1',
+                      ),
+                      CapsuleDetailsContainer(
+                        text: 'status',
+                        body:
+                        '${capsule.status}',
+                        index: '2',
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20.h),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CapsuleDetailsContainer(
+                        text: 'reuse\ncount',
+                        body: capsule
+                            .reuseCount
+                            .toString(),
+                        index: '3',
+                      ),
+                      CapsuleDetailsContainer(
+                        text: 'land\nlandings',
+                        body:
+                        '${capsule.landLandings}',
+                        index: '4',
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 15.h),
+                  Padding(
+                    padding: EdgeInsets.only(left: 15.w),
+                    child: CapsuleDetailsContainer(
+
                       text: 'water\nlandings',
                       body:
                       '${capsule.waterLandings}',

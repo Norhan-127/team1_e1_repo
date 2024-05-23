@@ -94,11 +94,37 @@ class _DragonScreenState extends State<DragonScreen> {
                         onPressed: () {
                           context.read<DragonCubit>().getAllDragons();
                         },
+
                         child: const Text('refresh'),
                       )
                     ],
                   ));
             }),
+
+                        success: (allDragons){
+                          return Expanded(
+                            child: ListView.builder(
+                                itemCount: allDragons.length,
+                                itemBuilder: (context, i) => GestureDetector(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, Routes.dragonDetailsScreen,
+                                          arguments: allDragons[i]);
+                                    },
+                                    child: Container(
+                                      margin: EdgeInsets.only(top: 30.h),
+                                      alignment: Alignment.center,
+                                      width: 370.w,
+                                      height: 80.h,
+                                      decoration: BoxDecoration(
+                                          color: Colors.grey.withOpacity(0.3),
+                                          borderRadius: BorderRadius.circular(15)
+                                      ),
+                                      child: ListTile(
+                                        title: Text('${allDragons[i].name}', style: TextStyles.poppins28BoldWhite,),
+                                        trailing: Text('${allDragons[i].firstFlight}' , style: TextStyles.poppins17LightWhite,),
+                                      ),
+
 
 
           ],

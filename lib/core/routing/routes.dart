@@ -14,5 +14,7 @@ class Routes {
   static const String capsuleDetailsScreen = '/capsuleDetailsScreen';
   static const String layOutScreen = '/layOutScreen';
   static const String categoryScreen = '/categoryScreen';
+  static const String launchesScreen = '/launchesScreen';
+  static const String launchesDetailsScreen = '/launchesDetailsScreen';
 
 }

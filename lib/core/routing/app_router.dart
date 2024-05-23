@@ -4,6 +4,12 @@ import 'package:team1_e1/core/routing/routes.dart';
 import 'package:team1_e1/features/capsules/ui/screens/capsules_screen.dart';
 import 'package:team1_e1/features/home/screens/home_screen.dart';
 import 'package:team1_e1/features/home/screens/layout_screen.dart';
+import 'package:team1_e1/features/dragon/logic/dragon_cubit.dart';
+import 'package:team1_e1/features/launches/data/models/launches_response.dart';
+import 'package:team1_e1/features/launches/logic/launches_cubit.dart';
+import 'package:team1_e1/features/launches/ui/screens/launches_details_screen.dart';
+import 'package:team1_e1/features/launches/ui/screens/launches_screen.dart';
+import 'package:team1_e1/features/on_boarging/ui/screens/on_baording_screen.dart';
 import 'package:team1_e1/features/rockets/data/models/rockets_response.dart';
 import 'package:team1_e1/features/rockets/ui/screens/rocket_details_screen.dart';
 import 'package:team1_e1/features/crew/ui/screen/crew_screen.dart';
@@ -96,6 +102,19 @@ class AppRouter {
             builder: (_) => OneCapsuleDetailsScreen(
                   capsule: capsule,
                 ));
+      case Routes.launchesScreen:
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+              create: (context) => getIt<LaunchesCubit>(),
+              child: const LaunchesScreen(),
+            ));
+
+      case Routes.launchesDetailsScreen:
+        final launchesResponse = settings.arguments as LaunchesResponse;
+        return MaterialPageRoute(
+            builder: (_) => LaunchesDetailsScreen(
+              launchesResponse: launchesResponse,
+            ));
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

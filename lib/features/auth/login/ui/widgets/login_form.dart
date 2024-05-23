@@ -176,6 +176,66 @@ class _LoginFormState extends State<LoginForm> {
                       ],
                     ),
                   ]));
+            key: formKey,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Welcome', style: TextStyles.poppins40MediumWhite,),
+                Text('Back', style: TextStyles.poppins63SemiBoldWhite,),
+                const SizedBox(height: 150,),
+                DefaultTextField(
+                  controller: emailController,
+                  validator: (val) {
+                    if (val == '') {
+                      return "Email should not empty";
+                    }
+                    return null;
+                  },
+                  isPassword: false,
+                  style: TextStyles.poppins17MediumWhite,
+                  text: 'Email Address',
+                  labelStyle: TextStyles.poppins17MediumWhite,
+                  suffixIcon: const Icon(
+                    Icons.email_outlined, color: AppColors.whiteColor,),
+                ),
+                const SizedBox(height: 10,),
+                DefaultTextField(
+                  controller: passwordController,
+                  validator: (val) {
+                    if (val == '') {
+                      return "Password should not empty";
+                    }
+                    return null;
+                  },
+                  isPassword: true,
+                  style: TextStyles.poppins17MediumWhite,
+                  text: 'Password',
+                  labelStyle: TextStyles.poppins17MediumWhite,
+                  suffixIcon: const Icon(
+                    Icons.lock_outlined, color: AppColors.whiteColor,),
+                ),
+                const SizedBox(height: 40,),
+                state is! LoginLoading ?
+                DefaultButton(
+                  function: () {
+                    if (formKey.currentState!.validate()) {
+                      LoginCubit.get(context).userLogin(
+                          email: emailController.text,
+                          password: passwordController.text
+                      );
+                    }
+                  },
+                  radius: 20,
+                  backgroundColor: AppColors.whiteColor,
+                  text: 'Log In',
+                  icon: Icons.arrow_forward,
+                  style: TextStyles.poppins21MediumBlack,
+                  IconColor: Colors.black,
+                ) :
+                const Center(child: CircularProgressIndicator())
+                ],
+            ),
+          );
         },
       ),
     );
