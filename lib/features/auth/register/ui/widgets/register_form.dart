@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:team1_e1/core/helpers/spacing.dart';
+import 'package:team1_e1/core/routing/routes.dart';
 import 'package:team1_e1/features/crew/ui/screen/crew_screen.dart';
+import 'package:team1_e1/features/home/screens/layout_screen.dart';
 import '../../../../../core/shared_widgets/default_button.dart';
 import '../../../../../core/shared_widgets/default_text_field.dart';
 import '../../../../../core/theming/colors.dart';
@@ -58,7 +62,7 @@ class _RegisterFormState extends State<RegisterForm> {
           }
           else if (state is RegisterSuccess){
             // Replace crewScreen to homeScreen
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const CrewScreen(),));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const LayoutScreen(),));
           }
         },
         builder: (context, state) {
@@ -67,18 +71,23 @@ class _RegisterFormState extends State<RegisterForm> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SizedBox(height: 10.h,),
                 Text(
-                  'Let\'s',
-                  style: TextStyles.poppins40MediumWhite,
+                  'Let\'s Start !',
+                  style: TextStyles.fontSpace36RegularWhite,
                 ),
                 Text(
-                  'Start',
-                  style: TextStyles.poppins63SemiBoldWhite,
+                  'Create your account to continue exploring',
+                  style: TextStyles.fontSpace18lightGrey,
                 ),
-                const SizedBox(
-                  height: 150,
+                 SizedBox(
+                  height: 70.h,
                 ),
                 DefaultTextField(
+                  readOnly: false,
+                  filled: true,
+                  fillColor: Colors.transparent,
+                  radius: 20,
                   controller: nameController,
                   validator: (val) {
                     if (val == '') {
@@ -87,18 +96,22 @@ class _RegisterFormState extends State<RegisterForm> {
                     return null;
                   },
                   isPassword: false,
-                  style: TextStyles.poppins17MediumWhite,
+                  style: TextStyles.fontSpace18lightGrey,
                   text: 'Your Name',
-                  labelStyle: TextStyles.poppins17MediumWhite,
+                  labelStyle: TextStyles.fontSpace18lightGrey,
                   suffixIcon: const Icon(
                     Icons.person,
-                    color: AppColors.whiteColor,
+                    color: AppColors.lightGrey,
                   ),
                 ),
-                const SizedBox(
-                  height: 10,
+                 SizedBox(
+                  height: 30.h,
                 ),
                 DefaultTextField(
+                  readOnly: false,
+                  filled: true,
+                  fillColor: Colors.transparent,
+                  radius: 20,
                   controller: emailController,
                   validator: (val) {
                     if (val == '') {
@@ -107,18 +120,22 @@ class _RegisterFormState extends State<RegisterForm> {
                     return null;
                   },
                   isPassword: false,
-                  style: TextStyles.poppins17MediumWhite,
+                  style: TextStyles.fontSpace18lightGrey,
                   text: 'Email Address',
-                  labelStyle: TextStyles.poppins17MediumWhite,
+                  labelStyle: TextStyles.fontSpace18lightGrey,
                   suffixIcon: const Icon(
                     Icons.email_outlined,
-                    color: AppColors.whiteColor,
+                    color: AppColors.lightGrey,
                   ),
                 ),
-                const SizedBox(
-                  height: 10,
+                 SizedBox(
+                  height: 30.h,
                 ),
                 DefaultTextField(
+                  readOnly: false,
+                  filled: true,
+                  fillColor: Colors.transparent,
+                  radius: 20,
                   controller: passwordController,
                   validator: (val) {
                     if (val == '') {
@@ -130,16 +147,16 @@ class _RegisterFormState extends State<RegisterForm> {
                     return null;
                   },
                   isPassword: true,
-                  style: TextStyles.poppins17MediumWhite,
+                  style: TextStyles.fontSpace18lightGrey,
                   text: 'Password',
-                  labelStyle: TextStyles.poppins17MediumWhite,
+                  labelStyle: TextStyles.fontSpace18lightGrey,
                   suffixIcon: const Icon(
                     Icons.lock_outlined,
-                    color: AppColors.whiteColor,
+                    color: AppColors.lightGrey,
                   ),
                 ),
-                const SizedBox(
-                  height: 40,
+                 SizedBox(
+                  height: 45.h,
                 ),
                 state is! RegisterLoading ?
                 DefaultButton(
@@ -152,13 +169,40 @@ class _RegisterFormState extends State<RegisterForm> {
                     }
                   },
                   radius: 20,
-                  backgroundColor: AppColors.whiteColor,
                   text: 'Sign Up',
-                  icon: Icons.arrow_forward,
-                  style: TextStyles.poppins21MediumBlack,
-                  IconColor: Colors.black,
+                  icon: Icons.arrow_forward_ios,
+                  style: TextStyles.fontSpace22RegularWhite,
+                  IconColor: AppColors.whiteColor,
+                  gradient: RadialGradient(
+                    center: Alignment.bottomRight,
+                    radius: 4.4,
+                    colors: [
+                      AppColors.lightBlueColor,
+                      AppColors.deepPurpleColor
+                    ],
+                  ),
                 ) :
-                const Center(child: CircularProgressIndicator())
+                const Center(child: CircularProgressIndicator()),
+
+                verticalSpacing(15),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Already have an account?',
+                      style: TextStyles.fontSpace18RegularWhite,
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, Routes.loginScreen);
+                      },
+                      child:Text(
+                        'Login',
+                        style: TextStyles.fontSpace16RegularLightBlue,
+                      ),
+                    )
+                  ],
+                ),
               ],
             ),
           );

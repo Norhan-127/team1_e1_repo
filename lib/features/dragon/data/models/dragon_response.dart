@@ -41,8 +41,11 @@ class Dragon {
 @JsonSerializable()
 class HeatShield {
   String? material;
+  @JsonKey(name: 'size_meters')
   double? sizeMeters;
+  @JsonKey(name: 'temp_degrees')
   int? tempDegrees;
+  @JsonKey(name: 'dev_partner')
   String? devPartner;
 
   HeatShield(

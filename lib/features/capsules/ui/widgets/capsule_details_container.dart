@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theming/colors.dart';
@@ -7,58 +8,54 @@ class CapsuleDetailsContainer extends StatelessWidget {
   String text;
   String body;
   String index;
-  CapsuleDetailsContainer({super.key,required this.text,required this.body,required this.index});
+  IconData icon;
+  CapsuleDetailsContainer({super.key,required this.text,required this.body,required this.index , required this.icon});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 190.h,
-      child: Stack(
-        alignment: Alignment.bottomCenter,
-        children: [
-          Positioned(
-            left: 55.w,
-            top: 0,
-            child: CircleAvatar(
-              radius: 22.r,
-              backgroundColor: AppColors.whiteColor,
-              child: Text(
-                index,
-                style: TextStyles.orbitron24BoldWhite
-                    .copyWith(color: Colors.black),
+    return SingleChildScrollView(
+      child: SizedBox(
+        height: 150.h,
+        width: 150.w,
+        child: Stack(
+          alignment: Alignment.bottomCenter,
+          children: [
+            Container(
+              width: 155.w,
+              height: 152.h,
+              decoration: BoxDecoration(
+                border: Border.all(width: 1,color: AppColors.gray.withOpacity(.3)),
+                borderRadius: const BorderRadius.all(Radius.circular(20)),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      Icon(icon,color: AppColors.lightGrey,),
+                      Text(
+                        text,
+                        style: TextStyles.fontSpace22RegularWhite,textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      const Divider(
+                        thickness: 1,
+                        color: AppColors.gray,
+                      ),
+                      Text(
+                        body,
+                        style: TextStyles.fontSpace18LightWhite,
+                      )
+                    ],
+                  )
+                ],
               ),
             ),
-          ),
-          Container(
-            width: 161.w,
-            height: 172.h,
-            decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(35)),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Center(
-                    child: Text(
-                      text,
-                      style: TextStyles.poppins28BoldWhite,
-                    )),
-                Column(
-                  children: [
-                    const Divider(
-                      thickness: 2,
-                      color: AppColors.lightGrey,
-                    ),
-                    Text(
-                      body,
-                      style: TextStyles.poppins19MediumWhite,
-                    )
-                  ],
-                )
-              ],
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
 

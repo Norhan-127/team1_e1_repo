@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:team1_e1/core/helpers/spacing.dart';
 
 import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/colors.dart';
@@ -15,24 +16,15 @@ class AppBarCapsuleDetails extends StatelessWidget {
       children: [
         Row(
           children: [
-            Container(
-              margin: EdgeInsets.only(left: 20.w),
-              width: 84,
-              height: 44,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.grey.withOpacity(0.3),
+            IconButton(
+              icon: const Icon(
+                Icons.arrow_back,
+                color: AppColors.whiteColor,
               ),
-              child: IconButton(
-                icon: const Icon(
-                  Icons.arrow_back,
-                  color: AppColors.whiteColor,
-                ),
-                onPressed: () {
-                  Navigator.pushReplacementNamed(
-                      context, Routes.capsuleScreen);
-                },
-              ),
+              onPressed: () {
+                Navigator.pushReplacementNamed(
+                    context, Routes.capsuleScreen);
+              },
             ),
             SizedBox(
               width: 15.w,
@@ -43,13 +35,12 @@ class AppBarCapsuleDetails extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(
-          height: 6.h,
-        ),
+      verticalSpacing(15),
         const Divider(
-          thickness: 1,
-          color: AppColors.whiteColor,
+          height: 0.5,
+          color: AppColors.gray,
         ),
+        verticalSpacing(15),
       ],
     );
   }

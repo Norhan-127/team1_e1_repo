@@ -3,6 +3,7 @@ class Routes {
   static const String beforeLoginScreen = '/beforeLoginScreen';
   static const String loginScreen = '/loginScreen';
   static const String signUpScreen = '/signUpScreen';
+  static const String profileScreen = '/profileScreen';
   static const String homeScreen = '/homeScreen';
   static const String rocketScreen = '/rocketScreen';
   static const String rocketDetailsScreen = '/rocketDetailsScreen';
@@ -11,6 +12,8 @@ class Routes {
   static const String dragonDetailsScreen = '/dragonDetailsScreen';
   static const String capsuleScreen = '/capScreen';
   static const String capsuleDetailsScreen = '/capsuleDetailsScreen';
+  static const String layOutScreen = '/layOutScreen';
+  static const String categoryScreen = '/categoryScreen';
   static const String launchesScreen = '/launchesScreen';
   static const String launchesDetailsScreen = '/launchesDetailsScreen';
 

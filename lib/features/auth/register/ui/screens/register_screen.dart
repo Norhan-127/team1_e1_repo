@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:team1_e1/core/theming/colors.dart';
 import 'package:team1_e1/features/auth/register/ui/widgets/register_form.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -11,14 +13,11 @@ class RegisterScreen extends StatelessWidget {
         child: Container(
           width: double.infinity,
           height: double.infinity,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/images/auth_background.png"),
-                fit: BoxFit.cover),
-          ),
-          child: const SingleChildScrollView(
+          color: AppColors.backgroundColor,
+
+          child: SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 50.0,horizontal: 40.0),
+              padding: EdgeInsets.symmetric(vertical: 40.0.h,horizontal: 20.0.w),
               child: RegisterForm(),
             ),
           ),
